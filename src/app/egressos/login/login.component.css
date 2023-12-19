@@ -1,0 +1,36 @@
+.login-container {
+    border: 1px solid #808080;
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 13px 10px 15px 0px rgba(0,0,0,0.1);
+}
+
+.header {
+    padding-left: 7px;
+    padding-top: 2px;
+    background-color: aliceblue;
+    height: 30px;
+}
+
+.infoLogin {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
+
+.insereEmail{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}

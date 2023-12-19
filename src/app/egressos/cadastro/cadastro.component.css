@@ -1,0 +1,197 @@
+select{
+    width: 100%;
+ }
+ body {
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 50px;
+ }
+ 
+ .form-control {
+     justify-self: flex-end;
+     width: 100%;
+     border-color: 1px solid gray;
+ }
+ 
+ .dados-cadastro {
+     width: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 50px;
+     gap: 10px;
+ }
+ 
+ .titulo-cadastral {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     width: 100vh;
+     height: 50px;
+     font-size: 30px;
+     background-color: lightgray;
+     border-bottom: 2px solid gray;
+     margin-bottom: 20px;
+ }
+ 
+ .div {
+     border: 1px solid gray;
+     width: 100vh;
+     margin-bottom: 18px;
+ }
+ 
+ .input-group {
+     width: 100vh;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-items: auto;
+     gap: 20px;
+ }
+ 
+ .input-cpf-conclusao {
+     display: flex;
+     flex-direction: row;
+     justify-content:space-between;
+     flex-wrap: nowrap;
+     gap: 20px;
+ }
+ .input-cpf-conclusao div{
+     display: flex;
+     height: 20px;
+     width: 100%;
+     flex-wrap: nowrap;
+     gap: 10px;
+ }
+ .input-cpf-conclusao input {
+     flex: 1;
+ }
+ 
+ .input-nome {
+     display: flex;
+     height: 20px;
+     width: 100%;
+     flex-wrap: nowrap;
+     gap: 10px;
+ }
+ .input-nome div{
+     display: flex;
+     height: 20px;
+     width: 100%;
+     flex-wrap: nowrap;
+     gap: 10px;
+ }
+ .input-nome input {
+     flex: 1;
+ }
+ 
+ .input-email-orientador {
+     display: flex;
+     flex-direction: row;
+     justify-content:space-between;
+     flex-wrap: nowrap;
+     gap: 20px;
+ }
+ .input-email-orientador div {
+     display: flex;
+     height: 20px;
+     width: 100%;
+     flex-wrap: nowrap;
+     gap: 10px;
+ }
+ .input-email-orientador input {
+     flex: 1;
+ }
+ 
+ .input-endereco {
+     display: flex;
+     flex-direction: row;
+     justify-content:space-between;
+     flex-wrap: nowrap;
+     gap: 20px;
+ }
+ 
+ .input-telefone-link {
+     display: flex;
+     flex-direction: row;
+     justify-content:space-between;
+     flex-wrap: nowrap;
+     gap: 20px;
+ }
+ .input-telefone-link div {
+     display: flex;
+     height: 20px;
+     width: 100%;
+     flex-wrap: nowrap;
+     gap: 10px;
+ }
+ .input-telefone-link {
+     flex: 1;
+ }
+ 
+ .radio-form-check{
+     display: flex;
+     flex-direction: row;
+     gap: 40px;
+     margin-bottom: 10px;
+ }
+ 
+ .opt-radios{
+     display: flex;
+     flex-direction: row;
+     gap: 20px;
+ }
+ 
+ .btn {
+     color: #ffffff;
+     background-color: #336699;
+     font-family: Verdana;
+     font-weight: bold;
+     width: 250px;
+     height: 40px;
+     border-radius: 13px;
+     border: 0px;
+     margin-top: 10px;
+ }
+ 
+ .dados-acompanhamento {
+     width: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 50px;
+     gap: 10px;
+ }
+ 
+ .nome-empresa-e-local {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     gap: 30px;
+ }
+ 
+ .cargo-e-atividade {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     gap: 30px;
+ }
+ 
+ .contribuicao-e-faixa {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     gap: 30px;
+ }
+ 
+ .area-trabalho-e-localizacao {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     gap: 30px;
+ }

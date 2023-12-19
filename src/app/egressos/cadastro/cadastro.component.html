@@ -1,0 +1,179 @@
+<body>
+    <form class="dados-cadastro" (ngSubmit)="saveInformation()">
+        <div class="titulo-cadastral">Dados Cadastro:</div>
+        <div class="input-group">
+            <div class="input-cpf-conclusao">
+                <div>
+                    <label for="input-cpf" class="form-label">Seu CPF: </label>
+                    <input [(ngModel)]="infoUsuario.cpf" type="text" class="form-control" name="cpf" required>
+                </div>
+                <div>
+                    <label for="input-conclusao" class="form-label">Ano que concluiu pós: </label>
+                    <input [(ngModel)]="infoUsuario.anoConclusao" type="text" class="form-control" name="conclusao" required>
+                </div>
+            </div>
+            <div class="input-nome">
+                <label for="input-nome" class="form-label">Seu nome completo: </label>
+                <input [(ngModel)]="infoUsuario.nomeCompleto" type="text" class="form-control" name="nome" required>
+            </div>
+            <div class="input-email-orientador">
+                <div>
+                    <label for="input-email" class="form-label">Seu atual email: </label>
+                    <input [(ngModel)]="infoUsuario.emailAtual" type="email" class="form-control" name="email" required>
+                </div>
+                <div>
+                    <label for="input-orientador" class="form-label">Nome orientador: </label>
+                    <input [(ngModel)]="infoUsuario.nomeOrientador" type="text" class="form-control" name="orientador" required>
+                </div>
+            </div>
+            <div class="input-endereco">
+                <label for="input-endereco" class="form-label">Endereço: </label>
+                <input [(ngModel)]="infoUsuario.endereco" type="text" class="form-control" name="endereco" required>
+            </div>
+            <div class="input-telefone-link">
+                <div>
+                    <label for="input-telefone" class="form-label">Telefone: </label>
+                    <input [(ngModel)]="infoUsuario.telefone" type="text" class="form-control" name="telefone" required>
+                </div>
+                <div>
+                    <label for="input-link" class="form-label">Link: </label>
+                    <input [(ngModel)]="infoUsuario.link" type="text" class="form-control" name="link" required>
+                </div>
+            </div>
+        </div>
+        <div class="radio-form-check">
+            <label>Curso mais alto feito no PPGEELT-UFU: </label>
+            <div class="opt-radios">
+                <div><input class="form-check-input" type="radio" [(ngModel)]="infoUsuario.curso" value="mestrado" name="curso"> <label>mestrado</label></div>
+                <div><input class="form-check-input" type="radio" [(ngModel)]="infoUsuario.curso" value="doutorado" name="curso"> <label>doutorado</label></div>
+                <div><input class="form-check-input" type="radio" [(ngModel)]="infoUsuario.curso" value="pos-doutorado" name="curso"> <label>pós-doutorado</label></div>
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn">Salvar Cadastro</button>
+        </div>
+    </form>
+
+    
+    
+    <form  class="dados-acompanhamento" (ngSubmit)="saveInformation()">
+        <div class="titulo-cadastral">Dados Acompanhamento:</div>
+        <div class="input-group">
+            <div class="nome-empresa-e-local">
+                <div class="nome-empresa-ou-instituicao">
+                    <label for="nome-empresa-ou-instituicao" class="form-label">Nome da empresa ou instituição onde está trabalhando:</label>
+                    <input [(ngModel)]="infoUsuario.nomeDaEmpresa" type="text" class="form-control" name="nome-empresa-ou-instituicao" required>
+                </div>
+                <div class="local-trabalho">
+                    <label for="tipo-de-local">Tipo de local de trabalho:</label>
+                    <select class="form-select" [(ngModel)]="infoUsuario.localDeTrabalho" name="tipo-de-local" required>
+                        <option selected>-</option>
+                        <option>Instituição de ensino superior</option>
+                        <option>Instituição de ensino técnico, médio ou afim</option>
+                        <option>Empresa/Indústria</option>
+                        <option>Empresário</option>
+                        <option>Centro de pesquisa</option>
+                        <option>Autônomo/profissional liberal</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cargo-e-atividade">
+                <div class="cargo">
+                    <label for="cargo">Cargo:</label>
+                    <select class="form-select">
+                        <option selected>-</option>
+                        <option>Pesquisador</option>
+                        <option>Professor</option>
+                        <option>Gerente ou Diretor</option>
+                        <option>Pós-doutorando</option>
+                        <option>Engenheiro</option>
+                        <option>Analista</option>
+                        <option>Contratado CLT diverso</option>
+                        <option>Colaborador</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+                <div class="atividade-atual">
+                    <label for="atividade">Sua atual atividade está relacionada com sua área de pesquisa na pós?</label>
+                    <select class="form-select">
+                        <option selected>-</option>
+                        <option>Sim, com alta relação</option>
+                        <option>Sim, com média relação (indireta)</option>
+                        <option>Sim, com baixa relação (esporádica)</option>
+                        <option>Nenhuma relação</option>
+                        <option>Não se aplica</option>
+                    </select>
+                </div>
+            </div>
+            <div class="contribuicao-e-faixa">
+                <div class="contribuicao-da-pos">
+                    <label for="contribuicao">Contribuição da sua pós na sua formação e inserção profissional:</label><br>
+                    <select class="form-select">
+                        <option selected>-</option>
+                        <option>Alta</option>
+                        <option>Média/alta</option>
+                        <option>Média</option>
+                        <option>Baixa</option>
+                        <option>Nenhuma</option>
+                    </select>
+                </div>
+                <div class="faixa-salarial">
+                    <label for="salario">Faixa salarial bruta (será mantido sigilo):</label><br>
+                    <select class="form-select">
+                        <option selected>-</option>
+                        <option>Menos que 3 salários mínimos</option>
+                        <option>3.1 a 5 salários mínimos</option>
+                        <option>5.1 a 10 salários mínimos</option>
+                        <option>10.1 a 20 salários mínimos</option>
+                        <option>Acima de 20.1 salários mínimos</option>
+                        <option>Prefere não declarar ou não possui</option>
+                    </select>
+                </div>
+            </div>
+            <div class="area-trabalho-e-localizacao">
+                <div class="area-trabalho">
+                    <label for="area-de-trabalho-proxima">Área de trabalho mais próxima</label>
+                    <select class="form-select">
+                        <option selected>-</option>
+                        <option>Sistemas Elétricos de Potência</option>
+                        <option>Eletrônica industrial, sistemas e controles eletrônicos</option>
+                        <option>Telecomunicações e Redes de comunicação</option>
+                        <option>Tecnologia da informação</option>
+                        <option>Eletrônica</option>
+                        <option>Biomédica</option>
+                        <option>Automação</option>
+                        <option>Materiais elétricos</option>
+                        <option>Medidas elétricas, magnéticas e instrumentação</option>
+                        <option>Circuitos elétricos</option>
+                        <option>Administrativa e gerencial</option>
+                        <option>Ensino</option>
+                        <option>Outras</option>
+                    </select>
+                </div>
+                <div class="localizacao">
+                    <label for="ocupacao-atual">Localização da sua ocupação atual:</label>
+                    <select class="form-select">
+                        <option selected>-</option>
+                        <option>Não informado</option>
+                        <option>Exterior</option>
+                        <option>MG Capital</option>
+                        <option>MG interior</option>
+                        <option>Capital em região sudeste (exceto MG)</option>
+                        <option>Interior em região sudeste (exceto MG)</option>
+                        <option>Capital em região sul</option>
+                        <option>Interior em região sul</option>
+                        <option>Capital em região centro-oeste</option>
+                        <option>Interior em região centro-oeste</option>
+                        <option>Capital em região nordeste</option>
+                        <option>Interior em região nordeste</option>
+                        <option>Capital em região norte</option>
+                        <option>Interior em região norte</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn">Salvar Acompanhamento</button>
+        </div>
+    </form>

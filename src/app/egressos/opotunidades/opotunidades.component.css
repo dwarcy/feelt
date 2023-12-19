@@ -1,0 +1,68 @@
+/* 
+    #999999 - header
+    #e6e6e6 - row impar
+    #cccccc - row par
+*/
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+th[mat-header-cell] {
+    background-color: #999999;
+    font-size: small;
+    border: 5px solid white;
+}
+
+tr.mat-mdc-row.mdc-data-table__row.cdk-row:nth-child(2n+1){
+    background-color: #e6e6e6;
+    height: 35px !important;
+    border: 5px solid white;
+}
+
+tr.mat-mdc-row.mdc-data-table__row.cdk-row:nth-child(2n+2){
+    background-color: #cccccc;
+    height: 35px !important;
+    border: 5px solid white;
+}
+
+td[mat-cell] {
+    border: 5px solid white;
+}
+
+.titulo-oportunidade {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end !important;
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightgray;
+    border-bottom: 2px solid gray;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.mat-column-dataCadastro {
+    width: 10%;
+}
+
+.mat-column-oportunidade {
+    width: 30%;
+}
+
+.mat-column-tipo {
+    width: 8%;
+}
+
+.mat-column-breveDescricao {
+    width: 35%;
+}
+
+.mat-column-contatos {
+    width: 15%;
+}
+

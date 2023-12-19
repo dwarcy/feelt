@@ -1,0 +1,27 @@
+header {
+    padding-block: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: gray;
+    color: #434343;
+  }
+
+header >span{
+    font-weight: 500;
+}
+
+.navigation-content{
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation-content > a {
+    color: #434343;
+    font-weight: 500;
+}
