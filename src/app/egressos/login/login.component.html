@@ -1,22 +1,24 @@
 <div class="login-container">
-    <header class="header">
-        <span>Login</span>
-    </header>
-    
-    <div class="infoLogin">
-        <div class="insereEmail">
-            <label for="inputEmail" class="form-label">Email:</label>
-            <input type="email" class="form-control">
-        </div>
-        <div class="insereEmail">
-            <label for="inputEmail" class="form-label">CPF:</label>
-            <input type="email" class="form-control">
-        </div>
-    </div>
+  <header class="header">
+    <span>Login</span>
+  </header>
 
-    <div class="button-content">
-        <button (click)="loginSucesso()">
-            Entrar
-        </button>
+  <div class="infoLogin">
+    <div class="login-instrucao">
+      <span>Esta área é reservada a egressos cadastrados.</span>
+      <span>Você precisa fazer login ou se cadastrar (se for um egresso).</span>
     </div>
+    <div class="insereUsuario">
+      <label for="inputUsuario" class="form-label">Usuário:</label>
+      <input type="usuario" class="form-control" />
+    </div>
+    <div class="insereSenha">
+      <label for="inputSenha" class="form-label">Senha:</label>
+      <input type="senha" class="form-control" />
+    </div>
+  </div>
+
+  <div class="button-content">
+    <button (click)="loginSucesso()">Entrar</button>
+  </div>
 </div>

@@ -1,32 +1,33 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { initializeApp } from '@angular/fire/app';
 import { getFirestore } from 'firebase/firestore';
-import { CollectionReference, DocumentData, Firestore, addDoc, collection } from '@angular/fire/firestore';
-
+import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { environment } from 'src/environment/environment.prod';
-import { HttpClient } from '@angular/common/http';
-
-// Initialize firebase
-// const app = initializeApp(environment.firebase)
-
-// Initialize Cloud Firestore
-// const db = getFirestore(app)
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FirebaseService {
+  formGroup!: FormGroup;
+  public db: any;
 
-  
+  constructor(private firestore: Firestore) {
+    // Inicializa Firebase e Firestore
+    const app = initializeApp(environment.firebase);
+    this.db = getFirestore(app);
+  }
 
-  // async adicionaEgresso() {
-  //   try {
-  //     const testeCollection: CollectionReference<DocumentData> = await collection(this.firestore, 'test');
-      
-  //     addDoc(testeCollection, {text: 'Alo, teste'})
-  //   } catch (error) {
-  //     console.log('erro', error)
-  //   }
-  // }
-
+  // Envia o form para o BD
+  async sendInfo(form: any) {
+    try {
+      const docRef = await addDoc(
+        collection(this.db, 'ListaEgressos'),
+        form.value
+      );
+      console.log('Document written with ID: ', docRef.id);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
+  }
 }

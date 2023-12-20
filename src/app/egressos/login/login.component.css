@@ -1,36 +1,62 @@
+/*
+    cor-header: rgba(204,204,204,255)
+*/
+
 .login-container {
-    border: 1px solid #808080;
-    height: 200px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 13px 10px 15px 0px rgba(0,0,0,0.1);
+  border: 1px solid #808080;
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 13px 10px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    padding-left: 7px;
-    padding-top: 2px;
-    background-color: aliceblue;
-    height: 30px;
+  padding-left: 7px;
+  padding-top: 10px;
+  background-color: rgba(204, 204, 204, 255);
+  height: 30px;
+  font-weight: bold;
 }
 
 .infoLogin {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    align-items: center;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
 }
 
-.insereEmail{
-    display: flex;
-    flex-direction: column;
+.login-instrucao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
-.button-content{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 14px;
+.insereUsuario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.insereSenha {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
 }

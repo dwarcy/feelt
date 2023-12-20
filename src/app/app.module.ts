@@ -46,8 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     OpotunidadesComponent,
     MatDialogModule,
     FormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    OpotunidadesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

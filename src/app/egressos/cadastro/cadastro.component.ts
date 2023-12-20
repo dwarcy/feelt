@@ -1,19 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormsModule, Validators } from '@angular/forms';
-import { DadosCadastro } from 'src/app/shared/pacote_cadastro';
-
-import {
-  CollectionReference,
-  DocumentData,
-  Firestore,
-  addDoc,
-  collection,
-} from '@angular/fire/firestore';
-import { getDatabase, ref, set } from 'firebase/database';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { doc, getFirestore, setDoc } from 'firebase/firestore';
-import { getApp, initializeApp } from '@angular/fire/app';
-import { environment } from 'src/environment/environment.prod';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -22,13 +10,9 @@ import { environment } from 'src/environment/environment.prod';
 })
 export class CadastroComponent {
   formGroup!: FormGroup;
-  public db: any;
 
-  constructor(private firestore: Firestore) {
+  constructor(private firebaseService: FirebaseService) {
     this.formGroup = this.createForm();
-
-    const app = initializeApp(environment.firebase);
-    this.db = getFirestore(app);
   }
 
   createForm() {
@@ -54,15 +38,6 @@ export class CadastroComponent {
   }
 
   async onSubmit(form: FormGroup) {
-    try {
-      const docRef = await addDoc(
-        collection(this.db, 'ListaEgressos'),
-        form.value
-      );
-
-      console.log('Document written with ID: ', docRef.id);
-    } catch (e) {
-      console.error('Error adding document: ', e);
-    }
+    this.firebaseService.sendInfo(form);
   }
 }
