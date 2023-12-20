@@ -1,72 +1,72 @@
 <body>
-    <form class="dados-cadastro" (ngSubmit)="saveInformation()">
+    <form class="dados-cadastro" [formGroup]="formGroup" (submit)="onSubmit(formGroup)">
         <div class="titulo-cadastral">Dados Cadastro:</div>
         <div class="input-group">
             <div class="input-cpf-conclusao">
                 <div>
                     <label for="input-cpf" class="form-label">Seu CPF: </label>
-                    <input [(ngModel)]="infoUsuario.cpf" type="text" class="form-control" name="cpf" required>
+                    <input type="text" class="form-control" formControlName="cpf" name="cpf" >
                 </div>
                 <div>
                     <label for="input-conclusao" class="form-label">Ano que concluiu pós: </label>
-                    <input [(ngModel)]="infoUsuario.anoConclusao" type="text" class="form-control" name="conclusao" required>
+                    <input type="text" class="form-control" formControlName="anoConclusao" name="conclusao" >
                 </div>
             </div>
             <div class="input-nome">
                 <label for="input-nome" class="form-label">Seu nome completo: </label>
-                <input [(ngModel)]="infoUsuario.nomeCompleto" type="text" class="form-control" name="nome" required>
+                <input  type="text" class="form-control" formControlName="nomeCompleto" name="nome" >
             </div>
             <div class="input-email-orientador">
                 <div>
                     <label for="input-email" class="form-label">Seu atual email: </label>
-                    <input [(ngModel)]="infoUsuario.emailAtual" type="email" class="form-control" name="email" required>
+                    <input  type="email" class="form-control" formControlName="emailAtual" name="email" >
                 </div>
                 <div>
                     <label for="input-orientador" class="form-label">Nome orientador: </label>
-                    <input [(ngModel)]="infoUsuario.nomeOrientador" type="text" class="form-control" name="orientador" required>
+                    <input  type="text" class="form-control" formControlName="nomeOrientador" name="orientador" >
                 </div>
             </div>
             <div class="input-endereco">
                 <label for="input-endereco" class="form-label">Endereço: </label>
-                <input [(ngModel)]="infoUsuario.endereco" type="text" class="form-control" name="endereco" required>
+                <input type="text" class="form-control"formControlName="endereco" name="endereco" >
             </div>
             <div class="input-telefone-link">
                 <div>
                     <label for="input-telefone" class="form-label">Telefone: </label>
-                    <input [(ngModel)]="infoUsuario.telefone" type="text" class="form-control" name="telefone" required>
+                    <input  type="text" class="form-control" formControlName="telefone" name="telefone" >
                 </div>
                 <div>
                     <label for="input-link" class="form-label">Link: </label>
-                    <input [(ngModel)]="infoUsuario.link" type="text" class="form-control" name="link" required>
+                    <input type="text" class="form-control" formControlName="link" name="link" >
                 </div>
             </div>
         </div>
         <div class="radio-form-check">
             <label>Curso mais alto feito no PPGEELT-UFU: </label>
             <div class="opt-radios">
-                <div><input class="form-check-input" type="radio" [(ngModel)]="infoUsuario.curso" value="mestrado" name="curso"> <label>mestrado</label></div>
-                <div><input class="form-check-input" type="radio" [(ngModel)]="infoUsuario.curso" value="doutorado" name="curso"> <label>doutorado</label></div>
-                <div><input class="form-check-input" type="radio" [(ngModel)]="infoUsuario.curso" value="pos-doutorado" name="curso"> <label>pós-doutorado</label></div>
+                <div><input class="form-check-input" type="radio" formControlName="curso" value="mestrado" name="curso"> <label>mestrado</label></div>
+                <div><input class="form-check-input" type="radio"  formControlName="curso" value="doutorado" name="curso"> <label>doutorado</label></div>
+                <div><input class="form-check-input" type="radio"  formControlName="curso" value="pos-doutorado" name="curso"> <label>pós-doutorado</label></div>
             </div>
         </div>
         <div class="button">
-            <button type="submit" class="btn">Salvar Cadastro</button>
+            <button type="submit" class="btn"[disabled]="formGroup.invalid" >Salvar Cadastro</button>
         </div>
     </form>
 
     
     
-    <form  class="dados-acompanhamento" (ngSubmit)="saveInformation()">
+    <form  class="dados-acompanhamento" >
         <div class="titulo-cadastral">Dados Acompanhamento:</div>
         <div class="input-group">
             <div class="nome-empresa-e-local">
                 <div class="nome-empresa-ou-instituicao">
                     <label for="nome-empresa-ou-instituicao" class="form-label">Nome da empresa ou instituição onde está trabalhando:</label>
-                    <input [(ngModel)]="infoUsuario.nomeDaEmpresa" type="text" class="form-control" name="nome-empresa-ou-instituicao" required>
+                    <input type="text" class="form-control" name="nome-empresa-ou-instituicao" required>
                 </div>
                 <div class="local-trabalho">
                     <label for="tipo-de-local">Tipo de local de trabalho:</label>
-                    <select class="form-select" [(ngModel)]="infoUsuario.localDeTrabalho" name="tipo-de-local" required>
+                    <select class="form-select"  name="tipo-de-local" required>
                         <option selected>-</option>
                         <option>Instituição de ensino superior</option>
                         <option>Instituição de ensino técnico, médio ou afim</option>
@@ -81,7 +81,7 @@
             <div class="cargo-e-atividade">
                 <div class="cargo">
                     <label for="cargo">Cargo:</label>
-                    <select class="form-select">
+                    <select class="form-select"  name="cargo" required>
                         <option selected>-</option>
                         <option>Pesquisador</option>
                         <option>Professor</option>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="atividade-atual">
                     <label for="atividade">Sua atual atividade está relacionada com sua área de pesquisa na pós?</label>
-                    <select class="form-select">
+                    <select class="form-select" name="atividade" required>
                         <option selected>-</option>
                         <option>Sim, com alta relação</option>
                         <option>Sim, com média relação (indireta)</option>
@@ -109,7 +109,7 @@
             <div class="contribuicao-e-faixa">
                 <div class="contribuicao-da-pos">
                     <label for="contribuicao">Contribuição da sua pós na sua formação e inserção profissional:</label><br>
-                    <select class="form-select">
+                    <select class="form-select"  name="contribuicao" required>
                         <option selected>-</option>
                         <option>Alta</option>
                         <option>Média/alta</option>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="faixa-salarial">
                     <label for="salario">Faixa salarial bruta (será mantido sigilo):</label><br>
-                    <select class="form-select">
+                    <select class="form-select"  name="salario" required>
                         <option selected>-</option>
                         <option>Menos que 3 salários mínimos</option>
                         <option>3.1 a 5 salários mínimos</option>
@@ -134,7 +134,7 @@
             <div class="area-trabalho-e-localizacao">
                 <div class="area-trabalho">
                     <label for="area-de-trabalho-proxima">Área de trabalho mais próxima</label>
-                    <select class="form-select">
+                    <select class="form-select"  name="area-de-trabalho-proxima" required>
                         <option selected>-</option>
                         <option>Sistemas Elétricos de Potência</option>
                         <option>Eletrônica industrial, sistemas e controles eletrônicos</option>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="localizacao">
                     <label for="ocupacao-atual">Localização da sua ocupação atual:</label>
-                    <select class="form-select">
+                    <select class="form-select" name="ocupacao-atual" required>
                         <option selected>-</option>
                         <option>Não informado</option>
                         <option>Exterior</option>

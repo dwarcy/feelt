@@ -1,53 +1,68 @@
 import { Component } from '@angular/core';
-import { getDatabase } from '@angular/fire/database'
-import { FormsModule } from '@angular/forms';
-
+import { FormGroup, FormsModule, Validators } from '@angular/forms';
 import { DadosCadastro } from 'src/app/shared/pacote_cadastro';
+
+import {
+  CollectionReference,
+  DocumentData,
+  Firestore,
+  addDoc,
+  collection,
+} from '@angular/fire/firestore';
+import { getDatabase, ref, set } from 'firebase/database';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { doc, getFirestore, setDoc } from 'firebase/firestore';
+import { getApp, initializeApp } from '@angular/fire/app';
+import { environment } from 'src/environment/environment.prod';
 
 @Component({
   selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html', 
-  styleUrls: ['./cadastro.component.css']
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
+  formGroup!: FormGroup;
+  public db: any;
 
-  valorInput: string = ''
+  constructor(private firestore: Firestore) {
+    this.formGroup = this.createForm();
 
-  // Pacote a ser preenchido com as informações do usuário
-  infoUsuario: DadosCadastro = {
-    cpf: '',
-    anoConclusao: '',
-    nomeCompleto: '',
-    emailAtual: '',
-    nomeOrientador: '',
-    endereco: '',
-    telefone: '',
-    link: '',
-    curso: '',
-    nomeDaEmpresa: '',
-    localDeTrabalho: '',
-    cargo: '',
-    relacaoAtividadeAtual: '',
-    contribuicaoPos: '',
-    faixaSalarial: '',
-    areaProxima: '',
-    localizacaoOcupacao: ''
+    const app = initializeApp(environment.firebase);
+    this.db = getFirestore(app);
   }
 
-  constructor() {
-
+  createForm() {
+    return new FormGroup({
+      cpf: new FormControl('', [Validators.required]),
+      anoConclusao: new FormControl(''),
+      nomeCompleto: new FormControl(''),
+      emailAtual: new FormControl(''),
+      nomeOrientador: new FormControl(''),
+      endereco: new FormControl(''),
+      telefone: new FormControl(''),
+      link: new FormControl(''),
+      curso: new FormControl(''),
+      nomeDaEmpresa: new FormControl(''),
+      localDeTrabalho: new FormControl(''),
+      cargo: new FormControl(''),
+      relacaoAtividadeAtual: new FormControl(''),
+      contribuicaoPos: new FormControl(''),
+      faixaSalarial: new FormControl(''),
+      areaProxima: new FormControl(''),
+      localizacaoOcupacao: new FormControl(''),
+    });
   }
 
-  // Guarda as informações dos input dentro do pacote do usuário e armazena os dados no BD
-  saveInformation() {
-    console.log('salvando informação.')
-    console.log(this.infoUsuario)
+  async onSubmit(form: FormGroup) {
+    try {
+      const docRef = await addDoc(
+        collection(this.db, 'ListaEgressos'),
+        form.value
+      );
+
+      console.log('Document written with ID: ', docRef.id);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
   }
-
-  // 
-  // keepInformation() {
-  //   console.log('salvando informação.')
-  //   console.log(this.infoUsuario)
-  // }
-
 }

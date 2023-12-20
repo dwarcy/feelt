@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { LoginComponent } from './egressos/login/login.component';
 import { OpotunidadesComponent } from './egressos/opotunidades/opotunidades.component';
 import { EgressosComponent } from './egressos/egressos.component';
 import { MainComponent } from './main/main.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { MainComponent } from './main/main.component';
     HistoricComponent,
     LoginComponent,
     EgressosComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +42,12 @@ import { MainComponent } from './main/main.component';
       measurementId: "G-393BBGNJ3N"    
     })),
     provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
     OpotunidadesComponent,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
