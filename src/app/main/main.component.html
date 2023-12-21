@@ -1,59 +1,92 @@
 <body>
-    <!-- <header>
-      <span>
-        ESTE É O PORTAL DE EGRESSOS DA PÓS-GRADUAÇÃO EM ENGENHARIA ELÉTRICA NA UFU
-      </span>
-    </header> -->
-  
-    <div class="welcome-content">
-      <div class="user-content">
-        <label for="">Usuario:</label>
-        <i class="fa fa-user-circle" aria-hidden="true"></i>
-        <select class="drop">
-          <option value="" selected>Login/Logoff</option>
-          <option value="">Cadastro</option>
-        </select>
+  <div class="topo-conteudo">
+    <img src="assets/header.jpg" style="margin-left: 20px" alt="" />
+    <div class="login-usuario">
+      <span>Usuário:</span>
+      <select class="drop">
+        <option value="" selected>Login</option>
+        <option value="">Cadastro</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="welcome-content">
+    <div class="texto-intro">
+      <div class="titulo-intro">
+        <span style="font-size: 25px; font-family: 'RobotoThin'"
+          >PORTAL DE ACOMPANHAMENTO DOS</span
+        >
+        <span style="font-family: 'RobotoBold'; font-size: 35px"
+          >EGRESSOS DA PÓS GRADUAÇÃO</span
+        >
       </div>
-      <div class="user-image">
-        <img src="assets/banner.jpg  " alt="" />
+      <div class="outro-titulo">
+        <span
+          style="font-family: 'RobotoBold'; font-size: 45px; margin-left: 45px"
+          >EM ENG. ELÉTRICA DA UFU</span
+        >
       </div>
-    </div>
-  
-    <div class="video-content">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZPdk5GaIDjo?si=uPeZhxV8jb2EYq9F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  
-    <div class="links-content">
-      <a href="/login">
-        <img src="assets/icone_historico.jpg" alt="" />
-        
-      </a>
-      <a>
-        <img src="assets/icone_numeros.jpg" alt="" />
-        
-      </a>
-      <a (click)="openDialog('egressos/opportunity')">
-        <img src="assets/icone_emprego.jpg" alt="" />
-        
-      </a>
-      <a (click)="openDialog('egressos/follow-up')">
-        <img src="assets/icone_acompanhamento.jpg" alt="" />
-        
-      </a>
-      <a>
-        <img src="assets/icone_egressos.jpg" alt="" />
-        
-      </a>
-  
-    </div>
-  
-    <div class="descrition-content">
-      <span>
-        Este é o site de acompanhamento dos egressos da pós-graduação da UFU.
-        Nele, traçamos uma série de informações para o publico em geral e também
-        criamos uma estrutura de suporte para nossos egressos. Este é o site de
-        acompanhamento dos egressos da pós-graduação da UFU. Nele, traçamos uma
+      <span
+        class="descricao"
+        style="font-family: 'RobotoLight'; font-size: 14px"
+      >
+        Neste site pretendemos manter contato constante com todos nossos
+        egressos de mestrado, doutorado e pós-doutorado do programa de
+        pós-graduação em Engenharia Elétrica da Universidade Federal de
+        Uberlândia (PPGEELT). Além de coletar informações de nossos egressos
+        para entender melhor os impactos de nossa formação, pretendemos usar
+        estes números para balizar melhorias e trazer ao público em geral um
+        panorama do impacto do PPGEELT. Também fomentar novas oportunidades e
+        propor interações a toda sua comunidade.
       </span>
     </div>
-  </body>
-  
+    <div class="imagem-fundo">
+      <img
+        src="assets/banner.jpg"
+        style="
+          z-index: -1;
+          display: flex;
+          justify-self: center;
+          align-self: center;
+        "
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="video-content">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/x492-9mDbTo?si=2Q_nedSoVnNPpz4c"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="links-content">
+    <a href="/login">
+      <img src="assets/icone_historico.jpg" alt="" />
+    </a>
+    <a>
+      <img src="assets/icone_numeros.jpg" alt="" />
+    </a>
+    <a (click)="openDialog('egressos/opportunity')">
+      <img src="assets/icone_emprego.jpg" alt="" />
+    </a>
+    <a (click)="openDialog('egressos/follow-up')">
+      <img src="assets/icone_acompanhamento.jpg" alt="" />
+    </a>
+    <a>
+      <img src="assets/icone_egressos.jpg" alt="" />
+    </a>
+  </div>
+
+  <div class="rodape" style="font-family: 'RobotoRegular'; height: 40px">
+    <span
+      >2023-2024 | Mais informações em: ppgeelt@ufu.br ou (34) 3239-4701</span
+    >
+  </div>
+</body>
