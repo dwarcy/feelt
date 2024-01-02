@@ -54,6 +54,19 @@ body {
   background-color: #343434;
 }
 
+.texto-intro {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  margin-left: 40px;
+  margin-top: 1%;
+  width: 38%;
+
+  color: white;
+}
+
 .titulo-intro {
   display: flex;
   flex-direction: column;
@@ -66,17 +79,6 @@ body {
   flex-direction: row;
   margin-top: 0%;
   margin-bottom: 10px;
-}
-
-.texto-intro {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-
-  margin-left: 40px;
-
-  color: white;
 }
 
 .descricao {
