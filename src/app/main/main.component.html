@@ -1,6 +1,6 @@
 <body>
   <div class="topo-conteudo">
-    <img src="assets/header.jpg" style="margin-left: 20px" alt="" />
+    <img src="assets/header.jpg" style="margin-left: 1%" alt="" />
     <div class="login-usuario">
       <span>Usuário:</span>
       <select class="drop">
@@ -13,23 +13,13 @@
   <div class="welcome-content" style="position: relative">
     <div class="texto-intro" style="z-index: 2; position: absolute">
       <div class="titulo-intro">
-        <span style="font-size: 25px; font-family: 'RobotoThin'"
-          >PORTAL DE ACOMPANHAMENTO DOS</span
-        >
-        <span style="font-family: 'RobotoBold'; font-size: 35px"
-          >EGRESSOS DA PÓS GRADUAÇÃO</span
-        >
+        <span class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
       </div>
+      <span class="egresso-title">EGRESSOS DA PÓS GRADUAÇÃO</span>
       <div class="outro-titulo">
-        <span
-          style="font-family: 'RobotoBold'; font-size: 45px; margin-left: 45px"
-          >EM ENG. ELÉTRICA DA UFU</span
-        >
+        <span class="eng-title">EM ENG. ELÉTRICA DA UFU</span>
       </div>
-      <span
-        class="descricao"
-        style="font-family: 'RobotoLight'; font-size: 14px"
-      >
+      <span class="descricao">
         Neste site pretendemos manter contato constante com todos nossos
         egressos de mestrado, doutorado e pós-doutorado do programa de
         pós-graduação em Engenharia Elétrica da Universidade Federal de
@@ -41,8 +31,14 @@
       </span>
     </div>
 
-    <div class="imagem-fundo" style="transform: translateX(50%)">
-      <img src="assets/banner.jpg" />
+    <div class="imagem-fundo">
+      <img src="assets/banner.jpg" 
+      srcset="
+      assets/banner-smallest.jpg  320w,
+      assets/banner.jpg           908w,
+      assets/banner-widest.jpg   1919w
+    "
+      />
     </div>
   </div>
 

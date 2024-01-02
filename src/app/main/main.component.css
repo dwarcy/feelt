@@ -2,11 +2,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 120vh;
+  height: 100vh;
   width: 100%;
   margin: 0%;
 
-  font-family: "RobotoLight";
   color: #f5f5f5;
 }
 
@@ -32,6 +31,7 @@ body {
 
   gap: 10px;
   margin-right: 30px;
+  margin-left: 1%;
 }
 
 .drop {
@@ -47,6 +47,7 @@ body {
 
 .welcome-content {
   display: flex;
+  justify-content: end;
   flex-direction: row;
   width: 100%;
   margin-bottom: 60px;
@@ -60,73 +61,53 @@ body {
   align-content: center;
   justify-content: center;
 
-  margin-left: 40px;
-  margin-top: 1%;
-  width: 38%;
-
-  color: white;
+  margin-top: 3%;
+  margin-left: 2%;
 }
 
-.titulo-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  font-size: 100px;
+/* ==== TO BE CHANGED BY THE MEDIA QUERY ==== */
+/* ==== variaveis declaradas no styles.css ==== */
+.portal-title {
+  font-family: var(--ff-medium-title);
+  font-size: var(--fs-big);
 }
-.outro-titulo {
-  display: flex;
-  flex-direction: row;
-  margin-top: 0%;
-  margin-bottom: 10px;
+.egresso-title {
+  font-family: var(--ff-big-title);
+  font-size: var(--fs-bigger);
 }
-
+.eng-title {
+  font-family: var(--ff-big-title);
+  font-size: var(--fs-bigger);
+  margin-left: 3.3%;
+}
 .descricao {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  font-family: var(--ff-standard);
+  font-size: var(--fs-standard);
 
-  justify-content: flex-start;
-  align-content: flex-start;
+  width: 45%;
+  margin-top: 1%;
 
-  margin-top: 5px;
-
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: left;
 }
 
-.video-content {
+@media (max-width: 600px) {
+  .texto-intro {
+    margin-top: 15%;
+  }
+  .descricao {
+    visibility: hidden;
+  }
+}
+
+.imagem-fundo {
+  max-height: 100%;
+  overflow: hidden;
+  width: 70%;
+}
+
+.imagem-fundo img {
   width: 100%;
-  flex: 2;
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 80px;
-}
-.links-content {
-  flex: 2;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  margin-bottom: 80px;
-}
-.links-content a {
-  background-color: transparent;
-}
-
-.rodape {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 10px;
-  color: gray;
-
-  color: white;
-  background-color: #343434;
+  height: auto; /* This maintains the aspect ratio of the image */
+  display: block; /* Removes extra space below the image */
 }
