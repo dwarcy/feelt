@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireModule } from '@angular/fire/compat';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { OpotunidadesComponent } from './egressos/opotunidades/opotunidades.comp
 import { EgressosComponent } from './egressos/egressos.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RodapeComponent } from './rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -27,29 +28,32 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     EgressosComponent,
     MainComponent,
+    RodapeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp({
-      apiKey: "AIzaSyC3G08HEpx84FvYiPCX0mgLO1i1cEDPfyA",
-      authDomain: "pos-gradfeelt.firebaseapp.com",    
-      databaseURL: "https://pos-gradfeelt-default-rtdb.firebaseio.com",    
-      projectId: "pos-gradfeelt",    
-      storageBucket: "pos-gradfeelt.appspot.com",    
-      messagingSenderId: "845254377531",    
-      appId: "1:845254377531:web:b957efc001a347f2169c1e",
-      measurementId: "G-393BBGNJ3N"    
-    })),
+    provideFirebaseApp(() =>
+      initializeApp({
+        apiKey: 'AIzaSyC3G08HEpx84FvYiPCX0mgLO1i1cEDPfyA',
+        authDomain: 'pos-gradfeelt.firebaseapp.com',
+        databaseURL: 'https://pos-gradfeelt-default-rtdb.firebaseio.com',
+        projectId: 'pos-gradfeelt',
+        storageBucket: 'pos-gradfeelt.appspot.com',
+        messagingSenderId: '845254377531',
+        appId: '1:845254377531:web:b957efc001a347f2169c1e',
+        measurementId: 'G-393BBGNJ3N',
+      })
+    ),
     provideFirestore(() => getFirestore()),
     ReactiveFormsModule,
     OpotunidadesComponent,
     MatDialogModule,
     FormsModule,
     HttpClientModule,
-    OpotunidadesComponent
+    OpotunidadesComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

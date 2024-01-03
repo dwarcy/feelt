@@ -7,7 +7,7 @@
 
   /* font-sizes */
   /* --fs-supersmall: 0.1rem; */
-  /* --fs-small: 0.6rem; */
+  --fs-small: 0.6em;
   --fs-standard: 0.8em;
   --fs-big: 1.2em;
   --fs-bigger: 1.5em;
@@ -21,7 +21,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   :root {
     --fs-standard: 0.7em;
     --fs-big: 0.9em;
@@ -29,11 +29,33 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   :root {
     --fs-standard: 0.6em;
     --fs-big: 0.8em;
     --fs-bigger: 1em;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --fs-standard: 0.5em;
+    --fs-big: 0.7em;
+    --fs-bigger: 0.9em;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --fs-standard: 0.4em;
+    --fs-big: 0.6em;
+    --fs-bigger: 0.8em;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --fs-small: 0.5em;
   }
 }
 

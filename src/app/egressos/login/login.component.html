@@ -1,25 +1,22 @@
-<div class="login-container">
-  <header class="header">
-    <span style="font-family: 'RobotoRegular'">Login</span>
-  </header>
-
-  <div class="infoLogin">
-    <div class="login-instrucao">
-      <span>Esta área é reservada a egressos cadastrados.</span>
-      <span>Você precisa fazer login ou se cadastrar (se for um egresso).</span>
-    </div>
-    <div class="insereUsuario">
-      <label for="inputUsuario" class="form-label">Usuário:</label>
-      <input type="usuario" class="form-control" />
-    </div>
-    <div class="insereSenha">
-      <label for="inputSenha" class="form-label">Senha:</label>
-      <input type="senha" class="form-control" />
-    </div>
-  </div>
-
-  <div class="button-content">
-    <button (click)="loginSucesso()">Entrar</button>
-    <button>Cadastrar</button>
+<div class="wrapper">
+  <div class="form-box login">
+    <h2>Login</h2>
+    <form action="#">
+      <div class="input-box">
+        <span class="icon"></span>
+        <input type="text" required />
+        <label>Usuario</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"></span>
+        <input type="password" required />
+        <label>Senha</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" />Lembrar-me</label>
+        <a href="#">Esqueci a senha</a>
+      </div>
+      <button type="submit" class="btn">Entrar</button>
+    </form>
   </div>
 </div>

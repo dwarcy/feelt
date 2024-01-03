@@ -6,29 +6,28 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
-export class MainComponent implements OnInit{
+export class MainComponent implements OnInit {
+  constructor(private _dialog: MatDialog, private route: Router) {}
 
-  constructor(private _dialog: MatDialog, private route: Router) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  public openDialog(rota:string) {
-    const config: MatDialogConfig = new MatDialogConfig()
+  public openDialog(rota: string) {
+    const config: MatDialogConfig = new MatDialogConfig();
     config.width = 'auto';
     config.height = 'auto';
     config.autoFocus = true;
-    config.position = {}
-    let component = this._dialog.open(LoginComponent, config)
+    config.position = {};
+    // config.backdropClass = 'background-color: transparent; opacity: 0.5';
 
-    component.componentInstance.rota = rota
+    let component = this._dialog.open(LoginComponent, config);
 
-    component.afterClosed().subscribe(result => {
-      console.log(result)
-        this.route.navigate([result])
+    component.componentInstance.rota = rota;
+
+    component.afterClosed().subscribe((result) => {
+      console.log(result);
+      this.route.navigate([result]);
     });
   }
-
 }

@@ -1,0 +1,23 @@
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: #343434; /* Cor de fundo opcional para o rodapé */
+  color: white;
+}
+
+.rodape {
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--fs-small);
+
+  color: white;
+  background-color: #343434;
+}
