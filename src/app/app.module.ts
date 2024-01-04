@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,9 @@ import { EgressosComponent } from './egressos/egressos.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RodapeComponent } from './rodape/rodape.component';
+import { LoginService } from './services/auth/login.service';
+import { AuthGuard } from './services/auth/authGuard';
+import { environment } from 'src/environment/environment.prod';
 
 @NgModule({
   declarations: [
@@ -53,7 +58,12 @@ import { RodapeComponent } from './rodape/rodape.component';
     HttpClientModule,
     OpotunidadesComponent,
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    AuthGuard,
+    AngularFireModule,
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
