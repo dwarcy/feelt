@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -20,6 +20,7 @@ import {
 export class FirebaseService {
   formGroup!: FormGroup;
   public db: any;
+  isSignedIn: boolean = false;
 
   constructor(private firestore: Firestore) {
     // Inicializa Firebase e Firestore
@@ -41,7 +42,7 @@ export class FirebaseService {
   }
 
   // Percorre o BD
-  async queryBd() {
+  async queryBd(formUSer: FormGroup) {
     const usersRef = collection(this.firestore, 'ListaEgressos');
 
     // Creating a query
@@ -49,11 +50,21 @@ export class FirebaseService {
 
     try {
       const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, '=>', doc.data());
-      });
+
+      for (const doc of querySnapshot.docs) {
+        if (
+          doc.data()['cpf'] == formUSer.value.cpf &&
+          doc.data()['senha'] == formUSer.value.senha
+        ) {
+          localStorage.setItem('id', doc.id);
+          return (this.isSignedIn = true);
+        }
+      }
+
+      return (this.isSignedIn = false);
     } catch (error) {
       console.error('Error fetching documents:', error); // Log errors
+      return (this.isSignedIn = false);
     }
   }
 }

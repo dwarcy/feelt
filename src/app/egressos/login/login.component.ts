@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { LoginService } from 'src/app/services/auth/login.service';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -15,36 +16,43 @@ export class LoginComponent {
 
   constructor(
     public dialogRef: MatDialogRef<LoginComponent>,
-    public firebaseService: LoginService
+    public firebaseService: LoginService,
+    private fService: FirebaseService
   ) {
     this.formGroup = this.createForm();
   }
 
   createForm() {
     return new FormGroup({
-      cpf: new FormControl(''),
-      senha: new FormControl(''),
+      cpf: new FormControl('', [Validators.required]),
+      senha: new FormControl('', [Validators.required]),
     });
   }
 
   ngOnInit() {
-    if (localStorage.getItem('user') !== null) {
-      this.isSignedIn = true;
-    } else {
-      this.isSignedIn = false;
-    }
+    // if (localStorage.getItem('user') !== null) {
+    //   this.isSignedIn = true;
+    // } else {
+    //   this.isSignedIn = false;
+    // }
   }
 
   public async onSubmit(form: FormGroup) {
-    await this.firebaseService.login(
-      form.get('cpf')?.value,
-      form.get('senha')?.value
-    );
+    const resultado = await this.fService.queryBd(form);
+    this.isSignedIn = resultado;
 
-    if (this.firebaseService.isLogged) {
-      this.isSignedIn = true;
-    }
+    if (resultado) {
+      console.log(
+        'Login efetuado com sucesso: ',
+        resultado,
+        '\n',
+        localStorage.getItem('id')
+      );
+      this.redirecionaRota();
+    } else console.log('Não foi possível efetuar o login: ', resultado);
+  }
 
+  redirecionaRota() {
     this.dialogRef.close(this.rota);
   }
 

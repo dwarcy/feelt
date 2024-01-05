@@ -15,10 +15,10 @@ export class MainComponent implements OnInit {
   constructor(
     private _dialog: MatDialog,
     private route: Router,
-    public loginService: LoginService,
-    private firebase: FirebaseService
-  ) {
-    firebase.queryBd();
+    public loginService: LoginService
+  ) // private firebase: FirebaseService
+  {
+    // firebase.queryBd();
   }
 
   ngOnInit(): void {}
