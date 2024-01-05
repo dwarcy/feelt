@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormsModule, Validators } from '@angular/forms';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FirebaseService } from 'src/app/services/firebase.service';
+import { doc } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,9 +11,15 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class CadastroComponent {
   formGroup!: FormGroup;
+  USER_DOC: any;
 
   constructor(private firebaseService: FirebaseService) {
+    this.USER_DOC = this.firebaseService.buscaDoc();
     this.formGroup = this.createForm();
+  }
+
+  ngOnInit() {
+    const userId = localStorage.getItem('id');
   }
 
   createForm() {
@@ -35,6 +42,10 @@ export class CadastroComponent {
       areaProxima: new FormControl(''),
       localizacaoOcupacao: new FormControl(''),
     });
+
+    if (localStorage.getItem('id') != null) {
+      
+    }
   }
 
   async onSubmit(form: FormGroup) {

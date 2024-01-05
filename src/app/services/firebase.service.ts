@@ -11,7 +11,9 @@ import {
   query,
   where,
   getDocs,
+  getDoc,
   getFirestore,
+  doc,
 } from '@angular/fire/firestore';
 
 @Injectable({
@@ -66,5 +68,21 @@ export class FirebaseService {
       console.error('Error fetching documents:', error); // Log errors
       return (this.isSignedIn = false);
     }
+  }
+
+  // Busca um documento específico do BD a partir do ID guardado no LocalStorage
+  async buscaDoc() {
+    let docId = localStorage.getItem('id');
+
+    if (docId === null) {
+      throw new Error('docId is null');
+    }
+
+    const docRef = doc(this.db, 'ListaEgressos', docId);
+
+    const docSnap = await getDoc(docRef);
+    console.log('Document ' + docSnap.id + ' succeesfull retrieved');
+
+    return docSnap;
   }
 }
