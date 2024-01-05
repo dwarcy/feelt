@@ -41,7 +41,15 @@ export class LoginComponent {
       form.get('senha')?.value
     );
 
+    if (this.firebaseService.isLogged) {
+      this.isSignedIn = true;
+    }
+
     this.dialogRef.close(this.rota);
   }
-  close() {}
+
+  public close() {
+    let rotaClose = '';
+    this.dialogRef.close(rotaClose);
+  }
 }

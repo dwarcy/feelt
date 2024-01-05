@@ -21,7 +21,6 @@ import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginService } from './services/auth/login.service';
-import { AuthGuard } from './services/auth/authGuard';
 import { environment } from 'src/environment/environment.prod';
 
 @NgModule({
@@ -60,7 +59,6 @@ import { environment } from 'src/environment/environment.prod';
   ],
   providers: [
     LoginService,
-    AuthGuard,
     AngularFireModule,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
   ],

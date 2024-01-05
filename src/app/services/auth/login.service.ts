@@ -10,17 +10,7 @@ export class LoginService {
 
   constructor(public firebaseAuth: AngularFireAuth) {}
 
-  async login(cpf: string, senha: string) {
-    await this.firebaseAuth
-      .signInWithEmailAndPassword(cpf, senha)
-      .then((resposta) => {
-        this.isLogged = true;
-        localStorage.setItem('user', JSON.stringify(resposta.user));
-      });
-  }
-
-  logout() {
-    this.firebaseAuth.signOut();
-    localStorage.removeItem('user');
+  async login(usuario: string, password: string) {
+    // await this.firebaseAuth.
   }
 }

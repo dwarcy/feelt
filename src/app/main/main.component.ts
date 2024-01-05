@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { LoginComponent } from '../egressos/login/login.component';
 import { Router } from '@angular/router';
+import { FirebaseService } from '../services/firebase.service';
+import { LoginService } from '../services/auth/login.service';
 
 @Component({
   selector: 'app-main',
@@ -9,7 +11,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  constructor(private _dialog: MatDialog, private route: Router) {}
+  @Output() isLogout = new EventEmitter<void>();
+  constructor(
+    private _dialog: MatDialog,
+    private route: Router,
+    public loginService: LoginService,
+    private firebase: FirebaseService
+  ) {
+    firebase.queryBd();
+  }
 
   ngOnInit(): void {}
 
@@ -30,4 +40,9 @@ export class MainComponent implements OnInit {
       this.route.navigate([result]);
     });
   }
+
+  // public logout() {
+  //   this.loginService.logout();
+  //   this.isLogout.emit()
+  // }
 }
