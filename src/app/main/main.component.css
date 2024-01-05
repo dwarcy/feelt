@@ -7,7 +7,7 @@ body {
   margin: 0%;
   margin-bottom: 15%;
 
-  color: #f5f5f5;
+  color: #4d4d51;
 }
 
 .topo-conteudo {
@@ -53,7 +53,11 @@ body {
   width: 100%;
   margin-bottom: 60px;
 
-  background-color: #343434;
+  background-color: #ffffff;
+}
+
+.welcome-content .texto-intro {
+  
 }
 
 .texto-intro {
@@ -69,14 +73,21 @@ body {
 /* ==== TO BE CHANGED BY THE MEDIA QUERY ==== */
 /* ==== variaveis declaradas no styles.css ==== */
 .portal-title {
+  display: flex;
+  justify-self: flex-start;
   font-family: var(--ff-medium-title);
   font-size: var(--fs-big);
 }
 .egresso-title {
+  display: flex;
+  justify-self: center;
   font-family: var(--ff-big-title);
   font-size: var(--fs-bigger);
+  color: #ffcc00;
 }
 .eng-title {
+  display: flex;
+  justify-self: flex-end;
   font-family: var(--ff-big-title);
   font-size: var(--fs-bigger);
   margin-left: 2.8%;
