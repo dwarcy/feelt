@@ -14,12 +14,21 @@ export class CadastroComponent {
   USER_DOC: any;
 
   constructor(private firebaseService: FirebaseService) {
-    this.USER_DOC = this.firebaseService.buscaDoc();
     this.formGroup = this.createForm();
   }
 
-  ngOnInit() {
-    const userId = localStorage.getItem('id');
+  async ngOnInit() {
+    try {
+      const userId = localStorage.getItem('id');
+      const USER_DOC = await this.firebaseService.buscaDoc();
+      console.log(USER_DOC.data());
+
+      // if (localStorage.getItem('id') != null && this.USER_DOC != null) {
+      //   this.formGroup.setValue({
+      //     cpf: USER_DOC.data()['cpf'],
+      //   });
+      // }
+    } catch (error) {}
   }
 
   createForm() {
@@ -42,10 +51,6 @@ export class CadastroComponent {
       areaProxima: new FormControl(''),
       localizacaoOcupacao: new FormControl(''),
     });
-
-    if (localStorage.getItem('id') != null) {
-      
-    }
   }
 
   async onSubmit(form: FormGroup) {
