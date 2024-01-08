@@ -4,7 +4,10 @@
     <img src="assets/flag-brasil.svg" alt="Mudar para Português">
   </div>
   <div class="topo-conteudo">
-    <img src="assets/header.png" style="margin-left: 1%" alt="" />
+    <img src="assets/header.png" style="margin-left: 1%" alt="" srcset="
+    assets/header.png 1092w,
+    assets/header-50.png 320w
+    " />
     <div class="login-usuario">
       <span>Usuário:</span>
       <select class="drop">
@@ -39,7 +42,7 @@
       <img src="assets/banner.jpg" srcset="
           assets/banner-smallest.jpg  320w,
           assets/banner-standard.jpg  908w
-          assets/banner.jpg           745w,
+          assets/banner.jpg           1200w,
           assets/banner-widest.jpg   1919w
         " />
     </div>
@@ -53,31 +56,65 @@
   </div>
 
   <div class="links-content">
-    <div class="card" style="width: 18rem;">
-      <img src="assets/historico.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Aqui você encontrará a lista das pessoas que
-          se formaram no PPGEELT no decorrer dos
-          anos, seja no mestrado, seja no doutorado
-          ou no pós-doutorado de nosso programa.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="row">
+      <div class="card">
+        <a>
+          <img src="assets/lista_egressos.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <p class="card-text">Aqui você encontrará a lista das pessoas que
+            se formaram no PPGEELT no decorrer dos
+            anos, seja no mestrado, seja no doutorado
+            ou no pós-doutorado de nosso programa.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a (click)="openDialog('egressos/follow-up')">
+          <img src="assets/acompanhamento.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <p class="card-text">Aqui você encontrará a lista das pessoas que
+            se formaram no PPGEELT no decorrer dos
+            anos, seja no mestrado, seja no doutorado
+            ou no pós-doutorado de nosso programa.</p>
+        </div>
       </div>
     </div>
-    <!-- <a href="/login">
-      <img src="assets/historico.png" alt="" />
-    </a>
-    <a>
-      <img src="assets/numeros_pos.png" alt="" />
-    </a>
-    <a (click)="openDialog('egressos/opportunity')">
-      <img src="assets/opostunidades.png" alt="" />
-    </a>
-    <a (click)="openDialog('egressos/follow-up')">
-      <img src="assets/acompanhamento.png" alt="" />
-    </a>
-    <a>
-      <img src="assets/lista_egressos.png" alt="" />
-    </a> -->
+    <div class="row">
+      <div class="card">
+        <a (click)="openDialog('egressos/opportunity')">
+          <img src="assets/opostunidades.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <p class="card-text">Aqui você encontrará a lista das pessoas que
+            se formaram no PPGEELT no decorrer dos
+            anos, seja no mestrado, seja no doutorado
+            ou no pós-doutorado de nosso programa.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a>
+          <img src="assets/historico.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <p class="card-text">Aqui você encontrará a lista das pessoas que
+            se formaram no PPGEELT no decorrer dos
+            anos, seja no mestrado, seja no doutorado
+            ou no pós-doutorado de nosso programa.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a>
+          <img src="assets/numeros_pos.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <p class="card-text">Aqui você encontrará a lista das pessoas que
+            se formaram no PPGEELT no decorrer dos
+            anos, seja no mestrado, seja no doutorado
+            ou no pós-doutorado de nosso programa.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="rodape">
