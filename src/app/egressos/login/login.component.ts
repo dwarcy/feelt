@@ -29,13 +29,7 @@ export class LoginComponent {
     });
   }
 
-  ngOnInit() {
-    // if (localStorage.getItem('user') !== null) {
-    //   this.isSignedIn = true;
-    // } else {
-    //   this.isSignedIn = false;
-    // }
-  }
+  ngOnInit() {}
 
   public async onSubmit(form: FormGroup) {
     const resultado = await this.fService.queryBd(form);

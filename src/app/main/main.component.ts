@@ -16,10 +16,7 @@ export class MainComponent implements OnInit {
     private _dialog: MatDialog,
     private route: Router,
     public loginService: LoginService
-  ) // private firebase: FirebaseService
-  {
-    // firebase.queryBd();
-  }
+  ) {}
 
   ngOnInit(): void {}
 
@@ -40,9 +37,4 @@ export class MainComponent implements OnInit {
       this.route.navigate([result]);
     });
   }
-
-  // public logout() {
-  //   this.loginService.logout();
-  //   this.isLogout.emit()
-  // }
 }
