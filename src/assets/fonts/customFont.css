@@ -17,3 +17,13 @@
   font-family: "RobotoLight";
   src: url("src/assets/fonts/Roboto-Light.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "AdventPro";
+  src: url("src/assets/fonts/AdventPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("src/assets/fonts/Anton-Regular.ttf") format("truetype");
+}

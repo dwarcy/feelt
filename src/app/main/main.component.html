@@ -1,4 +1,8 @@
 <body>
+  <div class="lang">
+    <img src="assets/flag-uk.svg" alt="Switch to English">
+    <img src="assets/flag-brasil.svg" alt="Mudar para Português">
+  </div>
   <div class="topo-conteudo">
     <img src="assets/header.png" style="margin-left: 1%" alt="" />
     <div class="login-usuario">
@@ -15,9 +19,9 @@
       <div class="titulo-intro">
         <span class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
       </div>
-      <span class="egresso-title">EGRESSOS DA PÓS GRADUAÇÃO</span>
+      <span class="egresso-title">EGRESSOS DA PÓS GRADUACÃO</span>
       <div class="outro-titulo">
-        <span class="eng-title">EM ENG. ELÉTRICA DA UFU</span>
+        <span class="eng-title">EM ENG. ELETRICA DA UFU</span>
       </div>
       <span class="descricao">
         Neste site pretendemos manter contato constante com todos nossos
@@ -32,44 +36,48 @@
     </div>
 
     <div class="imagem-fundo">
-      <img
-        src="assets/banner.jpg"
-        srcset="
+      <img src="assets/banner.jpg" srcset="
           assets/banner-smallest.jpg  320w,
           assets/banner-standard.jpg  908w
           assets/banner.jpg           745w,
           assets/banner-widest.jpg   1919w
-        "
-      />
+        " />
     </div>
   </div>
 
   <div class="video-content">
-    <iframe
-      src="https://www.youtube.com/embed/9VXwaufU0QE?si=ookFFDPcDCYkpYRS"
-      title="YouTube video player"
+    <iframe src="https://www.youtube.com/embed/9VXwaufU0QE?si=ookFFDPcDCYkpYRS" title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
+      allowfullscreen></iframe>
   </div>
 
   <div class="links-content">
-    <a href="/login">
-      <img src="assets/icone_historico.jpg" alt="" />
+    <div class="card" style="width: 18rem;">
+      <img src="assets/historico.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Aqui você encontrará a lista das pessoas que
+          se formaram no PPGEELT no decorrer dos
+          anos, seja no mestrado, seja no doutorado
+          ou no pós-doutorado de nosso programa.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <!-- <a href="/login">
+      <img src="assets/historico.png" alt="" />
     </a>
     <a>
-      <img src="assets/icone_numeros.jpg" alt="" />
+      <img src="assets/numeros_pos.png" alt="" />
     </a>
     <a (click)="openDialog('egressos/opportunity')">
-      <img src="assets/icone_emprego.jpg" alt="" />
+      <img src="assets/opostunidades.png" alt="" />
     </a>
     <a (click)="openDialog('egressos/follow-up')">
-      <img src="assets/icone_acompanhamento.jpg" alt="" />
+      <img src="assets/acompanhamento.png" alt="" />
     </a>
     <a>
-      <img src="assets/icone_egressos.jpg" alt="" />
-    </a>
+      <img src="assets/lista_egressos.png" alt="" />
+    </a> -->
   </div>
 
   <div class="rodape">

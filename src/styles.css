@@ -2,38 +2,38 @@
 :root {
   /* font-family */
   --ff-standard: "RobotoLight";
-  --ff-medium-title: "RobotoThin";
-  --ff-big-title: "RobotoBold";
+  --ff-medium-title: "AdventPro";
+  --ff-big-title: "Anton";
 
   /* font-sizes */
   /* --fs-supersmall: 0.1rem; */
   --fs-small: 0.6em;
-  --fs-standard: 0.8em;
+  --fs-standard: 0.9em;
   --fs-big: 1.2em;
-  --fs-bigger: 1.5em;
+  --fs-bigger: 1.8em;
 }
 
 @media (min-width: 1500px) {
   :root {
     --fs-standard: 0.8em;
     --fs-big: 1em;
-    --fs-bigger: 1.3em;
+    --fs-bigger: 1.6em;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   :root {
     --fs-standard: 0.7em;
     --fs-big: 0.9em;
-    --fs-bigger: 1.1em;
+    --fs-bigger: 1.5em;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   :root {
     --fs-standard: 0.6em;
     --fs-big: 0.8em;
-    --fs-bigger: 1em;
+    --fs-bigger: 1.3em;
   }
 }
 
