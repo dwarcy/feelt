@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -22,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginService } from './services/auth/login.service';
 import { environment } from 'src/environment/environment.prod';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AlteraSenhaComponent } from './egressos/cadastro/altera-senha/altera-senha.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,11 @@ import { environment } from 'src/environment/environment.prod';
     EgressosComponent,
     MainComponent,
     RodapeComponent,
+    AlteraSenhaComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     provideFirebaseApp(() =>
       initializeApp({
@@ -56,6 +61,7 @@ import { environment } from 'src/environment/environment.prod';
     FormsModule,
     HttpClientModule,
     OpotunidadesComponent,
+    MatSnackBarModule,
   ],
   providers: [
     LoginService,

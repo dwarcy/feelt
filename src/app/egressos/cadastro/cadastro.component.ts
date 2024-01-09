@@ -1,8 +1,13 @@
 import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
 import { FormGroup, FormsModule, Validators } from '@angular/forms';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { doc } from '@angular/fire/firestore';
+import { AlteraSenhaComponent } from './altera-senha/altera-senha.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -13,10 +18,14 @@ export class CadastroComponent implements AfterViewChecked {
   formGroup!: FormGroup;
   USER_DOC: any;
   infoUpdated: boolean = false;
+  rota: string = '';
 
   constructor(
     private firebaseService: FirebaseService,
-    private readonly changeDetectorRef: ChangeDetectorRef
+    private readonly changeDetectorRef: ChangeDetectorRef,
+    private snack: MatSnackBar,
+    private _dialog: MatDialog,
+    private route: Router
   ) {
     firebaseService.infoChanged.subscribe(() => {
       this.infoUpdated = true;
@@ -66,5 +75,29 @@ export class CadastroComponent implements AfterViewChecked {
 
   async onSubmit(form: FormGroup) {
     this.firebaseService.sendInfo(form);
+    this.snack.open('Atualizado!', '', {
+      horizontalPosition: 'left',
+      verticalPosition: 'bottom',
+      panelClass: ['success-snackbar'],
+      duration: 2000,
+    });
+  }
+
+  public openDialog(rota: string) {
+    const config: MatDialogConfig = new MatDialogConfig();
+    config.width = 'auto';
+    config.height = 'auto';
+    config.autoFocus = true;
+    config.position = {};
+    // config.backdropClass = 'background-color: transparent; opacity: 0.5';
+
+    let component = this._dialog.open(AlteraSenhaComponent, config);
+
+    component.componentInstance.rota = rota;
+
+    component.afterClosed().subscribe((result) => {
+      console.log(result);
+      this.route.navigate([result]);
+    });
   }
 }

@@ -38,10 +38,27 @@ export class FirebaseService {
   async sendInfo(form: any) {
     const id = localStorage.getItem('id');
     const userID = id ? id : '';
+
     try {
       // Collection ref
       await setDoc(doc(this.db, 'ListaEgressos', userID), form.value);
 
+      // Sucesso na atualização de informação
+      console.log('\nInformação atualizada com sucesso. Documento: ', id);
+      this.infoChanged.next(true);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
+  }
+
+  async alteraSenha(form: any) {
+    const id = localStorage.getItem('id');
+    const userID = id ? id : '';
+    const senhaNova = form.value.senha;
+
+    try {
+      const docRef = doc(this.db, 'ListaEgressos', userID);
+      await updateDoc(docRef, { senha: senhaNova });
       // Sucesso na atualização de informação
       console.log('\nInformação atualizada com sucesso. Documento: ', id);
       this.infoChanged.next(true);

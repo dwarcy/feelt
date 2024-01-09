@@ -126,6 +126,11 @@
       </div>
     </div>
     <div class="button">
+      <button type="button" (click)="openDialog('')" class="btn-senha">
+        Alterar Senha
+      </button>
+    </div>
+    <div class="button">
       <button type="submit" class="btn">Salvar Cadastro</button>
     </div>
   </form>
@@ -311,12 +316,4 @@
       <button type="submit" class="btn">Salvar Acompanhamento</button>
     </div>
   </form>
-  <div class="popup-sucesso" *ngIf="infoUpdated">
-    <div class="alert alert-success d-flex align-items-center" role="alert">
-      <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:">
-        <use xlink:href="#check-circle-fill" />
-      </svg>
-      <div>An example success alert with an icon</div>
-    </div>
-  </div>
 </body>
