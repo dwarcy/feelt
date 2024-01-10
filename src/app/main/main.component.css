@@ -7,7 +7,9 @@ body {
   margin: 0%;
   margin-bottom: 15%;
 
-  color: #4d4d51;
+  color: white;
+}
+a {
 }
 
 .lang {
@@ -33,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -58,7 +60,6 @@ body {
   border-radius: 5px;
   color: white;
 }
-
 .drop:focus {
   background-color: #343434;
   color: white;
@@ -66,22 +67,24 @@ body {
 
 .welcome-content {
   display: flex;
-  justify-content: end;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 100%;
+
+  padding: 5%;
   margin-bottom: 60px;
 
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
-.texto-intro {
+.texto {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 
   gap: 3px;
-  transform: translateY(30%);
   margin-left: 2%;
 }
 
@@ -100,7 +103,7 @@ body {
   font-family: var(--ff-big-title);
   font-size: var(--fs-bigger);
   margin-left: 2%;
-  color: #ffcc00;
+  color: white;
 }
 
 .eng-title {
@@ -108,18 +111,7 @@ body {
   justify-self: flex-end;
   font-family: var(--ff-big-title);
   font-size: var(--fs-bigger);
-  margin-left: 8%;
-}
-
-.descricao {
-  font-family: var(--ff-standard);
-  font-size: var(--fs-standard);
-
-  width: 45%;
-  margin-top: 1%;
-
-  line-height: 1.5;
-  text-align: left;
+  margin-left: 4.5%;
 }
 
 @media (max-width: 600px) {
@@ -127,24 +119,29 @@ body {
     margin-top: 8%;
     transform: translateY(0%);
   }
-
-  .descricao {
-    visibility: hidden;
-  }
 }
 
-.imagem-fundo {
-  max-height: 100%;
-  overflow: hidden;
-  width: 70%;
-}
+.texto-tela {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-.imagem-fundo img {
-  width: 100%;
-  height: auto;
-  /* This maintains the aspect ratio of the image */
-  display: block;
-  /* Removes extra space below the image */
+  justify-content: center;
+  align-content: center;
+
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-bottom: 60px;
+  color: #000000;
+}
+.texto-tela span {
+  font-family: var(--ff-standard);
+  font-size: var(--fs-big);
+
+  width: 60%;
+
+  text-align: center;
+  line-height: 1.5;
 }
 
 .video-content {
@@ -168,78 +165,69 @@ body {
 }
 
 .links-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-content: center;
-  width: 100%;
-}
-
-.links-content .card {
-  width: 18em;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 2em;
-  background-color: #cccccc;
-  border: 3px solid #b3b3b3;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-
-  font-size: var(--fs-standard);
   font-family: var(--ff-standard);
-}
-
-.links-content img {
-  border-radius: 3%;
-  justify-self: center;
-}
-
-.links-content a {
-  display: flex;
-  justify-content: center;
-}
-
-@media (max-width: 1080px) {
-  .links-content img {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .links-content .card {
-    width: 15em;
-    padding: 0.8em;
-  }
-
-  .links-content img {
-    width: 90%;
-  }
-}
-
-.row {
+  font-size: var(--fs-big);
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
+
+  width: 100%;
+  padding-top: 8%;
+  padding-bottom: 8%;
   gap: 4%;
 
-  margin-left: 10%;
-  padding: 4%;
-  width: 70%;
+  background-color: #eeeeee;
+  color: black;
 }
 
-.row:first-child {
-  background-color: #dedddd;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 14%;
+}
+.card img {
+  border-radius: 5%;
+}
+.card p {
+  display: flex;
+  flex-wrap: wrap;
+
+  text-align: justify;
+  line-height: 1.2;
+}
+.card .titulo {
+  font-family: var(--ff-standard-inside);
+  font-size: medium;
+
+  display: flex;
+}
+.card .saiba-mais {
+  align-self: flex-start;
+}
+.card a {
+  color: #010536;
+  text-decoration: none;
+
+  font-family: var(--ff-standard-inside);
+  font-size: var(--fs-big);
+}
+.card .saiba-mais:hover .Angle-Right::before {
+  color: white;
 }
 
-@media (max-with: 450px) {
-  .card p {
-    visibility: hidden;
-  }
+.fontawesomeicon::before {
+  display: inline-block;
+  text-rendering: auto;
+}
+
+.Angle-Right::before {
+  font: var(--fa-font-solid);
+  content: " \f105";
+  color: #010536;
 }
 
 .rodape {

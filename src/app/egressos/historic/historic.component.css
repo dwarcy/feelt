@@ -1,52 +1,68 @@
 body {
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .center-content {
-    width: 70%;
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .center-content > span {
-    text-align: center;
-    margin-inline: 50px;
-  }
-  .researchers-content {
-    width: 70%;
-  
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-  }
-  .information {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .researchs {
-    min-width: 500px;
-    height: 60px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    display: flex;
-    gap: 6px;
-    padding: 10px;
-  }
-  .researchs > div {
-    display: flex;
-    flex-direction: column;
-  }
-  .researchs > img {
-    height: 60px;
-    width: 60px;
-  }
-  
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-family: var(--ff-medium-title);
+  font-size: var(--fs-bigger);
+}
+
+.center-content {
+  width: 70%;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.center-content > span {
+  font-family: var(--ff-standard);
+  font-size: var(--fs-big);
+
+  text-align: center;
+  margin-inline: 50px;
+}
+
+.researchers-content {
+  width: 70%;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.information {
+  font-family: var(--ff-standard);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.researchs {
+  min-width: 500px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.researchs > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-weight: 500;
+}
+
+.researchs > img {
+  height: 60px;
+  width: 60px;
+}

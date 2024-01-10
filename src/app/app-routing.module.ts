@@ -4,24 +4,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { EgressosComponent } from './egressos/egressos.component';
 import { HistoricComponent } from './egressos/historic/historic.component';
-import { OpotunidadesComponent } from './egressos/opotunidades/opotunidades.component';
 import { CadastroComponent } from './egressos/cadastro/cadastro.component';
+import { ListaegressosComponent } from './egressos/listaegressos/listaegressos.component';
+import { NumerosComponent } from './egressos/numeros/numeros.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   {
     path: 'egressos',
     component: EgressosComponent,
-    children: [{ path: 'historic', component: HistoricComponent },
-      { path: 'opportunity', component:  OpotunidadesComponent},
+    children: [
+      { path: 'historic', component: HistoricComponent },
+      { path: 'numbers', component: NumerosComponent },
       { path: 'follow-up', component: CadastroComponent },
-      { path: 'graduates', component: EgressosComponent }
+      { path: 'graduates', component: ListaegressosComponent },
     ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

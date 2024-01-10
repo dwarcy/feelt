@@ -4,16 +4,9 @@
     <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
   </div>
   <div class="topo-conteudo">
-    <img
-      src="assets/header.png"
-      style="margin-left: 1%"
-      alt=""
-      srcset="
-        assets/header-50.png    400w,
-        assets/header.png      1400w,
-        assets/header-full.png 1900w
-      "
-    />
+    <a href="">
+      <img src="assets/header.png" style="margin-left: 5%" alt="" />
+    </a>
     <div class="login-usuario">
       <span>Usuário:</span>
       <select class="drop">
@@ -23,38 +16,24 @@
     </div>
   </div>
 
-  <div class="welcome-content" style="position: relative">
-    <div class="texto-intro" style="z-index: 2; position: absolute">
-      <div class="titulo-intro">
-        <span class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
-      </div>
+  <div class="welcome-content">
+    <div class="texto">
+      <span class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
       <span class="egresso-title">EGRESSOS DA PÓS GRADUACÃO</span>
-      <div class="outro-titulo">
-        <span class="eng-title">EM ENG. ELETRICA DA UFU</span>
-      </div>
-      <span class="descricao">
-        Neste site pretendemos manter contato constante com todos nossos
-        egressos de mestrado, doutorado e pós-doutorado do programa de
-        pós-graduação em Engenharia Elétrica da Universidade Federal de
-        Uberlândia (PPGEELT). Além de coletar informações de nossos egressos
-        para entender melhor os impactos de nossa formação, pretendemos usar
-        estes números para balizar melhorias e trazer ao público em geral um
-        panorama do impacto do PPGEELT. Também fomentar novas oportunidades e
-        propor interações a toda sua comunidade.
-      </span>
+      <span class="eng-title">EM ENG. ELETRICA DA UFU</span>
     </div>
+  </div>
 
-    <div class="imagem-fundo">
-      <img
-        src="assets/banner.jpg"
-        srcset="
-          assets/banner-smallest.jpg  320w,
-          assets/banner-standard.jpg  1200w
-          assets/banner.jpg           1800w,
-          assets/banner-widest.jpg   1919w
-        "
-      />
-    </div>
+  <div class="texto-tela">
+    <span>
+      Neste site pretendemos manter contato constante com todos nossos egressos
+      de mestrado, doutorado e pós-doutorado do programa de pós-graduação em
+      Engenharia Elétrica da Universidade Federal de Uberlândia (PPGEELT). Além
+      de coletar informações de nossos egressos para entender melhor os impactos
+      de nossa formação, pretendemos usar estes números para balizar melhorias e
+      trazer ao público em geral um panorama do impacto do PPGEELT. Também
+      fomentar novas oportunidades e propor interações a toda sua comunidade.
+    </span>
   </div>
 
   <div class="video-content">
@@ -68,68 +47,80 @@
   </div>
 
   <div class="links-content">
-    <div class="row">
-      <div class="card">
-        <a>
-          <img src="assets/lista_egressos.png" class="card-img-top" alt="..." />
-        </a>
-        <div class="card-body">
-          <p class="card-text">
-            Aqui você encontrará a lista das pessoas que se formaram no PPGEELT
-            no decorrer dos anos, seja no mestrado, seja no doutorado ou no
-            pós-doutorado de nosso programa.
-          </p>
-        </div>
+    <div class="card">
+      <a href="egressos/graduates">
+        <img src="assets/lista_egressos.png" class="card-img-top" alt="..." />
+      </a>
+      <div class="card-body">
+        <p class="titulo">Lista de Egressos</p>
+        <p class="card-text">
+          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
+          decorrer dos anos, seja no mestrado, seja no doutorado ou no
+          pós-doutorado de nosso programa.
+        </p>
       </div>
-      <div class="card">
-        <a (click)="openDialog('egressos/follow-up')">
-          <img src="assets/acompanhamento.png" class="card-img-top" alt="..." />
+      <div class="saiba-mais">
+        <a href="egressos/graduates">
+          Saiba Mais
+          <span class="Angle-Right fontawesomeicon"></span>
         </a>
-        <div class="card-body">
-          <p class="card-text">
-            Aqui você encontrará a lista das pessoas que se formaram no PPGEELT
-            no decorrer dos anos, seja no mestrado, seja no doutorado ou no
-            pós-doutorado de nosso programa.
-          </p>
-        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="card">
-        <a (click)="openDialog('egressos/opportunity')">
-          <img src="assets/opostunidades.png" class="card-img-top" alt="..." />
-        </a>
-        <div class="card-body">
-          <p class="card-text">
-            Aqui você encontrará a lista das pessoas que se formaram no PPGEELT
-            no decorrer dos anos, seja no mestrado, seja no doutorado ou no
-            pós-doutorado de nosso programa.
-          </p>
-        </div>
+    <div class="card">
+      <a (click)="openDialog('egressos/follow-up')">
+        <img src="assets/acompanhamento.png" class="card-img-top" alt="..." />
+      </a>
+      <div class="card-body">
+        <p class="titulo">Acompanhamento dos Egressos</p>
+        <p class="card-text">
+          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
+          decorrer dos anos, seja no mestrado, seja no doutorado ou no
+          pós-doutorado de nosso programa.
+        </p>
       </div>
-      <div class="card">
-        <a>
-          <img src="assets/historico.png" class="card-img-top" alt="..." />
+      <div class="saiba-mais">
+        <a (click)="openDialog('egressos/follow-up')">
+          Saiba Mais
+          <span class="Angle-Right fontawesomeicon"></span>
         </a>
-        <div class="card-body">
-          <p class="card-text">
-            Aqui você encontrará a lista das pessoas que se formaram no PPGEELT
-            no decorrer dos anos, seja no mestrado, seja no doutorado ou no
-            pós-doutorado de nosso programa.
-          </p>
-        </div>
       </div>
-      <div class="card">
-        <a>
-          <img src="assets/numeros_pos.png" class="card-img-top" alt="..." />
+    </div>
+    <div class="card">
+      <a href="egressos/historic">
+        <img src="assets/historico.png" class="card-img-top" alt="..." />
+      </a>
+      <div class="card-body">
+        <p class="titulo">Histórico da Pós</p>
+        <p class="card-text">
+          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
+          decorrer dos anos, seja no mestrado, seja no doutorado ou no
+          pós-doutorado de nosso programa.
+        </p>
+      </div>
+      <div class="saiba-mais">
+        <a href="egressos/historic">
+          Saiba Mais
+          <span class="Angle-Right fontawesomeicon"></span>
         </a>
-        <div class="card-body">
-          <p class="card-text">
-            Aqui você encontrará a lista das pessoas que se formaram no PPGEELT
-            no decorrer dos anos, seja no mestrado, seja no doutorado ou no
-            pós-doutorado de nosso programa.
-          </p>
-        </div>
+      </div>
+    </div>
+    <div class="card">
+      <a href="egressos/numbers">
+        <img src="assets/numeros_pos.png" class="card-img-top" alt="..." />
+      </a>
+      <div class="card-body">
+        <p class="titulo">Números da Pós</p>
+        <p class="card-text">
+          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
+          decorrer dos anos, seja no mestrado, seja no doutorado ou no
+          pós-doutorado de nosso programa.
+        </p>
+      </div>
+      <div class="saiba-mais">
+        <a href="egressos/numbers">
+          Saiba Mais
+          <span class="Angle-Right fontawesomeicon"></span>
+        </a>
       </div>
     </div>
   </div>

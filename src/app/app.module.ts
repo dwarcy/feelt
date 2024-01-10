@@ -16,7 +16,6 @@ import { CadastroComponent } from './egressos/cadastro/cadastro.component';
 import { HeaderComponent } from './egressos/header/header.component';
 import { HistoricComponent } from './egressos/historic/historic.component';
 import { LoginComponent } from './egressos/login/login.component';
-import { OpotunidadesComponent } from './egressos/opotunidades/opotunidades.component';
 import { EgressosComponent } from './egressos/egressos.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +24,8 @@ import { LoginService } from './services/auth/login.service';
 import { environment } from 'src/environment/environment.prod';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlteraSenhaComponent } from './egressos/cadastro/altera-senha/altera-senha.component';
+import { NumerosComponent } from './egressos/numeros/numeros.component';
+import { ListaegressosComponent } from './egressos/listaegressos/listaegressos.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { AlteraSenhaComponent } from './egressos/cadastro/altera-senha/altera-se
     MainComponent,
     RodapeComponent,
     AlteraSenhaComponent,
+    NumerosComponent,
+    ListaegressosComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,11 +59,9 @@ import { AlteraSenhaComponent } from './egressos/cadastro/altera-senha/altera-se
     ),
     provideFirestore(() => getFirestore()),
     ReactiveFormsModule,
-    OpotunidadesComponent,
     MatDialogModule,
     FormsModule,
     HttpClientModule,
-    OpotunidadesComponent,
     MatSnackBarModule,
   ],
   providers: [

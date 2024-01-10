@@ -2,6 +2,7 @@
 :root {
   /* font-family */
   --ff-standard: "RobotoLight";
+  --ff-standard-inside: "RobotoBold";
   --ff-medium-title: "AdventPro";
   --ff-big-title: "Anton";
 
@@ -62,4 +63,8 @@
 body {
   margin: 0%;
   background-color: #f5f5f5;
+}
+
+.arrow::before {
+  content: "\f105";
 }

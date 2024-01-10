@@ -1,8 +1,9 @@
 header {
-  padding-block: 5px;
+  /* padding-block: 5px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 30px;
 
   font-family: var(--ff-medium-title);
   font-size: var(--fs-big);
