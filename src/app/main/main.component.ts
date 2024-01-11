@@ -4,6 +4,7 @@ import { LoginComponent } from '../egressos/login/login.component';
 import { Router } from '@angular/router';
 import { FirebaseService } from '../services/firebase.service';
 import { LoginService } from '../services/auth/login.service';
+import { VideplayerComponent } from './videplayer/videplayer.component';
 
 @Component({
   selector: 'app-main',
@@ -36,5 +37,21 @@ export class MainComponent implements OnInit {
       console.log(result);
       this.route.navigate([result]);
     });
+  }
+
+  public openVideoDialog() {
+    const config: MatDialogConfig = new MatDialogConfig();
+    config.width = 'auto';
+    config.height = 'auto';
+    config.autoFocus = true;
+    config.position = {};
+
+    config.panelClass = 'teste';
+
+    let component = this._dialog.open(VideplayerComponent, config);
+  }
+
+  public mudaRota(rota: string) {
+    this.route.navigate([rota]);
   }
 }

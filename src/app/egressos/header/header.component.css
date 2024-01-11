@@ -1,37 +1,3 @@
-header {
-  /* padding-block: 5px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-
-  font-family: var(--ff-medium-title);
-  font-size: var(--fs-big);
-  background-color: gray;
-  color: white;
-}
-
-header > span {
-  font-weight: 500;
-}
-
-.navigation-content {
-  height: 50px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  font-family: var(--ff-standard);
-  font-size: var(--fs-big);
-}
-
-.navigation-content > a {
-  color: black;
-  font-weight: 500;
-}
-
 .lang {
   width: 100%;
   height: 20px;
@@ -46,41 +12,63 @@ header > span {
 
 .lang img {
   width: 30px;
+  height: 20px;
   margin: 2px;
 }
 
-.topo-conteudo {
+.navbar {
+  font-family: var(--ff-text-regular);
+  font-size: 1.3em;
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 3%;
   width: 100%;
-  height: 50px;
+  height: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
-
   border-bottom: 4px solid #6699ff;
   background-color: #010536;
   color: white;
 }
 
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  gap: 2%;
+}
+
+.nav > span {
+  display: flex;
+  align-items: center;
+}
+
+.nav > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .login-usuario {
   display: flex;
   flex-direction: row;
-
   align-content: center;
 
-  gap: 10px;
   margin-right: 1%;
+  gap: 10px;
 }
 
 .drop {
+  font-family: var(--ff-text-regular);
+  font-size: medium;
   background-color: transparent;
   border: white 1px solid;
   border-radius: 5px;
   color: white;
 }
-
 .drop:focus {
   background-color: #343434;
   color: white;

@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlteraSenhaComponent } from './egressos/cadastro/altera-senha/altera-senha.component';
 import { NumerosComponent } from './egressos/numeros/numeros.component';
 import { ListaegressosComponent } from './egressos/listaegressos/listaegressos.component';
+import { VideplayerComponent } from './main/videplayer/videplayer.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ListaegressosComponent } from './egressos/listaegressos/listaegressos.c
     AlteraSenhaComponent,
     NumerosComponent,
     ListaegressosComponent,
+    VideplayerComponent,
   ],
   imports: [
     BrowserModule,

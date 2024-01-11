@@ -3,10 +3,27 @@
     <img src="assets/flag-uk.svg" alt="Switch to English" />
     <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
   </div>
-  <div class="topo-conteudo">
-    <a href="">
-      <img src="assets/header.png" style="margin-left: 5%" alt="" />
-    </a>
+
+  <!-- <nav class="navbar">
+    <div style="display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        width: 30%;
+        gap: 8%;">
+      <a href="">
+        <img src="assets/header.png" style="margin-left: 5%" alt="" />
+      </a>
+      <div class="nav">
+        <span class="nav-item" (click)="mudaRota('egressos/graduates')"
+          >Egressos</span>
+        <span class="nav-item" (click)="openDialog('egressos/follow-up')"
+          >Acompanhamento</span>
+        <span class="nav-item" (click)="mudaRota('egressos/historic')"
+          >Histórico</span>
+        <span class="nav-item" (click)="mudaRota('egressos/numbers')"
+          >Números</span>
+      </div>
     <div class="login-usuario">
       <span>Usuário:</span>
       <select class="drop">
@@ -14,17 +31,10 @@
         <option value="">Logout</option>
       </select>
     </div>
-  </div>
-  <header>
-    <span>
-      PORTAL DE EGRESSOS DA PÓS-GRADUAÇÃO EM ENGRENHARIA ELÉTRICA DA UFU
-    </span>
-  </header>
-  <div class="navigation-content">
-    <a [routerLink]="'historic'"> HISTÓRICO </a>
-    <a [routerLink]="'numbers'"> NÚMEROS </a
-    ><a [routerLink]="'opportunity'"> OPORTUNIDADES </a>
-    <a [routerLink]="'follow-up'">ACOMPANHAMENTO </a
-    ><a [routerLink]="'graduates'"> EGRESSOS </a>
-  </div>
+  </nav> -->
+
+  <nav class="navbar">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;"></div>
+  </nav>
+
 </div>

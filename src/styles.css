@@ -1,16 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  /* font-family */
-  --ff-standard: "RobotoLight";
-  --ff-standard-inside: "RobotoBold";
+  /* font-family for title */
   --ff-medium-title: "AdventPro";
   --ff-big-title: "Anton";
+
+  /* font-family for body */
+  --ff-standard: "RobotoLight";
+  --ff-standard-inside: "RobotoBold";
+  --ff-text-light: "GontserratLight";
+  --ff-text-regular: "GontserratRegular";
+  --ff-text-medium: "GontserratMedium";
 
   /* font-sizes */
   /* --fs-supersmall: 0.1rem; */
   --fs-small: 0.6em;
   --fs-standard: 0.9em;
-  --fs-big: 1.2em;
+  --fs-big: 1.5em;
   --fs-bigger: 1.8em;
 }
 

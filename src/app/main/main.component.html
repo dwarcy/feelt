@@ -3,10 +3,36 @@
     <img src="assets/flag-uk.svg" alt="Switch to English" />
     <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
   </div>
-  <div class="topo-conteudo">
-    <a href="">
-      <img src="assets/header.png" style="margin-left: 5%" alt="" />
-    </a>
+
+  <nav class="navbar">
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        width: 30%;
+        gap: 8%;
+      "
+    >
+      <a href="">
+        <img src="assets/header.png" style="margin-left: 5%" alt="" />
+      </a>
+      <div class="nav">
+        <span class="nav-item" (click)="mudaRota('egressos/graduates')"
+          >Egressos</span
+        >
+        <span class="nav-item" (click)="openDialog('egressos/follow-up')"
+          >Acompanhamento</span
+        >
+        <span class="nav-item" (click)="mudaRota('egressos/historic')"
+          >Histórico</span
+        >
+        <span class="nav-item" (click)="mudaRota('egressos/numbers')"
+          >Números</span
+        >
+      </div>
+    </div>
     <div class="login-usuario">
       <span>Usuário:</span>
       <select class="drop">
@@ -14,7 +40,7 @@
         <option value="">Logout</option>
       </select>
     </div>
-  </div>
+  </nav>
 
   <div class="welcome-content">
     <div class="texto">
@@ -36,14 +62,16 @@
     </span>
   </div>
 
-  <div class="video-content">
-    <iframe
-      src="https://www.youtube.com/embed/9VXwaufU0QE?si=ookFFDPcDCYkpYRS"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
+  <div class="video-popup">
+    <div class="img-video">
+      <!-- <img src="assets/banner-75.jpg" alt="" /> -->
+      <div class="descricao-video">
+        <h1>PPGEELT</h1>
+        <a class="assistir-video" (click)="openVideoDialog()">
+          <h3>Assista Ao Vídeo <span class="far fa-play-circle"></span></h3>
+        </a>
+      </div>
+    </div>
   </div>
 
   <div class="links-content">
@@ -71,7 +99,7 @@
         <img src="assets/acompanhamento.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
-        <p class="titulo">Acompanhamento dos Egressos</p>
+        <h5 class="titulo">Acompanhamento dos Egressos</h5>
         <p class="card-text">
           Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
           decorrer dos anos, seja no mestrado, seja no doutorado ou no

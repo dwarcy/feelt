@@ -27,3 +27,18 @@
   font-family: "Anton";
   src: url("src/assets/fonts/Anton-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "GontserratLight";
+  src: url("src/assets/fonts/Gontserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GontserratRegular";
+  src: url("src/assets/fonts/Gontserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GontserratMedium";
+  src: url("src/assets/fonts/Gontserrat-Medium.ttf") format("truetype");
+}
