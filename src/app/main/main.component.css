@@ -220,7 +220,7 @@ a:hover {
 
 .links-content {
   font-family: var(--ff-standard);
-  font-size: var(--fs-big);
+  font-size: larger;
   display: flex;
   flex-direction: row;
   align-content: center;

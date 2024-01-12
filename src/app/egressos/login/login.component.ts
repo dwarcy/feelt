@@ -51,7 +51,6 @@ export class LoginComponent {
   }
 
   public close() {
-    let rotaClose = '';
-    this.dialogRef.close(rotaClose);
+    this.dialogRef.close();
   }
 }
