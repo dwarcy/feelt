@@ -1,5 +1,6 @@
 * {
   font-family: var(--ff-standard);
+  font-size: large;
 }
 select {
   width: 100%;
