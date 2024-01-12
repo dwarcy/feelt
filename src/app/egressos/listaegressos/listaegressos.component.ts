@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
 import { FirebaseService } from 'src/app/services/firebase.service';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-listaegressos',
   templateUrl: './listaegressos.component.html',
   styleUrls: ['./listaegressos.component.css'],
-  standalone: true,
-  imports: [MatTableModule],
+  // standalone: true,
 })
 export class ListaegressosComponent {
   // Mostrar em uma tabela os egressos que estão salvos no BD
@@ -26,8 +27,15 @@ export class ListaegressosComponent {
   constructor(private firebaseService: FirebaseService) {}
 
   async ngOnInit() {
+    console.log(this.displayedColumns);
     this.LIST_SOURCE = await this.firebaseService.percorreCollection();
 
     console.log('Lista de Egressos', this.LIST_SOURCE);
+  }
+
+  filtroPesquisa(event: string) {
+    console.log('Pesquisa triggada');
+    const filterValue = event;
+    this.LIST_SOURCE.filter = filterValue.trim().toLowerCase();
   }
 }

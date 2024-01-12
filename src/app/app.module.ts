@@ -27,6 +27,9 @@ import { AlteraSenhaComponent } from './egressos/cadastro/altera-senha/altera-se
 import { NumerosComponent } from './egressos/numeros/numeros.component';
 import { ListaegressosComponent } from './egressos/listaegressos/listaegressos.component';
 import { VideplayerComponent } from './main/videplayer/videplayer.component';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ import { VideplayerComponent } from './main/videplayer/videplayer.component';
     AlteraSenhaComponent,
     NumerosComponent,
     VideplayerComponent,
+    ListaegressosComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,9 +68,11 @@ import { VideplayerComponent } from './main/videplayer/videplayer.component';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatTableModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   providers: [
-    ListaegressosComponent,
     LoginService,
     AngularFireModule,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },

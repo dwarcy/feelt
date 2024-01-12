@@ -33,7 +33,7 @@ a:hover {
 
 .navbar {
   font-family: var(--ff-text-regular);
-  font-size: 1.3em;
+  font-size: 1.2em;
 
   display: flex;
   flex-direction: row;
@@ -78,7 +78,7 @@ a:hover {
 
 .drop {
   font-family: var(--ff-text-regular);
-  font-size: medium;
+  font-size: small;
   background-color: transparent;
   border: white 1px solid;
   border-radius: 5px;
@@ -159,7 +159,7 @@ a:hover {
 }
 .texto-tela span {
   font-family: var(--ff-text-regular);
-  font-size: 1.3em;
+  font-size: 1.2em;
 
   width: 60%;
 
@@ -251,7 +251,7 @@ a:hover {
 }
 .card p {
   font-family: var(--ff-text-light);
-  font-size: 0.9em;
+  font-size: 0.8em;
   display: flex;
   flex-wrap: wrap;
   text-align: start;
@@ -259,7 +259,7 @@ a:hover {
 }
 .card .titulo {
   font-family: var(--ff-standard-inside);
-  font-size: 1.1em;
+  font-size: 0.9em;
   color: #010536;
   display: flex;
 }

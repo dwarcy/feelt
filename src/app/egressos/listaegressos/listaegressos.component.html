@@ -1,5 +1,15 @@
 <body>
-  <table mat-table [dataSource]="LIST_SOURCE" class="mat-elevation-z8">
+  <mat-form-field>
+    <mat-select
+      placeholder="Filtro"
+      (selectionChange)="filtroPesquisa($event.value)"
+    >
+      <mat-option *ngFor="let coluna of displayedColumns" [value]="coluna">
+        {{ coluna }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <table mat-table [dataSource]="LIST_SOURCE" class="mat-elevation-z3">
     <!-- COLUNA -> ANO DO EGRESSO -->
     <ng-container matColumnDef="ano-egresso">
       <!-- Define o nome que apareceno no topo da coluna -->
