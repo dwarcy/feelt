@@ -40,7 +40,6 @@ import { VideplayerComponent } from './main/videplayer/videplayer.component';
     RodapeComponent,
     AlteraSenhaComponent,
     NumerosComponent,
-    ListaegressosComponent,
     VideplayerComponent,
   ],
   imports: [
@@ -67,6 +66,7 @@ import { VideplayerComponent } from './main/videplayer/videplayer.component';
     MatSnackBarModule,
   ],
   providers: [
+    ListaegressosComponent,
     LoginService,
     AngularFireModule,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },

@@ -1,1 +1,46 @@
-<p>listaegressos works!</p>
+<body>
+  <table mat-table [dataSource]="LIST_SOURCE" class="mat-elevation-z8">
+    <!-- COLUNA -> ANO DO EGRESSO -->
+    <ng-container matColumnDef="ano-egresso">
+      <!-- Define o nome que apareceno no topo da coluna -->
+      <th mat-header-cell *matHeaderCellDef="">Ano Egresso</th>
+      <td mat-cell *matCellDef="let element">{{ element.anoConclusao }}</td>
+    </ng-container>
+
+    <!-- COLUNA -> NOME -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef="">Nome</th>
+      <td mat-cell *matCellDef="let element">{{ element.nomeCompleto }}</td>
+    </ng-container>
+
+    <!-- COLUNA -> TITULAÇÃO -->
+    <ng-container matColumnDef="titulacao">
+      <th mat-header-cell *matHeaderCellDef="">Titulação</th>
+      <td mat-cell *matCellDef="let element">{{ element.curso }}</td>
+    </ng-container>
+
+    <!-- COLUNA -> EMPRESA OU INSTITUIÇÃO ATUALMENTE -->
+    <ng-container matColumnDef="empresa">
+      <th mat-header-cell *matHeaderCellDef="">
+        Empresa ou Instituição Atualmente
+      </th>
+      <td mat-cell *matCellDef="let element">{{ element.nomeDaEmpresa }}</td>
+    </ng-container>
+
+    <!-- COLUNA -> ORIENTADOR -->
+    <ng-container matColumnDef="orientador">
+      <th mat-header-cell *matHeaderCellDef="">Orientador</th>
+      <td mat-cell *matCellDef="let element">{{ element.nomeOrientador }}</td>
+    </ng-container>
+
+    <!-- COLUNA -> LINK -->
+    <ng-container matColumnDef="link">
+      <th mat-header-cell *matHeaderCellDef="">Link</th>
+      <td mat-cell *matCellDef="let element">{{ element.link }}</td>
+    </ng-container>
+
+    <!-- Define as linhas -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</body>
