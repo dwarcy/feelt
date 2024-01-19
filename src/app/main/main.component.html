@@ -4,41 +4,41 @@
     <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
   </div>
 
-  <nav class="navbar">
-    <div
-      style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
-        width: 30%;
-        gap: 8%;
-      "
-    >
-      <a href="">
-        <img src="assets/header.png" style="margin-left: 5%" alt="" />
-      </a>
-      <div class="nav">
-        <span class="nav-item" (click)="mudaRota('egressos/graduates')"
-          >Egressos</span
-        >
-        <span class="nav-item" (click)="openDialog('egressos/follow-up')"
-          >Acompanhamento</span
-        >
-        <span class="nav-item" (click)="mudaRota('egressos/historic')"
-          >Histórico</span
-        >
-        <span class="nav-item" (click)="mudaRota('egressos/numbers')"
-          >Números</span
-        >
-      </div>
-    </div>
+  <div class="header-image-login">
+    <a href="">
+      <img src="assets/header.png" style="margin-left: 5%" alt="" />
+    </a>
     <div class="login-usuario">
       <span>Usuário:</span>
       <select class="drop">
         <option value="" selected>Login</option>
         <option value="">Logout</option>
       </select>
+    </div>
+  </div>
+
+  <!-- <nav class="navbar">
+    <div class="navbar">
+      <i class="ri-menu-line"></i><i class="ri-close-line"></i>
+    </div>
+  </nav> -->
+
+  <nav class="navbar">
+    <!-- <span class="nav-item" (click)="mudaRota('egressos/graduates')">Egressos</span>
+    <span class="nav-item" (click)="openDialog('egressos/follow-up')">Acompanhamento</span>
+    <span class="nav-item" (click)="mudaRota('egressos/historic')">Histórico</span>
+    <span class="nav-item" (click)="mudaRota('egressos/numbers')">Números</span> -->
+    <div class="nav--toggle" id="nav-toggle">
+      <i class="ri-menu-line nav--open"></i>
+      <i class="ri-close-line nav--close"></i>
+    </div>
+    <div class="nav--menu" id="nav-menu">
+      <ul class="nav--list">
+        <li><a href="#" class="nav--link">Lista de Egressos</a></li>
+        <li><a href="#" class="nav--link">Acompanhamento dos Egressos</a></li>
+        <li><a href="#" class="nav--link">Histórico da Pós</a></li>
+        <li><a href="#" class="nav--link">Números da Pós</a></li>
+      </ul>
     </div>
   </nav>
 
