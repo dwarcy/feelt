@@ -25,14 +25,38 @@
         [class.showSideBar]="animation"
       >
         <ul class="nav--list">
-          <li><a (click)="mudaRota('egressos/graduates')" class="nav--link">Lista de Egressos</a></li>
-          <li><a (click)="openDialog('egressos/follow-up')" class="nav--link">Acompanhamento dos Egressos</a></li>
-          <li><a (click)="mudaRota('egressos/historic')" class="nav--link">Histórico da Pós</a></li>
-          <li><a (click)="mudaRota('egressos/numbers')" class="nav--link">Números da Pós</a></li>
+          <li>
+            <a (click)="mudaRota('egressos/graduates')" class="nav--link"
+              >Lista de Egressos</a
+            >
+          </li>
+          <li>
+            <a (click)="openDialog('egressos/follow-up')" class="nav--link"
+              >Acompanhamento dos Egressos</a
+            >
+          </li>
+          <li>
+            <a (click)="mudaRota('egressos/historic')" class="nav--link"
+              >Histórico da Pós</a
+            >
+          </li>
+          <li>
+            <a (click)="mudaRota('egressos/numbers')" class="nav--link"
+              >Números da Pós</a
+            >
+          </li>
         </ul>
       </div>
-      <i class="fa fa-close icon-mobile" *ngIf="isOpen" (click)="showSideBar(false)"></i>
-      <i class="fa fa-list icon-mobile" *ngIf="!isOpen" (click)="showSideBar(true)"></i>
+      <i
+        class="fa fa-close icon-mobile"
+        *ngIf="isOpen"
+        (click)="showSideBar(false)"
+      ></i>
+      <i
+        class="fa fa-list icon-mobile"
+        *ngIf="!isOpen"
+        (click)="showSideBar(true)"
+      ></i>
     </nav>
   </header>
 
@@ -41,6 +65,9 @@
       <span class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
       <span class="egresso-title">EGRESSOS DA PÓS GRADUACÃO</span>
       <span class="eng-title">EM ENG. ELETRICA DA UFU</span>
+    </div>
+    <div class="img-logo">
+      <img src="assets/background1.jpg" alt="" />
     </div>
   </div>
 
@@ -71,7 +98,11 @@
   <div class="cards-content">
     <div class="card">
       <a (click)="mudaRota('egressos/graduates')">
-        <img src="assets/lista_egressos.png" class="card-img-top" alt="..." />
+        <img
+          src="assets/icone_acompanhamento.png"
+          class="card-img-top"
+          alt="..."
+        />
       </a>
       <div class="card-body">
         <p class="titulo">Lista de Egressos</p>
@@ -90,7 +121,11 @@
     </div>
     <div class="card">
       <a (click)="openDialog('egressos/follow-up')">
-        <img src="assets/acompanhamento.png" class="card-img-top" alt="..." />
+        <img
+          src="assets/icone_historia_pos.png"
+          class="card-img-top"
+          alt="..."
+        />
       </a>
       <div class="card-body">
         <h5 class="titulo">Acompanhamento dos Egressos</h5>
@@ -109,7 +144,11 @@
     </div>
     <div class="card">
       <a (click)="mudaRota('egressos/historic')">
-        <img src="assets/historico.png" class="card-img-top" alt="..." />
+        <img
+          src="assets/icone_lista_egressos.png"
+          class="card-img-top"
+          alt="..."
+        />
       </a>
       <div class="card-body">
         <p class="titulo">Histórico da Pós</p>
@@ -128,7 +167,7 @@
     </div>
     <div class="card">
       <a (click)="mudaRota('egressos/numbers')">
-        <img src="assets/numeros_pos.png" class="card-img-top" alt="..." />
+        <img src="assets/icone_num_pos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
         <p class="titulo">Números da Pós</p>

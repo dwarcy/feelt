@@ -163,14 +163,14 @@ a {
     gap: 1.2rem;
   }
   a {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .links-content {
     position: absolute;
     flex-direction: column !important;
     right: 0;
-    top: 10%;
+    top: 12%;
 
     height: fit-content;
     width: 35% !important;
@@ -199,17 +199,33 @@ a {
   display: flex !important;
 }
 
+@media (max-width: 510px) {
+  .links-content {
+    top: 11%;
+  }
+}
+
+@media (max-width: 420px) {
+  .links-content {
+    top: 9.7%;
+  }
+}
+
 /* ========= MENSAGEM NO TOPO DA PÁGINA ========= */
 .welcome-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-content: center;
   width: 100%;
   margin-bottom: 60px;
-  padding-bottom: 5%;
-  padding-top: 5%;
-  background-color: #000000;
+  background-color: #1a1a1a;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.welcome-content img {
+  resize: both;
 }
 
 .texto {
@@ -217,9 +233,10 @@ a {
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  width: 50%;
 
   gap: 3px;
-  margin-left: 2%;
+  margin-left: 8%;
 }
 
 /* ==== TO BE CHANGED BY THE MEDIA QUERY ==== */
@@ -248,9 +265,69 @@ a {
   margin-left: 4.5%;
 }
 
+@media screen and (max-width: 970px) {
+  .welcome-content img {
+    width: 480px;
+  }
+
+  .portal-title {
+    font-size: 1.1em;
+  }
+  .egresso-title {
+    font-size: 1.6em;
+  }
+  .eng-title {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .welcome-content img {
+    width: 420px;
+  }
+
+  .portal-title {
+    font-size: 0.9em;
+  }
+  .egresso-title {
+    font-size: 1.4em;
+  }
+  .eng-title {
+    font-size: 1.4em;
+  }
+}
+
 @media (max-width: 600px) {
   .texto-intro {
     margin-top: 8%;
+  }
+
+  .portal-title {
+    font-size: 0.7em;
+  }
+  .egresso-title {
+    font-size: 1.2em;
+  }
+  .eng-title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .welcome-content {
+    justify-content: center;
+  }
+  .welcome-content img {
+    display: none;
+  }
+  .portal-title {
+    font-size: 0.7em;
+  }
+  .egresso-title {
+    font-size: 1em;
+  }
+  .eng-title {
+    font-size: 1em;
   }
 }
 
@@ -453,7 +530,7 @@ a {
 
 .card img {
   border-radius: 5%;
-  width: 210px;
+  resize: both;
 }
 
 .card p {
@@ -559,6 +636,12 @@ a {
   .card {
     width: 30%;
     margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 550px) {
+  .card img {
+    width: 90px;
   }
 }
 
