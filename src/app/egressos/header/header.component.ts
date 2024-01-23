@@ -12,6 +12,7 @@ export class HeaderComponent {
   public marignRghtValue: string;
   public maxWidth: number;
   public animation: boolean;
+isOpen: any;
 
   constructor(private route: Router, private _dialog: MatDialog) {
     this.maxWidth = 0;

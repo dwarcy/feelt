@@ -96,7 +96,6 @@ li {
 header {
   display: flex;
   flex-direction: column;
-  z-index: 999;
 
   font-size: 1.25em;
 }

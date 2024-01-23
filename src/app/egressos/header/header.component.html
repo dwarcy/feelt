@@ -5,45 +5,49 @@
       <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
     </div>
 
-    <header id="header">
-      <nav class="nav-content">
-        <div>
-          <a href="/"
-            ><img src="assets/header.png" style="margin-left: 5%" alt=""
-          /></a>
-        </div>
-
+    <header class="header">
+      <nav class="nav--menu">
+        <a href="">
+          <img src="assets/header.png" style="margin-left: 5%" alt="" />
+        </a>
         <div
           class="links-content"
           [ngStyle]="styleDefault()"
-          [ngClass]="{ showSideBar: animation == true }"
+          [class.showSideBar]="animation"
         >
-          <a href=""
-            ><span class="nav-item" (click)="mudaRota('egressos/graduates')"
-              >Egressos</span
-            ></a
-          >
-          <a href=""
-            ><span class="nav-item" (click)="openDialog('egressos/follow-up')"
-              >Acompanhamento</span
-            ></a
-          >
-          <a href=""
-            ><span class="nav-item" (click)="mudaRota('egressos/historic')"
-              >Histórico</span
-            ></a
-          >
-          <a href=""
-            ><span class="nav-item" (click)="mudaRota('egressos/graduates')"
-              >Números</span
-            ></a
-          >
-          <button class="btn-enter" (click)="searchPage('/login')">
-            Entrar
-          </button>
+          <ul class="nav--list">
+            <li>
+              <a (click)="mudaRota('egressos/graduates')" class="nav--link"
+                >Lista de Egressos</a
+              >
+            </li>
+            <li>
+              <a (click)="openDialog('egressos/follow-up')" class="nav--link"
+                >Acompanhamento dos Egressos</a
+              >
+            </li>
+            <li>
+              <a (click)="mudaRota('egressos/historic')" class="nav--link"
+                >Histórico da Pós</a
+              >
+            </li>
+            <li>
+              <a (click)="mudaRota('egressos/numbers')" class="nav--link"
+                >Números da Pós</a
+              >
+            </li>
+          </ul>
         </div>
-        <i class="fa fa-close icon-mobile" (click)="showSideBar(false)"></i>
-        <i class="fa fa-list icon-mobile" (click)="showSideBar(true)"></i>
+        <i
+          class="fa fa-close icon-mobile"
+          *ngIf="isOpen"
+          (click)="showSideBar(false)"
+        ></i>
+        <i
+          class="fa fa-list icon-mobile"
+          *ngIf="!isOpen"
+          (click)="showSideBar(true)"
+        ></i>
       </nav>
     </header>
 

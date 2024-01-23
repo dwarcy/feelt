@@ -22,32 +22,31 @@ header {
   flex-direction: column;
   z-index: 999;
 
-  font-size: 2.5em;
-  border-bottom: 4px solid #6699ff;
+  font-size: 1.25em;
 }
-.nav-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 
-  height: 65px;
-  font-size: var(--fs-big);
-  padding: 0 10%;
-  background-color: #010536;
-}
-h3 {
-  color: whitesmoke;
-  font-size: 1.8em;
-  font-family: var(--ff-text-regular);
-  margin-top: auto;
-  margin-bottom: auto;
+.nav--menu {
+  font-family: var(--ff-standard-inside);
+  width: 100vw;
+  display: flex;
+
+  align-items: center;
+  color: white;
 }
 
 .links-content {
   display: flex;
   align-items: center;
+  width: 100vw;
   gap: 1em;
+  background-color: #010536 !important;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+::ng-deep .links-content {
+  padding-top: 0% !important;
+  padding-bottom: 0% !important;
+  background-color: #010536 !important;
 }
 a {
   text-decoration: none;
@@ -57,47 +56,57 @@ a {
   font-weight: bold;
 }
 
-.btn-enter {
-  background-color: #010536;
-  color: whitesmoke;
-  font-size: 16px;
-  font-weight: 600;
-  height: 25px;
-  width: 75px;
-  border: 1px solid whitesmoke;
-  border-radius: 10px;
-  cursor: pointer;
+.nav--list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-content: center;
+  justify-content: space-around;
+}
+.nav--list a {
+  color: white;
+  text-decoration: none;
 }
 
-/* mobile */
 .icon-mobile {
   color: whitesmoke;
   display: none;
 }
-@media screen and (max-width: 930px) {
+
+@media screen and (max-width: 820px) {
+  .nav--menu {
+    justify-content: end;
+    background-color: #010536;
+  }
   .icon-mobile {
     display: block;
   }
+  .nav--list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  a {
+    font-size: 9px;
+  }
+
   .links-content {
     position: absolute;
-    flex-direction: column;
+    flex-direction: column !important;
     right: 0;
-    top: 20px;
+    top: 12%;
 
-    height: 97.9%;
-    width: 25vw;
+    height: fit-content;
+    width: 35% !important;
     gap: 1.6em;
 
     background-color: #010536;
     animation-duration: 1s;
     margin-right: -50vw;
-    display: none;
+    display: none !important;
   }
   .links-content i {
     padding-top: 12%;
-  }
-  h3 {
-    font-size: 1.4em;
   }
 
   @keyframes showSideBar {
@@ -111,7 +120,19 @@ a {
 }
 .showSideBar {
   animation-name: showSideBar;
-  display: flex;
+  display: flex !important;
+}
+
+@media (max-width: 510px) {
+  .links-content {
+    top: 11%;
+  }
+}
+
+@media (max-width: 420px) {
+  .links-content {
+    top: 9.7%;
+  }
 }
 
 /* .navbar {
