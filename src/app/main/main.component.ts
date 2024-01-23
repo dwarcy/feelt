@@ -12,14 +12,41 @@ import { VideplayerComponent } from './videplayer/videplayer.component';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
+  searchPage(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
+  public marignRghtValue: string;
+  public maxWidth: number;
+  public animation: boolean;
+  public isOpen: boolean;
+
   @Output() isLogout = new EventEmitter<void>();
+
   constructor(
     private _dialog: MatDialog,
     private route: Router,
     public loginService: LoginService
-  ) { }
+  ) {
+    this.maxWidth = 0;
+    this.marignRghtValue = '-100vw';
+    this.animation = false;
+    this.isOpen = false;
+    console.log('Animation: ' + this.animation);
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
+
+  showSideBar(show: boolean) {
+    this.animation = show;
+    this.maxWidth = show ? 789 : 0;
+    this.marignRghtValue = show ? '0' : '50vw';
+    this.isOpen = show;
+    console.log('Animation dentro da showSideBar: ' + this.animation);
+  }
+
+  styleDefault() {
+    return { 'margin-right': this.maxWidth == 789 ? this.marignRghtValue : '' };
+  }
 
   public openDialog(rota: string) {
     const config: MatDialogConfig = new MatDialogConfig();
@@ -53,25 +80,5 @@ export class MainComponent implements OnInit {
 
   public mudaRota(rota: string) {
     this.route.navigate([rota]);
-  }
-
-  public showMenu() {
-    /*=============== SHOW MENU ===============*/
-    const showMenu = (toggleId: string, navId: string) => {
-      const toggle = document.getElementById(toggleId) as HTMLElement,
-        nav = document.getElementById(navId) as HTMLElement
-
-
-
-      toggle.addEventListener('click', () => {
-        // Add show-menu class to nav menu
-        nav.classList.toggle('show-menu')
-
-        // Add show-icon to show and hide the menu icon
-        toggle.classList.toggle('show-icon')
-      })
-    }
-
-    showMenu('nav-toggle', 'nav-menu')
   }
 }

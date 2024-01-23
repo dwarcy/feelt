@@ -17,30 +17,24 @@
     </div>
   </div>
 
-  <!-- <nav class="navbar">
-    <div class="navbar">
-      <i class="ri-menu-line"></i><i class="ri-close-line"></i>
-    </div>
-  </nav> -->
-
-  <nav class="navbar">
-    <!-- <span class="nav-item" (click)="mudaRota('egressos/graduates')">Egressos</span>
-    <span class="nav-item" (click)="openDialog('egressos/follow-up')">Acompanhamento</span>
-    <span class="nav-item" (click)="mudaRota('egressos/historic')">Histórico</span>
-    <span class="nav-item" (click)="mudaRota('egressos/numbers')">Números</span> -->
-    <div class="nav--toggle" id="nav-toggle">
-      <i class="ri-menu-line nav--open"></i>
-      <i class="ri-close-line nav--close"></i>
-    </div>
-    <div class="nav--menu" id="nav-menu">
-      <ul class="nav--list">
-        <li><a href="#" class="nav--link">Lista de Egressos</a></li>
-        <li><a href="#" class="nav--link">Acompanhamento dos Egressos</a></li>
-        <li><a href="#" class="nav--link">Histórico da Pós</a></li>
-        <li><a href="#" class="nav--link">Números da Pós</a></li>
-      </ul>
-    </div>
-  </nav>
+  <header class="header">
+    <nav class="nav--menu">
+      <div
+        class="links-content"
+        [ngStyle]="styleDefault()"
+        [class.showSideBar]="animation"
+      >
+        <ul class="nav--list">
+          <li><a (click)="mudaRota('egressos/graduates')" class="nav--link">Lista de Egressos</a></li>
+          <li><a (click)="openDialog('egressos/follow-up')" class="nav--link">Acompanhamento dos Egressos</a></li>
+          <li><a (click)="mudaRota('egressos/historic')" class="nav--link">Histórico da Pós</a></li>
+          <li><a (click)="mudaRota('egressos/numbers')" class="nav--link">Números da Pós</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-close icon-mobile" *ngIf="isOpen" (click)="showSideBar(false)"></i>
+      <i class="fa fa-list icon-mobile" *ngIf="!isOpen" (click)="showSideBar(true)"></i>
+    </nav>
+  </header>
 
   <div class="welcome-content">
     <div class="texto">
@@ -74,7 +68,7 @@
     </div>
   </div>
 
-  <div class="links-content">
+  <div class="cards-content">
     <div class="card">
       <a (click)="mudaRota('egressos/graduates')">
         <img src="assets/lista_egressos.png" class="card-img-top" alt="..." />

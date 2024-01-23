@@ -1,5 +1,5 @@
 .lang {
-  width: 100%;
+  width: 100vw;
   height: 20px;
   display: flex;
   flex-direction: row;
@@ -8,6 +8,7 @@
   align-content: center;
 
   background-color: rgba(0, 0, 0, 255);
+  color: whitesmoke;
 }
 
 .lang img {
@@ -16,7 +17,104 @@
   margin: 2px;
 }
 
-.navbar {
+header {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+
+  font-size: 2.5em;
+  border-bottom: 4px solid #6699ff;
+}
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 65px;
+  font-size: var(--fs-big);
+  padding: 0 10%;
+  background-color: #010536;
+}
+h3 {
+  color: whitesmoke;
+  font-size: 1.8em;
+  font-family: var(--ff-text-regular);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.links-content {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: whitesmoke;
+  transition: 1s;
+  font-weight: bold;
+}
+
+.btn-enter {
+  background-color: #010536;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 600;
+  height: 25px;
+  width: 75px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* mobile */
+.icon-mobile {
+  color: whitesmoke;
+  display: none;
+}
+@media screen and (max-width: 930px) {
+  .icon-mobile {
+    display: block;
+  }
+  .links-content {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 20px;
+
+    height: 97.9%;
+    width: 25vw;
+    gap: 1.6em;
+
+    background-color: #010536;
+    animation-duration: 1s;
+    margin-right: -50vw;
+    display: none;
+  }
+  .links-content i {
+    padding-top: 12%;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+
+  @keyframes showSideBar {
+    from {
+      margin-right: -40vw;
+    }
+    to {
+      margin-right: 0;
+    }
+  }
+}
+.showSideBar {
+  animation-name: showSideBar;
+  display: flex;
+}
+
+/* .navbar {
   font-family: var(--ff-text-regular);
   font-size: 1.3em;
 
@@ -72,4 +170,4 @@
 .drop:focus {
   background-color: #343434;
   color: white;
-}
+} */

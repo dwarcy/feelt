@@ -9,7 +9,29 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private route: Router, private _dialog: MatDialog) {}
+  public marignRghtValue: string;
+  public maxWidth: number;
+  public animation: boolean;
+
+  constructor(private route: Router, private _dialog: MatDialog) {
+    this.maxWidth = 0;
+    this.marignRghtValue = '-100vw';
+    this.animation = false;
+  }
+
+  showSideBar(show: boolean) {
+    this.animation = show;
+    this.maxWidth = show ? 789 : 0;
+    this.marignRghtValue = show ? '0' : '50vw';
+  }
+
+  styleDefault() {
+    return { 'margin-right': this.maxWidth == 789 ? this.marignRghtValue : '' };
+  }
+
+  searchPage(rout: string) {
+    this.route.navigateByUrl(rout);
+  }
 
   public openDialog(rota: string) {
     const config: MatDialogConfig = new MatDialogConfig();

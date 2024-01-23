@@ -1,44 +1,88 @@
-<div>
-  <div class="lang">
-    <img src="assets/flag-uk.svg" alt="Switch to English" />
-    <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
-  </div>
+<body>
+  <div class="content">
+    <div class="lang">
+      <img src="assets/flag-uk.svg" alt="Switch to English" />
+      <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
+    </div>
 
-  <nav class="navbar">
-    <div
-      style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
-        width: 30%;
-        gap: 8%;
-      "
-    >
-      <a href="">
-        <img src="assets/header.png" style="margin-left: 5%" alt="" />
-      </a>
-      <div class="nav">
-        <span class="nav-item" (click)="mudaRota('egressos/graduates')"
-          >Egressos</span
+    <header id="header">
+      <nav class="nav-content">
+        <div>
+          <a href="/"
+            ><img src="assets/header.png" style="margin-left: 5%" alt=""
+          /></a>
+        </div>
+
+        <div
+          class="links-content"
+          [ngStyle]="styleDefault()"
+          [ngClass]="{ showSideBar: animation == true }"
         >
-        <span class="nav-item" (click)="openDialog('egressos/follow-up')"
-          >Acompanhamento</span
-        >
-        <span class="nav-item" (click)="mudaRota('egressos/historic')"
-          >Histórico</span
-        >
-        <span class="nav-item" (click)="mudaRota('egressos/numbers')"
-          >Números</span
-        >
+          <a href=""
+            ><span class="nav-item" (click)="mudaRota('egressos/graduates')"
+              >Egressos</span
+            ></a
+          >
+          <a href=""
+            ><span class="nav-item" (click)="openDialog('egressos/follow-up')"
+              >Acompanhamento</span
+            ></a
+          >
+          <a href=""
+            ><span class="nav-item" (click)="mudaRota('egressos/historic')"
+              >Histórico</span
+            ></a
+          >
+          <a href=""
+            ><span class="nav-item" (click)="mudaRota('egressos/graduates')"
+              >Números</span
+            ></a
+          >
+          <button class="btn-enter" (click)="searchPage('/login')">
+            Entrar
+          </button>
+        </div>
+        <i class="fa fa-close icon-mobile" (click)="showSideBar(false)"></i>
+        <i class="fa fa-list icon-mobile" (click)="showSideBar(true)"></i>
+      </nav>
+    </header>
+
+    <!-- <nav class="navbar">
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-content: center;
+          width: 30%;
+          gap: 8%;
+        "
+      >
+        <a href="">
+          <img src="assets/header.png" style="margin-left: 5%" alt="" />
+        </a>
+        <div class="nav">
+          <span class="nav-item" (click)="mudaRota('egressos/graduates')"
+            >Egressos</span
+          >
+          <span class="nav-item" (click)="openDialog('egressos/follow-up')"
+            >Acompanhamento</span
+          >
+          <span class="nav-item" (click)="mudaRota('egressos/historic')"
+            >Histórico</span
+          >
+          <span class="nav-item" (click)="mudaRota('egressos/numbers')"
+            >Números</span
+          >
+        </div>
       </div>
-    </div>
-    <div class="login-usuario">
-      <span>Usuário:</span>
-      <select class="drop">
-        <option value="" selected>Login</option>
-        <option value="">Logout</option>
-      </select>
-    </div>
-  </nav>
-</div>
+      <div class="login-usuario">
+        <span>Usuário:</span>
+        <select class="drop">
+          <option value="" selected>Login</option>
+          <option value="">Logout</option>
+        </select>
+      </div>
+    </nav> -->
+  </div>
+</body>
