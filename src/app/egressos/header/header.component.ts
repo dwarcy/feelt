@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
+import { LoginService } from 'src/app/services/auth/login.service';
 
 @Component({
   selector: 'app-header',
@@ -12,18 +13,24 @@ export class HeaderComponent {
   public marignRghtValue: string;
   public maxWidth: number;
   public animation: boolean;
-isOpen: any;
+  public isOpen: any;
 
-  constructor(private route: Router, private _dialog: MatDialog) {
+  constructor(private _dialog: MatDialog,
+    private route: Router,
+    public loginService: LoginService) {
     this.maxWidth = 0;
     this.marignRghtValue = '-100vw';
     this.animation = false;
+    this.isOpen = false;
+    console.log('Animation: ' + this.animation);
   }
 
   showSideBar(show: boolean) {
     this.animation = show;
     this.maxWidth = show ? 789 : 0;
     this.marignRghtValue = show ? '0' : '50vw';
+    this.isOpen = show;
+    console.log('Animation dentro da showSideBar: ' + this.animation);
   }
 
   styleDefault() {

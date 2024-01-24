@@ -1,92 +1,29 @@
 <body>
-  <div class="content">
-    <div class="lang">
-      <img src="assets/flag-uk.svg" alt="Switch to English" />
-      <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
-    </div>
-
-    <header class="header">
-      <nav class="nav--menu">
-        <a href="">
-          <img src="assets/header.png" style="margin-left: 5%" alt="" />
-        </a>
-        <div
-          class="links-content"
-          [ngStyle]="styleDefault()"
-          [class.showSideBar]="animation"
-        >
-          <ul class="nav--list">
-            <li>
-              <a (click)="mudaRota('egressos/graduates')" class="nav--link"
-                >Lista de Egressos</a
-              >
-            </li>
-            <li>
-              <a (click)="openDialog('egressos/follow-up')" class="nav--link"
-                >Acompanhamento dos Egressos</a
-              >
-            </li>
-            <li>
-              <a (click)="mudaRota('egressos/historic')" class="nav--link"
-                >Histórico da Pós</a
-              >
-            </li>
-            <li>
-              <a (click)="mudaRota('egressos/numbers')" class="nav--link"
-                >Números da Pós</a
-              >
-            </li>
-          </ul>
-        </div>
-        <i
-          class="fa fa-close icon-mobile"
-          *ngIf="isOpen"
-          (click)="showSideBar(false)"
-        ></i>
-        <i
-          class="fa fa-list icon-mobile"
-          *ngIf="!isOpen"
-          (click)="showSideBar(true)"
-        ></i>
-      </nav>
-    </header>
-
-    <!-- <nav class="navbar">
-      <div
-        style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-content: center;
-          width: 30%;
-          gap: 8%;
-        "
-      >
-        <a href="">
-          <img src="assets/header.png" style="margin-left: 5%" alt="" />
-        </a>
-        <div class="nav">
-          <span class="nav-item" (click)="mudaRota('egressos/graduates')"
-            >Egressos</span
-          >
-          <span class="nav-item" (click)="openDialog('egressos/follow-up')"
-            >Acompanhamento</span
-          >
-          <span class="nav-item" (click)="mudaRota('egressos/historic')"
-            >Histórico</span
-          >
-          <span class="nav-item" (click)="mudaRota('egressos/numbers')"
-            >Números</span
-          >
-        </div>
-      </div>
-      <div class="login-usuario">
-        <span>Usuário:</span>
-        <select class="drop">
-          <option value="" selected>Login</option>
-          <option value="">Logout</option>
-        </select>
-      </div>
-    </nav> -->
+  <div class="lang">
+    <img src="assets/flag-uk.svg" alt="Switch to English" />
+    <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
   </div>
+
+  <header class="header">
+    <nav class="nav--menu">
+      <div class="links-content" [ngStyle]="styleDefault()" [class.showSideBar]="animation">
+        <ul class="nav--list">
+          <li>
+            <a (click)="mudaRota('egressos/graduates')" class="nav--link">Lista de Egressos</a>
+          </li>
+          <li>
+            <a (click)="openDialog('egressos/follow-up')" class="nav--link">Acompanhamento dos Egressos</a>
+          </li>
+          <li>
+            <a (click)="mudaRota('egressos/historic')" class="nav--link">Histórico da Pós</a>
+          </li>
+          <li>
+            <a (click)="mudaRota('egressos/numbers')" class="nav--link">Números da Pós</a>
+          </li>
+        </ul>
+      </div>
+      <i class="fa fa-close icon-mobile" *ngIf="isOpen" (click)="showSideBar(false)"></i>
+      <i class="fa fa-list icon-mobile" *ngIf="!isOpen" (click)="showSideBar(true)"></i>
+    </nav>
+  </header>
 </body>
