@@ -1,10 +1,12 @@
 * {
   font-family: var(--ff-standard);
-  font-size: large;
+  font-size: 1em;
 }
+
 select {
   width: 100%;
 }
+
 body {
   height: 100vh;
   width: 100%;
@@ -14,20 +16,26 @@ body {
   margin-top: 50px;
 }
 
-.form-control {
-  justify-self: flex-end;
-  width: 100%;
-  border-color: 1px solid gray;
+form {
+  width: 90%;
 }
 
 .dados-cadastro {
-  width: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
   gap: 10px;
+}
+
+.form-control {
+  justify-self: flex-end;
+  width: 100%;
+  border-color: 1px solid gray;
 }
 
 .titulo-cadastral {
@@ -64,6 +72,7 @@ body {
   flex-wrap: nowrap;
   gap: 20px;
 }
+
 .input-cpf-conclusao div {
   display: flex;
   height: 20px;
@@ -71,6 +80,7 @@ body {
   flex-wrap: nowrap;
   gap: 10px;
 }
+
 .input-cpf-conclusao input {
   flex: 1;
 }
@@ -82,6 +92,7 @@ body {
   flex-wrap: nowrap;
   gap: 10px;
 }
+
 .input-nome div {
   display: flex;
   height: 20px;
@@ -89,6 +100,7 @@ body {
   flex-wrap: nowrap;
   gap: 10px;
 }
+
 .input-nome input {
   flex: 1;
 }
@@ -100,6 +112,7 @@ body {
   flex-wrap: nowrap;
   gap: 20px;
 }
+
 .input-email-orientador div {
   display: flex;
   height: 20px;
@@ -107,6 +120,7 @@ body {
   flex-wrap: nowrap;
   gap: 10px;
 }
+
 .input-email-orientador input {
   flex: 1;
 }
@@ -126,6 +140,7 @@ body {
   flex-wrap: nowrap;
   gap: 20px;
 }
+
 .input-telefone-link div {
   display: flex;
   height: 20px;
@@ -133,6 +148,7 @@ body {
   flex-wrap: nowrap;
   gap: 10px;
 }
+
 .input-telefone-link {
   flex: 1;
 }
@@ -225,4 +241,18 @@ body {
   --mdc-snackbar-supporting-text-color: white;
   font-family: var(--ff-standard);
   font-size: var(--fs-big);
+}
+
+@media (max-width: 720px) {
+  .input-cpf-conclusao {
+    flex-direction: column;
+  }
+
+  .input-email-orientador {
+    flex-direction: column;
+  }
+
+  .input-telefone-link {
+    flex-direction: column;
+  }
 }
