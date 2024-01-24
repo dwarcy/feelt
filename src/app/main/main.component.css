@@ -118,11 +118,13 @@ header {
   padding-top: 0%;
   padding-bottom: 0%;
 }
+
 ::ng-deep .links-content {
   padding-top: 0% !important;
   padding-bottom: 0% !important;
   background-color: #343434 !important;
 }
+
 a {
   text-decoration: none;
   font-size: 14px;
@@ -138,6 +140,7 @@ a {
   align-content: center;
   justify-content: space-around;
 }
+
 .nav--list a {
   color: white;
   text-decoration: none;
@@ -153,14 +156,17 @@ a {
     justify-content: end;
     background-color: #343434;
   }
+
   .icon-mobile {
     display: block;
   }
+
   .nav--list {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
   }
+
   a {
     font-size: 9px;
   }
@@ -169,7 +175,7 @@ a {
     position: absolute;
     flex-direction: column !important;
     right: 0;
-    top: 12%;
+    top: 93px;
 
     height: fit-content;
     width: 35% !important;
@@ -180,6 +186,7 @@ a {
     margin-right: -50vw;
     display: none !important;
   }
+
   .links-content i {
     padding-top: 12%;
   }
@@ -188,25 +195,28 @@ a {
     from {
       margin-right: -40vw;
     }
+
     to {
       margin-right: 0;
     }
   }
 }
+
 .showSideBar {
   animation-name: showSideBar;
   display: flex !important;
+  overflow: hidden;
 }
 
 @media (max-width: 510px) {
   .links-content {
-    top: 11%;
+    top: 90px;
   }
 }
 
 @media (max-width: 420px) {
   .links-content {
-    top: 9.7%;
+    top: 78px;
   }
 }
 
@@ -272,9 +282,11 @@ a {
   .portal-title {
     font-size: 1.1em;
   }
+
   .egresso-title {
     font-size: 1.6em;
   }
+
   .eng-title {
     font-size: 1.6em;
   }
@@ -288,9 +300,11 @@ a {
   .portal-title {
     font-size: 0.9em;
   }
+
   .egresso-title {
     font-size: 1.4em;
   }
+
   .eng-title {
     font-size: 1.4em;
   }
@@ -304,9 +318,11 @@ a {
   .portal-title {
     font-size: 0.7em;
   }
+
   .egresso-title {
     font-size: 1.2em;
   }
+
   .eng-title {
     font-size: 1.2em;
   }
@@ -316,15 +332,19 @@ a {
   .welcome-content {
     justify-content: center;
   }
+
   .welcome-content img {
     display: none;
   }
+
   .portal-title {
     font-size: 0.7em;
   }
+
   .egresso-title {
     font-size: 1em;
   }
+
   .eng-title {
     font-size: 1em;
   }
