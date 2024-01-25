@@ -18,7 +18,7 @@ import { HistoricComponent } from './egressos/historic/historic.component';
 import { LoginComponent } from './egressos/login/login.component';
 import { EgressosComponent } from './egressos/egressos.component';
 import { MainComponent } from './main/main.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginService } from './services/auth/login.service';
 import { environment } from 'src/environment/environment.prod';
@@ -30,6 +30,13 @@ import { VideplayerComponent } from './main/videplayer/videplayer.component';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -71,6 +78,13 @@ import { MatSelectModule } from '@angular/material/select';
     MatTableModule,
     MatInputModule,
     MatSelectModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [
     LoginService,
