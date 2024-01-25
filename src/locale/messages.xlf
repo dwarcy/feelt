@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="pt" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5287115394497358262" datatype="html">
+        <source>Nova senha:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/altera-senha/altera-senha.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3988005976561192029" datatype="html">
+        <source>Confirmar nova senha:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/altera-senha/altera-senha.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="990290684168381482" datatype="html">
+        <source> Mostrar senha </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/altera-senha/altera-senha.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8211591636194914415" datatype="html">
+        <source>Alterar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/altera-senha/altera-senha.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8276904234553766330" datatype="html">
+        <source>Dados Cadastro:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="893515592511735712" datatype="html">
+        <source>Seu CPF: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7346167249612760016" datatype="html">
+        <source>Ano que concluiu pós: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7087064012377124588" datatype="html">
+        <source>Seu nome completo: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6867094261537106548" datatype="html">
+        <source>Seu atual email: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8902148175996377132" datatype="html">
+        <source>Nome orientador: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1613180828284488245" datatype="html">
+        <source>Endereço: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1144578930371592200" datatype="html">
+        <source>Telefone: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7322013851158083039" datatype="html">
+        <source>Link: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5918684238678821900" datatype="html">
+        <source>Curso mais alto feito no PPGEELT-UFU: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7163780281329375946" datatype="html">
+        <source>mestrado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4916586986745638546" datatype="html">
+        <source>doutorado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="790482518200299918" datatype="html">
+        <source>pós-doutorado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4387849643624632045" datatype="html">
+        <source> Alterar Senha </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">133,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3636959742409371441" datatype="html">
+        <source>Salvar Cadastro</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8940535621140688520" datatype="html">
+        <source>Nome da empresa ou instituição onde está trabalhando:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7791331167754331955" datatype="html">
+        <source>Tipo de local de trabalho:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="517424534857273422" datatype="html">
+        <source>Instituição de ensino superior</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6911006552944633076" datatype="html">
+        <source>Instituição de ensino técnico, médio ou afim</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4165859629422614804" datatype="html">
+        <source>Empresa/Indústria</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4248483959088287968" datatype="html">
+        <source>Empresário</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2035209480150491881" datatype="html">
+        <source>Centro de pesquisa</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1966920475037747913" datatype="html">
+        <source>Autônomo/profissional liberal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7529166907583584509" datatype="html">
+        <source>Outros</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">178</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1036778443528960744" datatype="html">
+        <source>Pesquisador</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1951990390156602647" datatype="html">
+        <source>Professor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4089811084435808198" datatype="html">
+        <source>Gerente ou Diretor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7007040247215197636" datatype="html">
+        <source>Pós-doutorando</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2642541091300750962" datatype="html">
+        <source>Engenheiro</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4848323579247933781" datatype="html">
+        <source>Analista</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="383065882448426454" datatype="html">
+        <source>Contratado CLT diverso</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6596656618873239496" datatype="html">
+        <source>Colaborador</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4900068736717017916" datatype="html">
+        <source>Sua atual atividade está relacionada com sua área de pesquisa na pós?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">205,206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3460856074152976112" datatype="html">
+        <source>Sim, com alta relação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2824828884029140977" datatype="html">
+        <source>Sim, com média relação (indireta)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">216</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4494531841019299280" datatype="html">
+        <source>Sim, com baixa relação (esporádica)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="630173733386891387" datatype="html">
+        <source>Nenhuma relação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4275670214909081629" datatype="html">
+        <source>Não se aplica</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">219</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="846183566418804221" datatype="html">
+        <source>Contribuição da sua pós na sua formação e inserção profissional:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">226,227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3532023074608212433" datatype="html">
+        <source>Alta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="376549372720154581" datatype="html">
+        <source>Média/alta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">237</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5965475152502529686" datatype="html">
+        <source>Média</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6532890474767193907" datatype="html">
+        <source>Baixa</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1314363859390473362" datatype="html">
+        <source>Nenhuma</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">240</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8080627052146643954" datatype="html">
+        <source>Faixa salarial bruta (será mantido sigilo):</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">245</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2811183113074982611" datatype="html">
+        <source>Menos que 3 salários mínimos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">254</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4561968350691780946" datatype="html">
+        <source>3.1 a 5 salários mínimos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7061738991513876321" datatype="html">
+        <source>5.1 a 10 salários mínimos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1702151153434551703" datatype="html">
+        <source>10.1 a 20 salários mínimos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8457443250878986752" datatype="html">
+        <source>Acima de 20.1 salários mínimos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7817364178445088037" datatype="html">
+        <source>Prefere não declarar ou não possui</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1960228347673084031" datatype="html">
+        <source>Área de trabalho mais próxima</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">266</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7107143528523304446" datatype="html">
+        <source>Sistemas Elétricos de Potência</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7638576273895334179" datatype="html">
+        <source> Eletrônica industrial, sistemas e controles eletrônicos </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">276,278</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3058484657350873320" datatype="html">
+        <source>Telecomunicações e Redes de comunicação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">279</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2541390603688359856" datatype="html">
+        <source>Tecnologia da informação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">280</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6709326720028755045" datatype="html">
+        <source>Eletrônica</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">281</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1889365334276127974" datatype="html">
+        <source>Biomédica</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">282</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1371636501775197171" datatype="html">
+        <source>Automação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">283</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4498502606224192951" datatype="html">
+        <source>Materiais elétricos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">284</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4393557235564726671" datatype="html">
+        <source>Medidas elétricas, magnéticas e instrumentação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="821444294215102036" datatype="html">
+        <source>Circuitos elétricos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">286</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8639962812499354716" datatype="html">
+        <source>Administrativa e gerencial</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">287</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="312824575608785334" datatype="html">
+        <source>Ensino</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4517701527958623828" datatype="html">
+        <source>Outras</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2594111319272187423" datatype="html">
+        <source>Localização da sua ocupação atual:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">294</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8780245982825749577" datatype="html">
+        <source>Não informado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">303</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8149624739622022751" datatype="html">
+        <source>Exterior</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8278594819870154221" datatype="html">
+        <source>MG Capital</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">305</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3027379525483096538" datatype="html">
+        <source>MG interior</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="72941864594916219" datatype="html">
+        <source>Capital em região sudeste (exceto MG)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5567637188375050964" datatype="html">
+        <source>Interior em região sudeste (exceto MG)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">308</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1796313838154374566" datatype="html">
+        <source>Capital em região sul</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">309</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6678207961214326950" datatype="html">
+        <source>Interior em região sul</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">310</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7763554046028624968" datatype="html">
+        <source>Capital em região centro-oeste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">311</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1334247798258336416" datatype="html">
+        <source>Interior em região centro-oeste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">312</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8759121325766966231" datatype="html">
+        <source>Capital em região nordeste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">313</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8853554377497015726" datatype="html">
+        <source>Interior em região nordeste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">314</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8204391412396747203" datatype="html">
+        <source>Capital em região norte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="683041926438653477" datatype="html">
+        <source>Interior em região norte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3398395399243642563" datatype="html">
+        <source>Salvar Acompanhamento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/cadastro/cadastro.component.html</context>
+          <context context-type="linenumber">322</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5500917499670783530" datatype="html">
+        <source>Lista de Egressos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/header/header.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5533030916841459180" datatype="html">
+        <source>Acompanhamento dos Egressos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/header/header.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6664335997171107489" datatype="html">
+        <source>Histórico da Pós</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/header/header.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2974973716656512891" datatype="html">
+        <source>Números da Pós</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/header/header.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6507413311109318055" datatype="html">
+        <source>HISTÓRICO</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3499729120722889291" datatype="html">
+        <source>Este é o site de acompanhamento dos egressos da pós-graduação da UFU. Nele, traçamos uma série de informações para o publico em geral e também criamos uma estrutura de suporte para nossos egressos. Este é o site de acompanhamento dos egressos da pós-graduação da UFU. Nele, traçamos uma série de </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">5,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8380528908753508089" datatype="html">
+        <source> Este é o site de acompanhamento dos egressos da pós-graduação da UFU. Nele, traçamos uma série de informações para o publico em geral e também criamos uma estrutura de suporte para nossos egressos. Este é o site de acompanhamento dos egressos da pós-graduação da UFU. Nele, traçamos uma série de </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">20,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3901090636929858000" datatype="html">
+        <source>PESQUISADORES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4558823946985871827" datatype="html">
+        <source>Nome: Alan Petrônio Pinheiro</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2444675842103265129" datatype="html">
+        <source>Periodo: 2018-2023 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6830976095156462786" datatype="html">
+        <source>Área: processamento de sinais</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/historic/historic.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3136489569273841262" datatype="html">
+        <source>Ano Egresso</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/listaegressos/listaegressos.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2332180001770133395" datatype="html">
+        <source>Nome</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/listaegressos/listaegressos.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4834229584440031176" datatype="html">
+        <source>Titulação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/listaegressos/listaegressos.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6205775780261291356" datatype="html">
+        <source> Empresa ou Instituição Atualmente </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/listaegressos/listaegressos.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2096384926280866149" datatype="html">
+        <source>Orientador</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/listaegressos/listaegressos.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2981219928115418649" datatype="html">
+        <source>Link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/listaegressos/listaegressos.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9016536884183098576" datatype="html">
+        <source>Usuario</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/login/login.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="150555469217751648" datatype="html">
+        <source>Senha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/login/login.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9103733250835118165" datatype="html">
+        <source><x id="TAG_INPUT" ctype="x-input" equiv-text="put type=&quot;checkbox&quot; /&gt;"/>Lembrar-me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/login/login.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6167262181639915125" datatype="html">
+        <source>Esqueci a senha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/login/login.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="600376029726528115" datatype="html">
+        <source>Entrar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/login/login.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5657480645310441826" datatype="html">
+        <source>*Se for sua primeira vez se conectando, a senha padrão é seu CPF sem pontos e traço.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/egressos/login/login.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="408310816789825658" datatype="html">
+        <source>Usuário:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6411777401109444709" datatype="html">
+        <source>PORTAL DE ACOMPANHAMENTO DOS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7680595605809035189" datatype="html">
+        <source>EGRESSOS DA PÓS GRADUACÃO</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6143632979140231072" datatype="html">
+        <source>EM ENG. ELETRICA DA UFU</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="604470324393391106" datatype="html">
+        <source> Neste site pretendemos manter contato constante com todos nossos egressos de mestrado, doutorado e pós-doutorado do programa de pós-graduação em Engenharia Elétrica da Universidade Federal de Uberlândia (PPGEELT). Além de coletar informações de nossos egressos para entender melhor os impactos de nossa formação, pretendemos usar estes números para balizar melhorias e trazer ao público em geral um panorama do impacto do PPGEELT. Também fomentar novas oportunidades e propor interações a toda sua comunidade. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">75,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7846363253797337952" datatype="html">
+        <source>PPGEELT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1688953245171352884" datatype="html">
+        <source> Assista Ao Vídeo <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;far fa-play-circle&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2947553184729259476" datatype="html">
+        <source> Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no decorrer dos anos, seja no mestrado, seja no doutorado ou no pós-doutorado de nosso programa. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">111,115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">134,138</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">157,161</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">176,180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4201285351639706759" datatype="html">
+        <source> Saiba Mais <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;Angle-Right fontawesomeicon&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">118,120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">141,143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">164,166</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/main.component.html</context>
+          <context context-type="linenumber">183,185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2976658379765845202" datatype="html">
+        <source>2023-2024 | Mais informações em: ppgeelt@ufu.br ou (34) 3239-4701</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/rodape/rodape.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

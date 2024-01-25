@@ -4,6 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "pos-feelt-05": {
+      "i18n": {
+        "sourceLocale": "pt",
+        "locales": { "en-US": "src/locale/messages.en.xlf" }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["en-US"],
             "outputPath": "dist/pos-feelt-05",
             "index": "src/index.html",
             "main": "src/main.ts",

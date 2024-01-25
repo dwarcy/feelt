@@ -9,7 +9,7 @@
       <img src="assets/header.png" style="margin-left: 5%" alt="" />
     </a>
     <div class="login-usuario">
-      <span>Usuário:</span>
+      <span i18n>Usuário:</span>
       <select class="drop">
         <option value="" selected>Login</option>
         <option value="">Logout</option>
@@ -26,22 +26,22 @@
       >
         <ul class="nav--list">
           <li>
-            <a (click)="mudaRota('egressos/graduates')" class="nav--link"
+            <a i18n (click)="mudaRota('egressos/graduates')" class="nav--link"
               >Lista de Egressos</a
             >
           </li>
           <li>
-            <a (click)="openDialog('egressos/follow-up')" class="nav--link"
+            <a i18n (click)="openDialog('egressos/follow-up')" class="nav--link"
               >Acompanhamento dos Egressos</a
             >
           </li>
           <li>
-            <a (click)="mudaRota('egressos/historic')" class="nav--link"
+            <a i18n (click)="mudaRota('egressos/historic')" class="nav--link"
               >Histórico da Pós</a
             >
           </li>
           <li>
-            <a (click)="mudaRota('egressos/numbers')" class="nav--link"
+            <a i18n (click)="mudaRota('egressos/numbers')" class="nav--link"
               >Números da Pós</a
             >
           </li>
@@ -62,9 +62,9 @@
 
   <div class="welcome-content">
     <div class="texto">
-      <span class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
-      <span class="egresso-title">EGRESSOS DA PÓS GRADUACÃO</span>
-      <span class="eng-title">EM ENG. ELETRICA DA UFU</span>
+      <span i18n class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
+      <span i18n class="egresso-title">EGRESSOS DA PÓS GRADUACÃO</span>
+      <span i18n class="eng-title">EM ENG. ELETRICA DA UFU</span>
     </div>
     <div class="img-logo">
       <img src="assets/background1.jpg" alt="" />
@@ -72,7 +72,7 @@
   </div>
 
   <div class="texto-tela">
-    <span>
+    <span i18n>
       Neste site pretendemos manter contato constante com todos nossos egressos
       de mestrado, doutorado e pós-doutorado do programa de pós-graduação em
       Engenharia Elétrica da Universidade Federal de Uberlândia (PPGEELT). Além
@@ -87,9 +87,11 @@
     <div class="img-video">
       <!-- <img src="assets/banner-75.jpg" alt="" /> -->
       <div class="descricao-video">
-        <h1>PPGEELT</h1>
+        <h1 i18n>PPGEELT</h1>
         <a class="assistir-video" (click)="openVideoDialog()">
-          <h3>Assista Ao Vídeo <span class="far fa-play-circle"></span></h3>
+          <h3 i18n>
+            Assista Ao Vídeo <span class="far fa-play-circle"></span>
+          </h3>
         </a>
       </div>
     </div>
@@ -105,15 +107,15 @@
         />
       </a>
       <div class="card-body">
-        <p class="titulo">Lista de Egressos</p>
-        <p class="card-text">
+        <p i18n class="titulo">Lista de Egressos</p>
+        <p i18n class="card-text">
           Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
           decorrer dos anos, seja no mestrado, seja no doutorado ou no
           pós-doutorado de nosso programa.
         </p>
       </div>
       <div class="saiba-mais">
-        <a (click)="mudaRota('egressos/graduates')">
+        <a i18n (click)="mudaRota('egressos/graduates')">
           Saiba Mais
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
@@ -128,15 +130,15 @@
         />
       </a>
       <div class="card-body">
-        <h5 class="titulo">Acompanhamento dos Egressos</h5>
-        <p class="card-text">
+        <h5 i18n class="titulo">Acompanhamento dos Egressos</h5>
+        <p i18n class="card-text">
           Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
           decorrer dos anos, seja no mestrado, seja no doutorado ou no
           pós-doutorado de nosso programa.
         </p>
       </div>
       <div class="saiba-mais">
-        <a (click)="openDialog('egressos/follow-up')">
+        <a i18n (click)="openDialog('egressos/follow-up')">
           Saiba Mais
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
@@ -151,15 +153,15 @@
         />
       </a>
       <div class="card-body">
-        <p class="titulo">Histórico da Pós</p>
-        <p class="card-text">
+        <p i18n class="titulo">Histórico da Pós</p>
+        <p i18n class="card-text">
           Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
           decorrer dos anos, seja no mestrado, seja no doutorado ou no
           pós-doutorado de nosso programa.
         </p>
       </div>
       <div class="saiba-mais">
-        <a (click)="mudaRota('egressos/historic')">
+        <a i18n (click)="mudaRota('egressos/historic')">
           Saiba Mais
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
@@ -170,15 +172,15 @@
         <img src="assets/icone_num_pos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
-        <p class="titulo">Números da Pós</p>
-        <p class="card-text">
+        <p i18n class="titulo">Números da Pós</p>
+        <p i18n class="card-text">
           Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
           decorrer dos anos, seja no mestrado, seja no doutorado ou no
           pós-doutorado de nosso programa.
         </p>
       </div>
       <div class="saiba-mais">
-        <a (click)="mudaRota('egressos/numbers')">
+        <a i18n (click)="mudaRota('egressos/numbers')">
           Saiba Mais
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
