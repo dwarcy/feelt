@@ -16,12 +16,8 @@ body {
   margin-top: 50px;
 }
 
-form {
-  width: 90%;
-}
-
 .dados-cadastro {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -42,7 +38,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 100vh;
+  width: 100%;
   height: 50px;
   font-size: 30px;
   background-color: lightgray;
@@ -52,12 +48,12 @@ form {
 
 .div {
   border: 1px solid gray;
-  width: 100vh;
+  width: 100%;
   margin-bottom: 18px;
 }
 
 .input-group {
-  width: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -197,7 +193,7 @@ form {
 }
 
 .dados-acompanhamento {
-  width: 100vh;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,15 +240,32 @@ form {
 }
 
 @media (max-width: 720px) {
-  .input-cpf-conclusao {
+  .input-cpf-conclusao,
+  .input-email-orientador,
+  .input-telefone-link,
+  .nome-empresa-e-local,
+  .cargo-e-atividade,
+  .contribuicao-e-faixa,
+  .area-trabalho-e-localizacao,
+  .radio-form-check {
     flex-direction: column;
   }
+}
 
-  .input-email-orientador {
-    flex-direction: column;
+@media (max-width: 420px) {
+  .btn {
+    width: 200px;
   }
+  .btn-senha {
+    width: 150px;
+  }
+}
 
-  .input-telefone-link {
-    flex-direction: column;
+@media (max-width: 320px) {
+  * {
+    font-size: 0.9em;
+  }
+  .titulo-cadastral {
+    font-size: 20px;
   }
 }
