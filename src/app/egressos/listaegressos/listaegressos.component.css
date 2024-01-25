@@ -1,5 +1,7 @@
 body {
   padding: 2%;
+  width: 95%;
+  overflow-x: auto;
 }
 
 table {
@@ -8,4 +10,22 @@ table {
 
 th {
   font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 506px) {
+  * {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 420px) {
+  table.mat-table {
+    overflow: auto;
+  }
 }
