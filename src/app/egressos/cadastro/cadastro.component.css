@@ -196,39 +196,82 @@ body {
   width: 90%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
-  gap: 10px;
 }
 
 .nome-empresa-e-local {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.nome-empresa-e-local div {
+  display: flex;
+  height: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 
 .cargo-e-atividade {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.cargo-e-atividade div {
+  display: flex;
+  height: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+
 }
 
 .contribuicao-e-faixa {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.contribuicao-e-faixa div {
+  display: flex;
+  height: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+
 }
 
 .area-trabalho-e-localizacao {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 10px;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.area-trabalho-e-localizacao div {
+  display: flex;
+  height: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+
 }
 
 ::ng-deep.mat-mdc-snack-bar-container {
@@ -240,6 +283,7 @@ body {
 }
 
 @media (max-width: 720px) {
+
   .input-cpf-conclusao,
   .input-email-orientador,
   .input-telefone-link,
@@ -256,6 +300,7 @@ body {
   .btn {
     width: 200px;
   }
+
   .btn-senha {
     width: 150px;
   }
@@ -265,6 +310,7 @@ body {
   * {
     font-size: 0.9em;
   }
+
   .titulo-cadastral {
     font-size: 20px;
   }
