@@ -407,7 +407,7 @@ a {
 }
 
 .video-popup .img-video {
-  background-color: black;
+  background-color: #040404;
   width: 610px;
   height: 340px;
 }
@@ -416,12 +416,19 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
+}
+
+.img-video img {
+  position: relative;
+  object-fit: cover;
+  transform: translateY(31%);
 }
 
 .descricao-video {
   display: flex;
   flex-direction: column;
-
+  z-index: 2;
   padding-left: 2%;
 }
 

@@ -19,44 +19,24 @@
 
   <header class="header">
     <nav class="nav--menu">
-      <div
-        class="links-content"
-        [ngStyle]="styleDefault()"
-        [class.showSideBar]="animation"
-      >
+      <div class="links-content" [ngStyle]="styleDefault()" [class.showSideBar]="animation">
         <ul class="nav--list">
           <li>
-            <a i18n (click)="mudaRota('egressos/graduates')" class="nav--link"
-              >Lista de Egressos</a
-            >
+            <a i18n (click)="mudaRota('egressos/graduates')" class="nav--link">Lista de Egressos</a>
           </li>
           <li>
-            <a i18n (click)="openDialog('egressos/follow-up')" class="nav--link"
-              >Acompanhamento dos Egressos</a
-            >
+            <a i18n (click)="openDialog('egressos/follow-up')" class="nav--link">Acompanhamento dos Egressos</a>
           </li>
           <li>
-            <a i18n (click)="mudaRota('egressos/historic')" class="nav--link"
-              >Histórico da Pós</a
-            >
+            <a i18n (click)="mudaRota('egressos/historic')" class="nav--link">Histórico da Pós</a>
           </li>
           <li>
-            <a i18n (click)="mudaRota('egressos/numbers')" class="nav--link"
-              >Números da Pós</a
-            >
+            <a i18n (click)="mudaRota('egressos/numbers')" class="nav--link">Números da Pós</a>
           </li>
         </ul>
       </div>
-      <i
-        class="fa fa-close icon-mobile"
-        *ngIf="isOpen"
-        (click)="showSideBar(false)"
-      ></i>
-      <i
-        class="fa fa-list icon-mobile"
-        *ngIf="!isOpen"
-        (click)="showSideBar(true)"
-      ></i>
+      <i class="fa fa-close icon-mobile" *ngIf="isOpen" (click)="showSideBar(false)"></i>
+      <i class="fa fa-list icon-mobile" *ngIf="!isOpen" (click)="showSideBar(true)"></i>
     </nav>
   </header>
 
@@ -85,7 +65,7 @@
 
   <div class="video-popup">
     <div class="img-video">
-      <!-- <img src="assets/banner-75.jpg" alt="" /> -->
+      <img src="assets/filmagem5.jpg" alt="" />
       <div class="descricao-video">
         <h1 i18n>PPGEELT</h1>
         <a class="assistir-video" (click)="openVideoDialog()">
@@ -100,11 +80,7 @@
   <div class="cards-content">
     <div class="card">
       <a (click)="mudaRota('egressos/graduates')">
-        <img
-          src="assets/icone_acompanhamento.png"
-          class="card-img-top"
-          alt="..."
-        />
+        <img src="assets/icone_acompanhamento.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
         <p i18n class="titulo">Lista de Egressos</p>
@@ -123,11 +99,7 @@
     </div>
     <div class="card">
       <a (click)="openDialog('egressos/follow-up')">
-        <img
-          src="assets/icone_historia_pos.png"
-          class="card-img-top"
-          alt="..."
-        />
+        <img src="assets/icone_historia_pos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
         <h5 i18n class="titulo">Acompanhamento dos Egressos</h5>
@@ -146,11 +118,7 @@
     </div>
     <div class="card">
       <a (click)="mudaRota('egressos/historic')">
-        <img
-          src="assets/icone_lista_egressos.png"
-          class="card-img-top"
-          alt="..."
-        />
+        <img src="assets/icone_lista_egressos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
         <p i18n class="titulo">Histórico da Pós</p>
