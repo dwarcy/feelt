@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { LoginComponent } from '../egressos/login/login.component';
 import { Router } from '@angular/router';
@@ -34,7 +34,13 @@ export class MainComponent implements OnInit {
     console.log('Animation: ' + this.animation);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  // Limpar localStorage ao fechar a aba ou sair do site completamente
+  @HostListener('window:beforeunload', ['$event'])
+  beforeunloadHandler(event: any) {
+    localStorage.clear();
+  }
 
   showSideBar(show: boolean) {
     this.animation = show;

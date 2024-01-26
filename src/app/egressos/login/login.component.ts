@@ -29,7 +29,11 @@ export class LoginComponent {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (localStorage.getItem('id') != null) {
+      this.redirecionaRota();
+    }
+  }
 
   public async onSubmit(form: FormGroup) {
     const resultado = await this.fService.queryBd(form);
