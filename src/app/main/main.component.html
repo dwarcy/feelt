@@ -1,7 +1,7 @@
 <body>
   <div class="lang">
-    <img src="assets/flag-uk.svg" alt="Switch to English" />
-    <img src="assets/flag-brasil.svg" alt="Mudar para Português" />
+    <img (click)="mudaIdioma('en')" src="assets/flag-uk.svg" alt="Switch to English" />
+    <img (click)="mudaIdioma('pt')" src="assets/flag-brasil.svg" alt="Mudar para Português" />
   </div>
 
   <div class="header-image-login">
@@ -9,10 +9,10 @@
       <img src="assets/header.png" style="margin-left: 5%" alt="" />
     </a>
     <div class="login-usuario">
-      <span i18n>Usuário:</span>
+      <span i18n>{{ "Usuário" | translate }}</span>
       <select class="drop">
-        <option value="" selected>Login</option>
-        <option value="">Logout</option>
+        <option value="" selected>{{ "Login" | translate }}</option>
+        <option value="">{{ "Logout" | translate }}</option>
       </select>
     </div>
   </div>
@@ -22,16 +22,16 @@
       <div class="links-content" [ngStyle]="styleDefault()" [class.showSideBar]="animation">
         <ul class="nav--list">
           <li>
-            <a i18n (click)="mudaRota('egressos/graduates')" class="nav--link">Lista de Egressos</a>
+            <a i18n (click)="mudaRota('egressos/graduates')" class="nav--link">{{"Lista de Egressos" | translate}}</a>
           </li>
           <li>
-            <a i18n (click)="openDialog('egressos/follow-up')" class="nav--link">Acompanhamento dos Egressos</a>
+            <a i18n (click)="openDialog('egressos/follow-up')" class="nav--link">{{"Acompanhamento dos Egressos" | translate}}</a>
           </li>
           <li>
-            <a i18n (click)="mudaRota('egressos/historic')" class="nav--link">Histórico da Pós</a>
+            <a i18n (click)="mudaRota('egressos/historic')" class="nav--link">{{"Histórico da Pós" | translate}}</a>
           </li>
           <li>
-            <a i18n (click)="mudaRota('egressos/numbers')" class="nav--link">Números da Pós</a>
+            <a i18n (click)="mudaRota('egressos/numbers')" class="nav--link">{{"Números da Pós" | translate}}</a>
           </li>
         </ul>
       </div>
@@ -42,9 +42,9 @@
 
   <div class="welcome-content">
     <div class="texto">
-      <span i18n class="portal-title">PORTAL DE ACOMPANHAMENTO DOS</span>
-      <span i18n class="egresso-title">EGRESSOS DA PÓS GRADUACÃO</span>
-      <span i18n class="eng-title">EM ENG. ELETRICA DA UFU</span>
+      <span i18n class="portal-title">{{"PORTAL DE ACOMPANHAMENTO DOS" | translate}}</span>
+      <span i18n class="egresso-title">{{"EGRESSOS DA PÓS GRADUACÃO" | translate}}</span>
+      <span i18n class="eng-title">{{"EM ENG. ELETRICA DA UFU" | translate}}</span>
     </div>
     <div class="img-logo">
       <img src="assets/background1.jpg" alt="" />
@@ -53,13 +53,7 @@
 
   <div class="texto-tela">
     <span i18n>
-      Neste site pretendemos manter contato constante com todos nossos egressos
-      de mestrado, doutorado e pós-doutorado do programa de pós-graduação em
-      Engenharia Elétrica da Universidade Federal de Uberlândia (PPGEELT). Além
-      de coletar informações de nossos egressos para entender melhor os impactos
-      de nossa formação, pretendemos usar estes números para balizar melhorias e
-      trazer ao público em geral um panorama do impacto do PPGEELT. Também
-      fomentar novas oportunidades e propor interações a toda sua comunidade.
+      {{ "Neste site pretendemos manter contato constante com todos nossos egressos de mestrado, doutorado e pós-doutorado do programa de pós-graduação em Engenharia Elétrica da Universidade Federal de Uberlândia (PPGEELT). Além de coletar informações de nossos egressos para entender melhor os impactos de nossa formação, pretendemos usar estes números para balizar melhorias e trazer ao público em geral um panorama do impacto do PPGEELT. Também fomentar novas oportunidades e propor interações a toda sua comunidade." | translate }}
     </span>
   </div>
 
@@ -70,7 +64,7 @@
         <h1 i18n>PPGEELT</h1>
         <a class="assistir-video" (click)="openVideoDialog()">
           <h3 i18n>
-            Assista Ao Vídeo <span class="far fa-play-circle"></span>
+            {{"Assista Ao Vídeo" | translate}} <span class="far fa-play-circle"></span>
           </h3>
         </a>
       </div>
@@ -83,16 +77,14 @@
         <img src="assets/icone_acompanhamento.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
-        <p i18n class="titulo">Lista de Egressos</p>
+        <p i18n class="titulo">{{"Lista de Egressos" | translate}}</p>
         <p i18n class="card-text">
-          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
-          decorrer dos anos, seja no mestrado, seja no doutorado ou no
-          pós-doutorado de nosso programa.
+          {{"Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no decorrer dos anos, seja no mestrado, seja no doutorado ou no pós-doutorado de nosso programa." | translate}}
         </p>
       </div>
       <div class="saiba-mais">
         <a i18n (click)="mudaRota('egressos/graduates')">
-          Saiba Mais
+          {{"Saiba Mais" | translate}}
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
       </div>
@@ -102,16 +94,14 @@
         <img src="assets/icone_historia_pos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
-        <h5 i18n class="titulo">Acompanhamento dos Egressos</h5>
+        <h5 i18n class="titulo">{{"Acompanhamento dos Egressos" | translate}}</h5>
         <p i18n class="card-text">
-          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
-          decorrer dos anos, seja no mestrado, seja no doutorado ou no
-          pós-doutorado de nosso programa.
+          {{"Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no decorrer dos anos, seja no mestrado, seja no doutorado ou no pós-doutorado de nosso programa." | translate}}
         </p>
       </div>
       <div class="saiba-mais">
         <a i18n (click)="openDialog('egressos/follow-up')">
-          Saiba Mais
+          {{"Saiba Mais" | translate}}
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
       </div>
@@ -121,16 +111,14 @@
         <img src="assets/icone_lista_egressos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
-        <p i18n class="titulo">Histórico da Pós</p>
+        <p i18n class="titulo">{{"Histórico da Pós" | translate}}</p>
         <p i18n class="card-text">
-          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
-          decorrer dos anos, seja no mestrado, seja no doutorado ou no
-          pós-doutorado de nosso programa.
+          {{"Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no decorrer dos anos, seja no mestrado, seja no doutorado ou no pós-doutorado de nosso programa." | translate}}
         </p>
       </div>
       <div class="saiba-mais">
         <a i18n (click)="mudaRota('egressos/historic')">
-          Saiba Mais
+          {{"Saiba Mais" | translate}}
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
       </div>
@@ -140,16 +128,14 @@
         <img src="assets/icone_num_pos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
-        <p i18n class="titulo">Números da Pós</p>
+        <p i18n class="titulo">{{"Números da Pós" | translate}}</p>
         <p i18n class="card-text">
-          Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no
-          decorrer dos anos, seja no mestrado, seja no doutorado ou no
-          pós-doutorado de nosso programa.
+          {{"Aqui você encontrará a lista das pessoas que se formaram no PPGEELT no decorrer dos anos, seja no mestrado, seja no doutorado ou no pós-doutorado de nosso programa." | translate}}
         </p>
       </div>
       <div class="saiba-mais">
         <a i18n (click)="mudaRota('egressos/numbers')">
-          Saiba Mais
+          {{"Saiba Mais" | translate}}
           <span class="Angle-Right fontawesomeicon"></span>
         </a>
       </div>

@@ -2,9 +2,9 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { LoginComponent } from '../egressos/login/login.component';
 import { Router } from '@angular/router';
-import { FirebaseService } from '../services/firebase.service';
 import { LoginService } from '../services/auth/login.service';
 import { VideplayerComponent } from './videplayer/videplayer.component';
+import { TranslateService } from '@ngx-translate/core'
 
 @Component({
   selector: 'app-main',
@@ -25,7 +25,8 @@ export class MainComponent implements OnInit {
   constructor(
     private _dialog: MatDialog,
     private route: Router,
-    public loginService: LoginService
+    public loginService: LoginService,
+    private translate: TranslateService
   ) {
     this.maxWidth = 0;
     this.marignRghtValue = '-100vw';
@@ -40,6 +41,10 @@ export class MainComponent implements OnInit {
   @HostListener('window:beforeunload', ['$event'])
   beforeunloadHandler(event: any) {
     localStorage.clear();
+  }
+
+  public mudaIdioma(lang: string) {
+    this.translate.use(lang)
   }
 
   showSideBar(show: boolean) {

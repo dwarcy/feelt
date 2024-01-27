@@ -3,7 +3,7 @@
     <span (click)="close()">X</span>
   </div>
   <div class="form-box login">
-    <h2>Login</h2>
+    <h2>{{"Login" | translate}}</h2>
     <form [formGroup]="formGroup" (submit)="onSubmit(formGroup)">
       <div class="input-box">
         <span class="icon"></span>
@@ -14,7 +14,7 @@
           name="cpf"
           required
         />
-        <label i18n>Usuario</label>
+        <label i18n>{{"Usuário" | translate}}</label>
       </div>
       <div class="input-box">
         <span class="icon"></span>
@@ -25,18 +25,17 @@
           name="senha"
           required
         />
-        <label i18n>Senha</label>
+        <label i18n>{{"Senha" | translate}}</label>
       </div>
       <div class="remember-forgot">
-        <label i18n><input type="checkbox" />Lembrar-me</label>
-        <a i18n href="#">Esqueci a senha</a>
+        <label i18n><input type="checkbox" />{{"Lembrar-me" | translate}}</label>
+        <a i18n href="#">{{"Esqueci a senha" | translate}}</a>
       </div>
-      <button i18n type="submit" class="btn">Entrar</button>
+      <button i18n type="submit" class="btn">{{"Entrar" | translate}}</button>
     </form>
     <div class="info">
       <span i18n
-        >*Se for sua primeira vez se conectando, a senha padrão é seu CPF sem
-        pontos e traço.</span
+        >{{"*Se for sua primeira vez se conectando, a senha padrão é seu CPF sem pontos e traço." | translate}}</span
       >
     </div>
   </div>

@@ -13,33 +13,33 @@
     <!-- COLUNA -> ANO DO EGRESSO -->
     <ng-container matColumnDef="ano-egresso">
       <!-- Define o nome que apareceno no topo da coluna -->
-      <th i18n mat-header-cell *matHeaderCellDef="">Ano Egresso</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">{{"Ano Egresso" | translate}}</th>
       <td mat-cell *matCellDef="let element">{{ element.anoConclusao }}</td>
     </ng-container>
 
     <!-- COLUNA -> NOME -->
     <ng-container matColumnDef="nome">
-      <th i18n mat-header-cell *matHeaderCellDef="">Nome</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">{{"Nome" | translate}}</th>
       <td mat-cell *matCellDef="let element">{{ element.nomeCompleto }}</td>
     </ng-container>
 
     <!-- COLUNA -> TITULAÇÃO -->
     <ng-container matColumnDef="titulacao">
-      <th i18n mat-header-cell *matHeaderCellDef="">Titulação</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">{{"Titulação" | translate}}</th>
       <td mat-cell *matCellDef="let element">{{ element.curso }}</td>
     </ng-container>
 
     <!-- COLUNA -> EMPRESA OU INSTITUIÇÃO ATUALMENTE -->
     <ng-container matColumnDef="empresa">
       <th i18n mat-header-cell *matHeaderCellDef="">
-        Empresa ou Instituição Atualmente
+        {{"Empresa ou Instituição Atualmente" | translate}}
       </th>
       <td mat-cell *matCellDef="let element">{{ element.nomeDaEmpresa }}</td>
     </ng-container>
 
     <!-- COLUNA -> ORIENTADOR -->
     <ng-container matColumnDef="orientador">
-      <th i18n mat-header-cell *matHeaderCellDef="">Orientador</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">{{"Orientador" | translate}}</th>
       <td mat-cell *matCellDef="let element">{{ element.nomeOrientador }}</td>
     </ng-container>
 

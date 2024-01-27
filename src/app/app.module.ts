@@ -38,6 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
+export const DEFAULT_LANGUAGE = 'pt'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +81,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatInputModule,
     MatSelectModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'pt',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
@@ -93,4 +96,4 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

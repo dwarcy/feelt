@@ -42,6 +42,21 @@ li {
   width: 30px;
   height: 20px;
   margin: 2px;
+  resize: both;
+}
+
+@media (max-width: 560px) {
+  .lang img {
+    width: 25px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .lang img {
+    width: 20px;
+    height: 10px;
+  }
 }
 
 /* ========= LOGO DA FEELT ========= */
