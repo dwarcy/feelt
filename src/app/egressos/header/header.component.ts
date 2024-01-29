@@ -3,6 +3,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { LoginService } from 'src/app/services/auth/login.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -15,14 +16,21 @@ export class HeaderComponent {
   public animation: boolean;
   public isOpen: any;
 
-  constructor(private _dialog: MatDialog,
+  constructor(
+    private _dialog: MatDialog,
     private route: Router,
-    public loginService: LoginService) {
+    public loginService: LoginService,
+    private translate: TranslateService
+  ) {
     this.maxWidth = 0;
     this.marignRghtValue = '-100vw';
     this.animation = false;
     this.isOpen = false;
     console.log('Animation: ' + this.animation);
+  }
+
+  public mudaIdioma(lang: string) {
+    this.translate.use(lang);
   }
 
   showSideBar(show: boolean) {

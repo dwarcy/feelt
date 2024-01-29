@@ -12,9 +12,6 @@ import { TranslateService } from '@ngx-translate/core'
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  searchPage(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
   public marignRghtValue: string;
   public maxWidth: number;
   public animation: boolean;

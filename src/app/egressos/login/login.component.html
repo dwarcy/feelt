@@ -3,7 +3,7 @@
     <span (click)="close()">X</span>
   </div>
   <div class="form-box login">
-    <h2>{{"Login" | translate}}</h2>
+    <h2>{{ "Login" | translate }}</h2>
     <form [formGroup]="formGroup" (submit)="onSubmit(formGroup)">
       <div class="input-box">
         <span class="icon"></span>
@@ -14,29 +14,24 @@
           name="cpf"
           required
         />
-        <label i18n>{{"Usuário" | translate}}</label>
+        <label i18n>{{ "Usuário" | translate }}</label>
       </div>
       <div class="input-box">
         <span class="icon"></span>
-        <input
-          type="password"
-          class="form-control"
-          formControlName="senha"
-          name="senha"
-          required
-        />
-        <label i18n>{{"Senha" | translate}}</label>
+        <input type="password" class="form-control" formControlName="senha" name="senha" id="senhaInput" required/>
+        <label i18n>{{ "Senha" | translate }}</label>
       </div>
       <div class="remember-forgot">
-        <label i18n><input type="checkbox" />{{"Lembrar-me" | translate}}</label>
-        <a i18n href="#">{{"Esqueci a senha" | translate}}</a>
+        <label i18n><input type="checkbox" id="mostrarSenha" (click)="mostrarSenha()"/>{{ "Mostrar Senha" | translate }}</label>
+        <a i18n href="#">{{ "Esqueci a senha" | translate }}</a>
       </div>
-      <button i18n type="submit" class="btn">{{"Entrar" | translate}}</button>
+      <button i18n type="submit" class="btn">{{ "Entrar" | translate }}</button>
     </form>
     <div class="info">
-      <span i18n
-        >{{"*Se for sua primeira vez se conectando, a senha padrão é seu CPF sem pontos e traço." | translate}}</span
-      >
+      <span i18n>{{
+        "*Se for sua primeira vez se conectando, a senha padrão é seu CPF sem pontos e traço."
+          | translate
+      }}</span>
     </div>
   </div>
 </div>

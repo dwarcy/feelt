@@ -35,6 +35,17 @@ export class LoginComponent {
     }
   }
 
+  public mostrarSenha() {
+    let senhaInput = document.getElementById('senhaInput') as HTMLInputElement;
+    let mostrarSenhaCheckbox = document.getElementById('mostrarSenha') as HTMLInputElement;
+
+    if (senhaInput.type === 'password') {
+      senhaInput.type = 'text';
+    } else {
+      senhaInput.type = 'password';
+    }
+  }
+
   public async onSubmit(form: FormGroup) {
     const resultado = await this.fService.queryBd(form);
     this.isSignedIn = resultado;
