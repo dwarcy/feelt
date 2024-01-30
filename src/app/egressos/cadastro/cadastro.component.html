@@ -8,7 +8,7 @@
           <input type="text" class="form-control" formControlName="cpf" name="cpf" />
         </div>
         <div>
-          <label i18n for="input-conclusao" class="form-label">{{"Ano que concluiu pós:" | translate}} 
+          <label i18n for="input-conclusao" class="form-label">{{"Ano que concluiu pós:" | translate}}
           </label>
           <input type="text" class="form-control" formControlName="anoConclusao" name="conclusao" />
         </div>
@@ -111,7 +111,8 @@
           </select>
         </div>
         <div class="atividade-atual">
-          <label i18n for="atividade">{{"Sua atual atividade está relacionada com sua área de pesquisa na pós?" | translate}}</label>
+          <label i18n for="atividade">{{"Sua atual atividade está relacionada com sua área de pesquisa na pós?" |
+            translate}}</label>
           <select class="form-select" name="relacaoAtividadeAtual" formControlName="relacaoAtividadeAtual" required>
             <option selected>-</option>
             <option i18n>{{"Sim, com alta relação" | translate}}</option>
@@ -124,7 +125,8 @@
       </div>
       <div class="contribuicao-e-faixa">
         <div class="contribuicao-da-pos">
-          <label i18n for="contribuicao">{{"Contribuição da sua pós na sua formação e inserção profissional" | translate}}:</label><br />
+          <label i18n for="contribuicao">{{"Contribuição da sua pós na sua formação e inserção profissional" |
+            translate}}:</label><br />
           <select class="form-select" name="contribuicaoPos" formControlName="contribuicaoPos" required>
             <option selected>-</option>
             <option i18n>{{"Alta" | translate}}</option>
@@ -195,4 +197,5 @@
       <button i18n type="submit" class="btn">{{"Salvar Acompanhamento" | translate}}</button>
     </div>
   </form>
+  <app-rodape></app-rodape>
 </body>
