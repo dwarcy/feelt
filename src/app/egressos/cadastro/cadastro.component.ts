@@ -5,7 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import { FirebaseService } from 'src/app/services/firebase.service';
-import { doc } from '@angular/fire/firestore';
 import { AlteraSenhaComponent } from './altera-senha/altera-senha.component';
 import { Router } from '@angular/router';
 
@@ -41,7 +40,6 @@ export class CadastroComponent implements AfterViewChecked {
 
   async retrieveInfo() {
     try {
-      // const userId = localStorage.getItem('id');
       const USER_DOC = await this.firebaseService.buscaDoc();
       console.log(USER_DOC.data());
       this.USER_DOC = USER_DOC;

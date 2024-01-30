@@ -49,6 +49,14 @@ export class HeaderComponent {
     this.route.navigateByUrl(rout);
   }
 
+  public checaLogin(rota: string) {
+    if (localStorage.getItem('id') == null) {
+      this.openDialog(rota);
+    } else {
+      this.route.navigate([rota]);
+    }
+  }
+
   public openDialog(rota: string) {
     const config: MatDialogConfig = new MatDialogConfig();
     config.width = 'auto';

@@ -42,6 +42,7 @@ li {
   width: 30px;
   height: 20px;
   margin: 2px;
+  margin-right: 12px;
   resize: both;
 }
 
@@ -67,8 +68,8 @@ li {
   justify-content: space-between;
 
   width: 100%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
   background-color: #010536;
   border-bottom: 4px solid #6699ff;
@@ -91,6 +92,13 @@ li {
   gap: 5%;
   width: 15%;
   margin-right: 2%;
+}
+.login-usuario .ri-logout-box-r-line {
+  font-weight: 700;
+}
+.ri-logout-box-r-line:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .drop {

@@ -9,11 +9,17 @@
       <img src="assets/header.png" style="margin-left: 5%" alt="" />
     </a>
     <div class="login-usuario">
-      <span i18n>{{ "Usuário" | translate }}</span>
-      <select class="drop">
-        <option value="" selected>{{ "Login" | translate }}</option>
-        <option value="">{{ "Logout" | translate }}</option>
-      </select>
+      <span i18n>{{ "Usuário" | translate }}:</span>
+      <ng-container *ngIf="isLoggedIn; else loginDropdown">
+        <span>{{ userNome }}</span>
+        <i (click)="loginLogout('logout')" class="ri-logout-box-r-line"></i>
+      </ng-container>
+      <ng-template #loginDropdown>
+        <select #opcao class="drop" (click)="loginLogout(opcao.value)">
+          <option value="login">{{ "Login" | translate }}</option>
+          <option value="logout">{{ "Logout" | translate }}</option>
+        </select>
+      </ng-template>
     </div>
   </div>
 
@@ -25,7 +31,7 @@
             <a i18n (click)="mudaRota('egressos/graduates')" class="nav--link">{{"Lista de Egressos" | translate}}</a>
           </li>
           <li>
-            <a i18n (click)="openDialog('egressos/follow-up')" class="nav--link">{{"Acompanhamento dos Egressos" | translate}}</a>
+            <a i18n (click)="checaLogin('egressos/follow-up')" class="nav--link">{{"Acompanhamento dos Egressos" | translate}}</a>
           </li>
           <li>
             <a i18n (click)="mudaRota('egressos/historic')" class="nav--link">{{"Histórico da Pós" | translate}}</a>
@@ -90,7 +96,7 @@
       </div>
     </div>
     <div class="card">
-      <a (click)="openDialog('egressos/follow-up')">
+      <a (click)="checaLogin('egressos/follow-up')">
         <img src="assets/icone_historia_pos.png" class="card-img-top" alt="..." />
       </a>
       <div class="card-body">
