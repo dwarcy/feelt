@@ -28,7 +28,7 @@ export class ListaegressosComponent {
 
   async ngOnInit() {
     console.log(this.displayedColumns);
-    this.LIST_SOURCE = await this.firebaseService.percorreCollection();
+    this.LIST_SOURCE = await this.firebaseService.percorreCollection('ListaEgressos');
 
     console.log('Lista de Egressos', this.LIST_SOURCE);
   }

@@ -110,9 +110,9 @@ export class FirebaseService {
     }
   }
 
-  async percorreCollection() {
+  async percorreCollection(opcCollec: string) {
     // Referência à collection onde está armazenada o documento do usuário
-    const usersRef = collection(this.firestore, 'ListaEgressos');
+    const usersRef = collection(this.firestore, opcCollec);
     let usersList: Array<DocumentData> = [];
 
     const q = query(usersRef, where('cpf', '!=', 'null'));
