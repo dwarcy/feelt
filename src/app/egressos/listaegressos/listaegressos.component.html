@@ -1,4 +1,4 @@
-<body>
+<div class="content">
   <mat-form-field>
     <mat-select
       placeholder="Filtro"
@@ -13,33 +13,41 @@
     <!-- COLUNA -> ANO DO EGRESSO -->
     <ng-container matColumnDef="ano-egresso">
       <!-- Define o nome que apareceno no topo da coluna -->
-      <th i18n mat-header-cell *matHeaderCellDef="">{{"Ano Egresso" | translate}}</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">
+        {{ "Ano Egresso" | translate }}
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.anoConclusao }}</td>
     </ng-container>
 
     <!-- COLUNA -> NOME -->
     <ng-container matColumnDef="nome">
-      <th i18n mat-header-cell *matHeaderCellDef="">{{"Nome" | translate}}</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">
+        {{ "Nome" | translate }}
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.nomeCompleto }}</td>
     </ng-container>
 
     <!-- COLUNA -> TITULAÇÃO -->
     <ng-container matColumnDef="titulacao">
-      <th i18n mat-header-cell *matHeaderCellDef="">{{"Titulação" | translate}}</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">
+        {{ "Titulação" | translate }}
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.curso }}</td>
     </ng-container>
 
     <!-- COLUNA -> EMPRESA OU INSTITUIÇÃO ATUALMENTE -->
     <ng-container matColumnDef="empresa">
       <th i18n mat-header-cell *matHeaderCellDef="">
-        {{"Empresa ou Instituição Atualmente" | translate}}
+        {{ "Empresa ou Instituição Atualmente" | translate }}
       </th>
       <td mat-cell *matCellDef="let element">{{ element.nomeDaEmpresa }}</td>
     </ng-container>
 
     <!-- COLUNA -> ORIENTADOR -->
     <ng-container matColumnDef="orientador">
-      <th i18n mat-header-cell *matHeaderCellDef="">{{"Orientador" | translate}}</th>
+      <th i18n mat-header-cell *matHeaderCellDef="">
+        {{ "Orientador" | translate }}
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.nomeOrientador }}</td>
     </ng-container>
 
@@ -53,5 +61,8 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-  <app-rodape></app-rodape>
-</body>
+
+  <div class="rodape">
+    <app-rodape></app-rodape>
+  </div>
+</div>

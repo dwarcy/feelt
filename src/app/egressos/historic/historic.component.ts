@@ -8,10 +8,11 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class HistoricComponent {
   LIST_SOURCE: any;
+  private listaPesquisadores: Array<string> = []
 
   constructor(
     private firebaseService: FirebaseService,
-    private listaPesquisadores: Array<string>
+    
   ) {}
 
   public async ngOnInit() {

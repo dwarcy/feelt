@@ -17,8 +17,8 @@ a:hover {
 
 ul {
   list-style: none;
-  /* Color highlighting when pressed on mobile devices */
-  /*-webkit-tap-highlight-color: transparent;*/
+  padding: 0%;
+  padding-inline-start: 0%;
 }
 
 li {
@@ -119,13 +119,14 @@ li {
 header {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   font-size: 1.25em;
 }
 
 .nav--menu {
   font-family: var(--ff-standard-inside);
-  width: 100vw;
+  width: 100%;
   display: flex;
 
   align-items: center;

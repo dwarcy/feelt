@@ -1,6 +1,7 @@
 body {
   width: 100%;
   height: 100%;
+  padding-top: 2%;
 }
 
 iframe {
@@ -14,4 +15,12 @@ div {
   display: flex;
   flex-wrap: wrap;
   margin-left: 20%;
+}
+
+.rodape {
+  width: 100%;
+  position: fixed;
+  bottom: 70px;
+  padding: 0%;
+  transform: translateX(-20%);
 }
