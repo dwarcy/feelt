@@ -64,9 +64,11 @@ export class CadastroComponent implements AfterViewChecked {
       cargo: new FormControl(user.cargo),
       relacaoAtividadeAtual: new FormControl(user.relacaoAtividadeAtual),
       contribuicaoPos: new FormControl(user.contribuicaoPos),
-      faixaSalarial: new FormControl(user.faixaSalarial),
+      importanciaPos: new FormControl(user.importanciaPos),
       areaProxima: new FormControl(user.areaProxima),
       localizacaoOcupacao: new FormControl(user.localizacaoOcupacao),
+      continuidadeEstudos: new FormControl(user.continuidadeEstudos),
+      insercaoSocial: new FormControl(user.insercaoSocial),
       senha: new FormControl(user.senha),
     });
   }

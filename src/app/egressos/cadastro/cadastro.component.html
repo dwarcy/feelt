@@ -1,201 +1,432 @@
 <body>
-  <form class="dados-cadastro" [formGroup]="formGroup" (submit)="onSubmit(formGroup)" *ngIf="formGroup">
-    <div i18n class="titulo-cadastral">{{"Dados Cadastro:" | translate}}</div>
+  <form
+    class="dados-cadastro"
+    [formGroup]="formGroup"
+    (submit)="onSubmit(formGroup)"
+    *ngIf="formGroup"
+  >
+    <div i18n class="titulo-cadastral">{{ "Dados Cadastro:" | translate }}</div>
     <div class="input-group">
       <div class="input-cpf-conclusao">
         <div>
-          <label i18n for="input-cpf" class="form-label">{{"Seu CPF:" | translate}}</label>
-          <input type="text" class="form-control" formControlName="cpf" name="cpf" />
+          <label i18n for="input-cpf" class="form-label">{{
+            "Seu CPF:" | translate
+          }}</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="cpf"
+            name="cpf"
+          />
         </div>
         <div>
-          <label i18n for="input-conclusao" class="form-label">{{"Ano que concluiu pós:" | translate}}
-          </label>
-          <input type="text" class="form-control" formControlName="anoConclusao" name="conclusao" />
+          <label i18n for="input-conclusao" class="form-label">{{
+            "Ano que concluiu pós:" | translate
+          }}</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="anoConclusao"
+            name="conclusao"
+          />
         </div>
       </div>
       <div class="input-nome">
-        <label i18n for="input-nome" class="form-label">{{"Seu nome completo" | translate}}:
-        </label>
-        <input type="text" class="form-control" formControlName="nomeCompleto" name="nome" />
+        <label i18n for="input-nome" class="form-label"
+          >{{ "Seu nome completo" | translate }}:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          formControlName="nomeCompleto"
+          name="nome"
+        />
       </div>
       <div class="input-email-orientador">
         <div>
-          <label i18n for="input-email" class="form-label">{{"Seu email atual" | translate}}:
-          </label>
-          <input type="email" class="form-control" formControlName="emailAtual" name="email" />
+          <label i18n for="input-email" class="form-label"
+            >{{ "Seu email atual" | translate }}:</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            formControlName="emailAtual"
+            name="email"
+          />
         </div>
         <div>
-          <label i18n for="input-orientador" class="form-label">{{"Nome do orientador" | translate}}:
-          </label>
-          <input type="text" class="form-control" formControlName="nomeOrientador" name="orientador" />
+          <label i18n for="input-orientador" class="form-label"
+            >{{ "Nome do orientador" | translate }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="nomeOrientador"
+            name="orientador"
+          />
         </div>
       </div>
       <div class="input-endereco">
-        <label i18n for="input-endereco" class="form-label">{{"Endereço" | translate}}: </label>
-        <input type="text" class="form-control" formControlName="endereco" name="endereco" />
+        <label i18n for="input-endereco" class="form-label"
+          >{{ "Endereço" | translate }}:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          formControlName="endereco"
+          name="endereco"
+        />
       </div>
       <div class="input-telefone-link">
         <div>
-          <label i18n for="input-telefone" class="form-label">{{"Telefone" | translate}}: </label>
-          <input type="text" class="form-control" formControlName="telefone" name="telefone" />
+          <label i18n for="input-telefone" class="form-label"
+            >{{ "Telefone" | translate }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="telefone"
+            name="telefone"
+          />
         </div>
         <div>
           <label i18n for="input-link" class="form-label">Link: </label>
-          <input type="text" class="form-control" formControlName="link" name="link" />
+          <input
+            type="text"
+            class="form-control"
+            formControlName="link"
+            name="link"
+          />
         </div>
       </div>
     </div>
     <div class="radio-form-check">
-      <label i18n>{{"Curso mais alto feito no PPGEELT-UFU" | translate}}: </label>
+      <label i18n
+        >{{ "Curso mais alto feito no PPGEELT-UFU" | translate }}:
+      </label>
       <div class="opt-radios">
         <div>
-          <input class="form-check-input" type="radio" formControlName="curso" value="mestrado" name="curso" />
-          <label i18n>{{"mestrado" | translate}}</label>
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="curso"
+            value="mestrado"
+            name="curso"
+          />
+          <label i18n>{{ "mestrado" | translate }}</label>
         </div>
         <div>
-          <input class="form-check-input" type="radio" formControlName="curso" value="doutorado" name="curso" />
-          <label i18n>{{"doutorado" | translate}}</label>
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="curso"
+            value="doutorado"
+            name="curso"
+          />
+          <label i18n>{{ "doutorado" | translate }}</label>
         </div>
         <div>
-          <input class="form-check-input" type="radio" formControlName="curso" value="pos-doutorado" name="curso" />
-          <label i18n>{{"pós-doutorado" | translate}}</label>
+          <input
+            class="form-check-input"
+            type="radio"
+            formControlName="curso"
+            value="pos-doutorado"
+            name="curso"
+          />
+          <label i18n>{{ "pós-doutorado" | translate }}</label>
         </div>
       </div>
     </div>
     <div class="button">
       <button i18n type="button" (click)="openDialog('')" class="btn-senha">
-        {{"Alterar Senha" | translate}}
+        {{ "Alterar Senha" | translate }}
       </button>
     </div>
     <div class="button">
-      <button i18n type="submit" class="btn">{{"Salvar Cadastro" | translate}}</button>
+      <button i18n type="submit" class="btn">
+        {{ "Salvar Cadastro" | translate }}
+      </button>
     </div>
   </form>
 
-  <form class="dados-acompanhamento" [formGroup]="formGroup" (submit)="onSubmit(formGroup)" *ngIf="formGroup">
-    <div class="titulo-cadastral">{{"Dados Acompanhamento" | translate}}:</div>
+  <form
+    class="dados-acompanhamento"
+    [formGroup]="formGroup"
+    (submit)="onSubmit(formGroup)"
+    *ngIf="formGroup"
+  >
+    <div class="titulo-cadastral">
+      {{ "Dados Acompanhamento" | translate }}:
+    </div>
     <div class="input-group">
       <div class="nome-empresa-e-local">
         <div class="nome-empresa-ou-instituicao">
-          <label i18n for="nome-empresa-ou-instituicao" class="form-label">{{"Nome da empresa ou instituição onde está trabalhando" | translate}}:</label>
-          <input type="text" class="form-control" formControlName="nomeDaEmpresa" name="nomeDaEmpresa" required />
+          <label i18n for="nome-empresa-ou-instituicao" class="form-label"
+            >{{
+              "Nome da empresa ou instituição onde está trabalhando"
+                | translate
+            }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="nomeDaEmpresa"
+            name="nomeDaEmpresa"
+            required
+          />
         </div>
         <div class="local-trabalho">
-          <label i18n for="tipo-de-local">{{"Tipo de local de trabalho" | translate}}:</label>
-          <select class="form-select" name="localDeTrabalho" formControlName="localDeTrabalho" required>
+          <label i18n for="tipo-de-local"
+            >{{ "Tipo de local de trabalho" | translate }}:</label
+          >
+          <select
+            class="form-select"
+            name="localDeTrabalho"
+            formControlName="localDeTrabalho"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Instituição de ensino superior" | translate}}</option>
-            <option i18n>{{"Instituição de ensino técnico, médio ou afim" | translate}}</option>
-            <option i18n>{{"Empresa/Indústria" | translate}}</option>
-            <option i18n>{{"Empresário" | translate}}</option>
-            <option i18n>{{"Centro de pesquisa" | translate}}</option>
-            <option i18n>{{"Autônomo/profissional liberal" | translate}}</option>
-            <option i18n>{{"Outros" | translate}}</option>
+            <option i18n>
+              {{ "Instituição de ensino superior" | translate }}
+            </option>
+            <option i18n>
+              {{ "Instituição de ensino técnico, médio ou afim" | translate }}
+            </option>
+            <option i18n>{{ "Empresa/Indústria" | translate }}</option>
+            <option i18n>{{ "Empresário" | translate }}</option>
+            <option i18n>{{ "Centro de pesquisa" | translate }}</option>
+            <option i18n>
+              {{ "Autônomo/profissional liberal" | translate }}
+            </option>
+            <option i18n>{{ "Comércio" | translate }}</option>
+            <option i18n>{{ "Sem atuação profissional" | translate }}</option>
+            <option i18n>{{ "Outros" | translate }}</option>
           </select>
         </div>
       </div>
       <div class="cargo-e-atividade">
         <div class="cargo">
-          <label for="cargo">{{"Cargo" | translate}}:</label>
-          <select class="form-select" name="cargo" formControlName="cargo" required>
+          <label for="cargo">{{ "Cargo" | translate }}:</label>
+          <select
+            class="form-select"
+            name="cargo"
+            formControlName="cargo"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Pesquisador" | translate}}</option>
-            <option i18n>{{"Professor" | translate}}</option>
-            <option i18n>{{"Gerente ou Diretor" | translate}}</option>
-            <option i18n>{{"Pós-doutorando" | translate}}</option>
-            <option i18n>{{"Engenheiro" | translate}}</option>
-            <option i18n>{{"Analista" | translate}}</option>
-            <option i18n>{{"Contratado CLT diverso" | translate}}</option>
-            <option i18n>{{"Colaborador" | translate}}</option>
-            <option i18n>{{"Outros" | translate}}</option>
+            <option i18n>{{ "Pesquisador" | translate }}</option>
+            <option i18n>{{ "Professor" | translate }}</option>
+            <option i18n>{{ "Gerente ou Diretor" | translate }}</option>
+            <option i18n>{{ "Pós-doutorando" | translate }}</option>
+            <option i18n>{{ "Engenheiro" | translate }}</option>
+            <option i18n>{{ "Analista" | translate }}</option>
+            <option i18n>{{ "Contratado CLT diverso" | translate }}</option>
+            <option i18n>{{ "Colaborador" | translate }}</option>
+            <option i18n>{{ "Técnico" | translate }}</option>
+            <option i18n>{{ "Outros" | translate }}</option>
           </select>
         </div>
         <div class="atividade-atual">
-          <label i18n for="atividade">{{"Sua atual atividade está relacionada com sua área de pesquisa na pós?" |
-            translate}}</label>
-          <select class="form-select" name="relacaoAtividadeAtual" formControlName="relacaoAtividadeAtual" required>
+          <label i18n for="atividade">{{
+            "Sua atual atividade está relacionada com sua área de pesquisa na pós?"
+              | translate
+          }}</label>
+          <select
+            class="form-select"
+            name="relacaoAtividadeAtual"
+            formControlName="relacaoAtividadeAtual"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Sim, com alta relação" | translate}}</option>
-            <option i18n>{{"Sim, com média relação (indireta)" | translate}}</option>
-            <option i18n>{{"Sim, com baixa relação (esporádica)" | translate}}</option>
-            <option i18n>{{"Nenhuma relação" | translate}}</option>
-            <option i18n>{{"Não se aplica" | translate}}</option>
+            <option i18n>{{ "Sim, com alta relação" | translate }}</option>
+            <option i18n>
+              {{ "Sim, com média relação (indireta)" | translate }}
+            </option>
+            <option i18n>
+              {{ "Sim, com baixa relação (esporádica)" | translate }}
+            </option>
+            <option i18n>{{ "Nenhuma relação" | translate }}</option>
+            <option i18n>{{ "Não se aplica" | translate }}</option>
           </select>
         </div>
       </div>
       <div class="contribuicao-e-faixa">
         <div class="contribuicao-da-pos">
-          <label i18n for="contribuicao">{{"Contribuição da sua pós na sua formação e inserção profissional" |
-            translate}}:</label><br />
-          <select class="form-select" name="contribuicaoPos" formControlName="contribuicaoPos" required>
+          <label i18n for="contribuicao"
+            >{{
+              "Contribuição da sua pós na sua formação e inserção profissional"
+                | translate
+            }}:</label
+          ><br />
+          <select
+            class="form-select"
+            name="contribuicaoPos"
+            formControlName="contribuicaoPos"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Alta" | translate}}</option>
-            <option i18n>{{"Média/alta" | translate}}</option>
-            <option i18n>{{"Média" | translate}}</option>
-            <option i18n>{{"Baixa" | translate}}</option>
-            <option i18n>{{"Nenhuma" | translate}}</option>
+            <option i18n>{{ "Alta" | translate }}</option>
+            <option i18n>{{ "Média/alta" | translate }}</option>
+            <option i18n>{{ "Média" | translate }}</option>
+            <option i18n>{{ "Baixa" | translate }}</option>
+            <option i18n>{{ "Nenhuma" | translate }}</option>
           </select>
         </div>
-        <div class="faixa-salarial">
-          <label i18n for="salario">{{"Faixa salarial bruta (será mantido sigilo)" | translate}}:</label><br />
-          <select class="form-select" name="faixaSalarial" formControlName="faixaSalarial" required>
+        <div class="importanciaPos">
+          <label i18n for="salario"
+            >{{
+              "Qual a importância você dá à sua formação recebida na pós"
+                | translate
+            }}:</label
+          ><br />
+          <select
+            class="form-select"
+            name="importanciaPos"
+            formControlName="importanciaPos"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Menos que 3 salários mínimos" | translate}}</option>
-            <option i18n>{{"3.1 a 5 salários mínimos" | translate}}</option>
-            <option i18n>{{"5.1 a 10 salários mínimos" | translate}}</option>
-            <option i18n>{{"10.1 a 20 salários mínimos" | translate}}</option>
-            <option i18n>{{"Acima de 20.1 salários mínimos" | translate}}</option>
-            <option i18n>{{"Prefere não declarar ou não possui" | translate}}</option>
+            <option i18n>{{ "Alta" | translate }}</option>
+            <option i18n>{{ "Média/alta" | translate }}</option>
+            <option i18n>{{ "Média" | translate }}</option>
+            <option i18n>{{ "Baixa" | translate }}</option>
           </select>
         </div>
       </div>
+
       <div class="area-trabalho-e-localizacao">
         <div class="area-trabalho">
-          <label i18n for="area-de-trabalho-proxima">{{"Área de trabalho mais próxima" | translate}}</label>
-          <select class="form-select" name="areaProxima" formControlName="areaProxima" required>
+          <label i18n for="area-de-trabalho-proxima">{{
+            "Área de trabalho mais próxima" | translate
+          }}</label>
+          <select
+            class="form-select"
+            name="areaProxima"
+            formControlName="areaProxima"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Sistemas Elétricos de Potência" | translate}}</option>
             <option i18n>
-              {{"Eletrônica industrial, sistemas e controles eletrônicos" | translate}}
+              {{ "Sistemas Elétricos de Potência" | translate }}
             </option>
-            <option i18n>{{"Telecomunicações e Redes de comunicação" | translate}}</option>
-            <option i18n>{{"Tecnologia da informação" | translate}}</option>
-            <option i18n>{{"Eletrônica" | translate}}</option>
-            <option i18n>{{"Biomédica" | translate}}</option>
-            <option i18n>{{"Automação" | translate}}</option>
-            <option i18n>{{"Materiais elétricos" | translate}}</option>
-            <option i18n>{{"Medidas elétricas, magnéticas e instrumentação" | translate}}</option>
-            <option i18n>{{"Circuitos elétricos" | translate}}</option>
-            <option i18n>{{"Administrativa e gerencial" | translate}}</option>
-            <option i18n>{{"Ensino" | translate}}</option>
-            <option i18n>{{"Outras" | translate}}</option>
+            <option i18n>
+              {{
+                "Eletrônica industrial, sistemas e controles eletrônicos"
+                  | translate
+              }}
+            </option>
+            <option i18n>
+              {{ "Telecomunicações e Redes de comunicação" | translate }}
+            </option>
+            <option i18n>{{ "Tecnologia da informação" | translate }}</option>
+            <option i18n>{{ "Eletrônica" | translate }}</option>
+            <option i18n>{{ "Biomédica" | translate }}</option>
+            <option i18n>{{ "Automação" | translate }}</option>
+            <option i18n>{{ "Materiais elétricos" | translate }}</option>
+            <option i18n>
+              {{ "Medidas elétricas, magnéticas e instrumentação" | translate }}
+            </option>
+            <option i18n>{{ "Circuitos elétricos" | translate }}</option>
+            <option i18n>{{ "Administrativa e gerencial" | translate }}</option>
+            <option i18n>{{ "Ensino" | translate }}</option>
+            <option i18n>{{ "Outras" | translate }}</option>
           </select>
         </div>
+
         <div class="localizacao">
-          <label i18n for="ocupacao-atual">{{"Localização da sua ocupação atual" | translate}}:</label>
-          <select class="form-select" name="localizacaoOcupacao" formControlName="localizacaoOcupacao" required>
+          <label i18n for="ocupacao-atual"
+            >{{ "Localização da sua ocupação atual" | translate }}:</label
+          >
+          <select
+            class="form-select"
+            name="localizacaoOcupacao"
+            formControlName="localizacaoOcupacao"
+            required
+          >
             <option selected>-</option>
-            <option i18n>{{"Não informado" | translate}}</option>
-            <option i18n>{{"Exterior" | translate}}</option>
-            <option i18n>{{"MG Capital" | translate}}</option>
-            <option i18n>{{"MG interior" | translate}}</option>
-            <option i18n>{{"Capital em região sudeste (exceto MG)" | translate}}</option>
-            <option i18n>{{"Interior em região sudeste (exceto MG)" | translate}}</option>
-            <option i18n>{{"Capital em região sul" | translate}}</option>
-            <option i18n>{{"Interior em região sul" | translate}}</option>
-            <option i18n>{{"Capital em região centro-oeste" | translate}}</option>
-            <option i18n>{{"Interior em região centro-oeste" | translate}}</option>
-            <option i18n>{{"Capital em região nordeste" | translate}}</option>
-            <option i18n>{{"Interior em região nordeste" | translate}}</option>
-            <option i18n>{{"Capital em região norte" | translate}}</option>
-            <option i18n>{{"Interior em região norte" | translate}}</option>
+            <option i18n>{{ "Não informado" | translate }}</option>
+            <option i18n>{{ "Exterior" | translate }}</option>
+            <option i18n>{{ "MG Capital" | translate }}</option>
+            <option i18n>{{ "MG interior" | translate }}</option>
+            <option i18n>
+              {{ "Capital em região sudeste (exceto MG)" | translate }}
+            </option>
+            <option i18n>
+              {{ "Interior em região sudeste (exceto MG)" | translate }}
+            </option>
+            <option i18n>{{ "Capital em região sul" | translate }}</option>
+            <option i18n>{{ "Interior em região sul" | translate }}</option>
+            <option i18n>
+              {{ "Capital em região centro-oeste" | translate }}
+            </option>
+            <option i18n>
+              {{ "Interior em região centro-oeste" | translate }}
+            </option>
+            <option i18n>{{ "Capital em região nordeste" | translate }}</option>
+            <option i18n>
+              {{ "Interior em região nordeste" | translate }}
+            </option>
+            <option i18n>{{ "Capital em região norte" | translate }}</option>
+            <option i18n>{{ "Interior em região norte" | translate }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="continuidade-e-insercao">
+        <div class="continuidadeEstudos">
+          <label i18n for="ocupacao-atual"
+            >{{ "Continuidade de seus estudos" | translate }}:</label
+          >
+          <select
+            class="form-select"
+            name="continuidadeEstudos"
+            formControlName="continuidadeEstudos"
+            required
+          >
+            <option selected>-</option>
+            <option i18n>
+              {{ "Fiz pelo menos mais outra pós stricto sensu" | translate }}
+            </option>
+            <option i18n>
+              {{ "Fiz pelo menos mais outra pós latu sensu" | translate }}
+            </option>
+            <option i18n>
+              {{
+                "Fiz pelo menos mais mais um curso de certificação (ou treinamento relevante)"
+                  | translate
+              }}
+            </option>
+            <option i18n>{{ "Não tive continuidade" | translate }}</option>
+          </select>
+        </div>
+
+        <div class="insercaoSocial">
+          <label i18n for="ocupacao-atual"
+            >{{ "Como você considera sua inserção social" | translate }}:</label
+          >
+          <select
+            class="form-select"
+            name="insercaoSocial"
+            formControlName="insercaoSocial"
+            required
+          >
+            <option selected>-</option>
+            <option i18n>{{ "Ótima" | translate }}</option>
+            <option i18n>{{ "Boa" | translate }}</option>
+            <option i18n>{{ "Regular" | translate }}</option>
+            <option i18n>{{ "Ruim" | translate }}</option>
+            <option i18n>{{ "Péssima" | translate }}</option>
+            <option i18n>{{ "Não sei responder" | translate }}</option>
           </select>
         </div>
       </div>
     </div>
     <div class="button">
-      <button i18n type="submit" class="btn">{{"Salvar Acompanhamento" | translate}}</button>
+      <button i18n type="submit" class="btn">
+        {{ "Salvar Acompanhamento" | translate }}
+      </button>
     </div>
   </form>
-  <app-rodape></app-rodape>
+  <div class="rodape">
+    <app-rodape></app-rodape>
+  </div>
 </body>

@@ -25,6 +25,29 @@
   </div>
   <div class="researchers-content">
     <h1 i18n>{{ "PESQUISADORES" | translate }}</h1>
+    <!-- <span *ngFor="let pesquisador of LIST_SOURCE">{{pesquisador.nomePesquisador}}</span> -->
+    <div class="card-row">
+      <div
+        class="card"
+        *ngFor="let pesquisador of LIST_SOURCE"
+        style="width: 18rem"
+      >
+        <div class="card-body">
+          <h2 class="card-title">{{ pesquisador.nomePesquisador }}</h2>
+          <div>
+            <div style="display: flex; flex-direction: row; gap: 2%">
+              <p class="titulo">Atuação:</p>
+              <p class="card-text">{{ pesquisador.areaAtuacao }}</p>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 2%">
+              <p class="titulo">Período:</p>
+              <p class="card-text">{{ pesquisador.periodo }}</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">{{ pesquisador.link }}</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="rodape">

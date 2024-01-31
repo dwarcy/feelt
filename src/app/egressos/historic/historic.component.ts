@@ -8,16 +8,19 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class HistoricComponent {
   LIST_SOURCE: any;
-  private listaPesquisadores: Array<string> = []
+  private listaPesquisadores: Array<string> = [];
 
-  constructor(
-    private firebaseService: FirebaseService,
-    
-  ) {}
+  constructor(private firebaseService: FirebaseService) {}
 
   public async ngOnInit() {
-    this.LIST_SOURCE = this.firebaseService.percorreCollection('Pesquisadores');
+    this.LIST_SOURCE =
+      await this.firebaseService.percorreCollectionPesquisadores(
+        'Pesquisadores'
+      );
 
-    console.log(this.LIST_SOURCE);
+    console.log('Lista de Pesquisadores:', this.LIST_SOURCE);
+    this.LIST_SOURCE.forEach((element: { nomePesquisador: string }) => {
+      console.log('nome:' + element.nomePesquisador);
+    });
   }
 }

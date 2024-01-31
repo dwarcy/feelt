@@ -110,7 +110,7 @@ export class FirebaseService {
     }
   }
 
-  async percorreCollection(opcCollec: string) {
+  async percorreCollectionEgressos(opcCollec: string) {
     // Referência à collection onde está armazenada o documento do usuário
     const usersRef = collection(this.firestore, opcCollec);
     let usersList: Array<DocumentData> = [];
@@ -124,7 +124,23 @@ export class FirebaseService {
       }
     }
 
-    // console.log('Array com users: ', usersList);
+    return usersList;
+  }
+
+  async percorreCollectionPesquisadores(opcCollec: string) {
+    // Referência à collection onde está armazenada o documento do usuário
+    const usersRef = collection(this.firestore, opcCollec);
+    let usersList: Array<DocumentData> = [];
+
+    const q = query(usersRef, where('nomePesquisador', '!=', ''));
+    const querySnapshot = await getDocs(q);
+
+    for (const doc of querySnapshot.docs) {
+      if (doc.data()['cpf'] != '') {
+        usersList.push(doc.data());
+      }
+    }
+
     return usersList;
   }
 

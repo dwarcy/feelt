@@ -6,18 +6,32 @@ body {
   align-items: center;
 }
 h1 {
-  font-family: var(--ff-medium-title);
+  font-family: var(--ff-text-light);
   font-size: var(--fs-bigger);
+}
+iframe {
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: underline;
+  color: #010536;
+  margin-top: 8px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #6699ff;
 }
 
 .center-content {
   width: 70%;
   margin: 60px;
-  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  gap: 3%;
 }
 .center-content > span {
   font-family: var(--ff-standard);
@@ -25,15 +39,52 @@ h1 {
 
   text-align: center;
   margin-inline: 50px;
+  margin-bottom: 50px;
 }
 
 .researchers-content {
-  width: 70%;
+  width: 100%;
+  background-color: #eeeeee;
+}
 
-  flex: 1;
+.researchers-content h1 {
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+.researchers-content .card {
+  margin-left: 3%;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  gap: 3%;
+}
+
+.card {
+  font-family: var(--ff-standard);
+
+  height: 150px;
+  padding-bottom: 2%;
+  padding-left: 1%;
+}
+.card p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.card .card-body {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  justify-content: space-around;
+}
+.card .titulo {
+  font-weight: 600;
 }
 
 .information {
